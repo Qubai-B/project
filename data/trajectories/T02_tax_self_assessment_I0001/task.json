@@ -1,0 +1,17 @@
+{
+  "task_id": "T02_tax_self_assessment_I0001",
+  "form_id": "tax_self_assessment",
+  "identity_id": "I0001",
+  "goal": "Enter the annual income and bank details for refunds",
+  "needs": [
+    "annual_income",
+    "bvn",
+    "bank_account"
+  ],
+  "values": {
+    "annual_income": "14680000",
+    "bvn": "22386379402",
+    "bank_account": "1193448329"
+  },
+  "n_steps": 4
+}

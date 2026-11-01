@@ -1,0 +1,135 @@
+{
+ "detector": "hybrid",
+ "task_id": "T05",
+ "needs": [
+  "nin",
+  "passport_no"
+ ],
+ "detections": [
+  {
+   "pii_type": "PERSON",
+   "field": "last_name",
+   "text": "Nwosu",
+   "bbox": {
+    "x": 502.0,
+    "y": 191.0,
+    "w": 44.0,
+    "h": 11.5
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "PERSON",
+   "field": "first_name",
+   "text": "Preye",
+   "bbox": {
+    "x": 502.0,
+    "y": 238.0,
+    "w": 37.5,
+    "h": 14.0
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "DOB",
+   "field": "date_of_birth",
+   "text": "27/0/1994",
+   "bbox": {
+    "x": 501.0,
+    "y": 284.5,
+    "w": 74.5,
+    "h": 12.0
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "NIN",
+   "field": "nin",
+   "text": "27824896383",
+   "bbox": {
+    "x": 501.0,
+    "y": 332.0,
+    "w": 91.5,
+    "h": 11.5
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "PASSPORT",
+   "field": "passport_no",
+   "text": "C39557077",
+   "bbox": {
+    "x": 501.5,
+    "y": 378.5,
+    "w": 76.5,
+    "h": 12.0
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "PHONE",
+   "field": "phone",
+   "text": "+234 907 935 2133",
+   "bbox": {
+    "x": 501.5,
+    "y": 484.0,
+    "w": 128.5,
+    "h": 11.5
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "EMAIL",
+   "field": "email",
+   "text": "preye.nwosu94@example.com",
+   "bbox": {
+    "x": 501.5,
+    "y": 530.5,
+    "w": 205.0,
+    "h": 14.5
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "ADDRESS",
+   "field": "address_line",
+   "text": "98 Isaac John Street, Asokoro",
+   "bbox": {
+    "x": 501.5,
+    "y": 577.5,
+    "w": 199.5,
+    "h": 13.5
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "ADDRESS",
+   "field": "lga",
+   "text": "Gwagwalada",
+   "bbox": {
+    "x": 501.5,
+    "y": 624.5,
+    "w": 86.0,
+    "h": 14.5
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "ADDRESS",
+   "field": "state",
+   "text": "FCT",
+   "bbox": {
+    "x": 502.0,
+    "y": 671.5,
+    "w": 28.0,
+    "h": 12.0
+   },
+   "source": "label"
+  }
+ ],
+ "timings_ms": {
+  "ocr": 443.0632500000087,
+  "detect": 22.101499999990892,
+  "mask": 27.00616699998193
+ }
+}

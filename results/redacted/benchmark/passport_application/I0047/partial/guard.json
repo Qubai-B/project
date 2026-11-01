@@ -1,0 +1,75 @@
+{
+ "detector": "hybrid",
+ "task_id": "T05",
+ "needs": [
+  "nin",
+  "passport_no"
+ ],
+ "detections": [
+  {
+   "pii_type": "PERSON",
+   "field": "last_name",
+   "text": "Abdullahi",
+   "bbox": {
+    "x": 501.0,
+    "y": 191.0,
+    "w": 61.0,
+    "h": 11.5
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "PERSON",
+   "field": "first_name",
+   "text": "Chinedu",
+   "bbox": {
+    "x": 501.5,
+    "y": 237.5,
+    "w": 54.5,
+    "h": 12.0
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "DOB",
+   "field": "date_of_birth",
+   "text": "20/02/1961",
+   "bbox": {
+    "x": 501.0,
+    "y": 284.5,
+    "w": 72.5,
+    "h": 12.0
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "NIN",
+   "field": "nin",
+   "text": "92268018242",
+   "bbox": {
+    "x": 501.5,
+    "y": 332.0,
+    "w": 90.5,
+    "h": 11.5
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "PASSPORT",
+   "field": "passport_no",
+   "text": "C81602209",
+   "bbox": {
+    "x": 501.5,
+    "y": 378.5,
+    "w": 76.5,
+    "h": 12.0
+   },
+   "source": "label"
+  }
+ ],
+ "timings_ms": {
+  "ocr": 402.6872500000138,
+  "detect": 18.51045799998019,
+  "mask": 22.267457999987528
+ }
+}

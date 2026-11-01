@@ -1,0 +1,160 @@
+{
+ "detector": "hybrid",
+ "task_id": "T01",
+ "needs": [
+  "address_line",
+  "lga",
+  "state"
+ ],
+ "detections": [
+  {
+   "pii_type": "PERSON",
+   "field": "last_name",
+   "text": "Abdullahi",
+   "bbox": {
+    "x": 501.0,
+    "y": 191.0,
+    "w": 61.0,
+    "h": 11.5
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "PERSON",
+   "field": "first_name",
+   "text": "Chinedu",
+   "bbox": {
+    "x": 501.5,
+    "y": 237.5,
+    "w": 54.5,
+    "h": 12.0
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "DOB",
+   "field": "date_of_birth",
+   "text": "20/02/1961",
+   "bbox": {
+    "x": 501.0,
+    "y": 284.5,
+    "w": 72.5,
+    "h": 12.0
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "TIN",
+   "field": "tin",
+   "text": "95235919-0009",
+   "bbox": {
+    "x": 501.5,
+    "y": 332.0,
+    "w": 104.0,
+    "h": 11.5
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "NIN",
+   "field": "nin",
+   "text": "92268018242",
+   "bbox": {
+    "x": 501.5,
+    "y": 379.0,
+    "w": 90.5,
+    "h": 11.5
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "ADDRESS",
+   "field": "address_line",
+   "text": "45 Aba Road, New Haven",
+   "bbox": {
+    "x": 501.0,
+    "y": 484.0,
+    "w": 172.0,
+    "h": 13.0
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "ADDRESS",
+   "field": "lga",
+   "text": "Ikot Ekpene",
+   "bbox": {
+    "x": 502.0,
+    "y": 531.0,
+    "w": 78.0,
+    "h": 14.0
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "ADDRESS",
+   "field": "state",
+   "text": "Akwa Ibom",
+   "bbox": {
+    "x": 501.0,
+    "y": 578.0,
+    "w": 73.5,
+    "h": 11.5
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "FINANCIAL",
+   "field": "annual_income",
+   "text": "14420000",
+   "bbox": {
+    "x": 502.5,
+    "y": 683.0,
+    "w": 65.0,
+    "h": 11.5
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "BVN",
+   "field": "bvn",
+   "text": "22253584143",
+   "bbox": {
+    "x": 501.0,
+    "y": 730.0,
+    "w": 91.5,
+    "h": 11.5
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "BANK_ACCOUNT",
+   "field": "bank_account",
+   "text": "1178758213",
+   "bbox": {
+    "x": 502.5,
+    "y": 777.0,
+    "w": 80.5,
+    "h": 11.5
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "EMAIL",
+   "field": "email",
+   "text": "chinedu.abdullahi10@example.com",
+   "bbox": {
+    "x": 501.5,
+    "y": 823.5,
+    "w": 237.0,
+    "h": 14.5
+   },
+   "source": "label"
+  }
+ ],
+ "timings_ms": {
+  "ocr": 648.3815410000204,
+  "detect": 14.940541999976631,
+  "mask": 28.351833000016313
+ }
+}

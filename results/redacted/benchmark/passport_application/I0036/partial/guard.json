@@ -1,0 +1,75 @@
+{
+ "detector": "hybrid",
+ "task_id": "T05",
+ "needs": [
+  "nin",
+  "passport_no"
+ ],
+ "detections": [
+  {
+   "pii_type": "PERSON",
+   "field": "last_name",
+   "text": "Okafor",
+   "bbox": {
+    "x": 501.5,
+    "y": 190.5,
+    "w": 44.5,
+    "h": 12.0
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "PERSON",
+   "field": "first_name",
+   "text": "Abubakar",
+   "bbox": {
+    "x": 501.0,
+    "y": 238.0,
+    "w": 64.5,
+    "h": 11.5
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "DOB",
+   "field": "date_of_birth",
+   "text": "16/01/1985",
+   "bbox": {
+    "x": 502.5,
+    "y": 284.5,
+    "w": 73.5,
+    "h": 12.0
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "NIN",
+   "field": "nin",
+   "text": "36968164535",
+   "bbox": {
+    "x": 501.5,
+    "y": 332.0,
+    "w": 91.0,
+    "h": 11.5
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "PASSPORT",
+   "field": "passport_no",
+   "text": "B36477373",
+   "bbox": {
+    "x": 502.0,
+    "y": 379.0,
+    "w": 75.5,
+    "h": 11.5
+   },
+   "source": "label"
+  }
+ ],
+ "timings_ms": {
+  "ocr": 416.7632079999919,
+  "detect": 19.272292000010793,
+  "mask": 24.651374999990594
+ }
+}

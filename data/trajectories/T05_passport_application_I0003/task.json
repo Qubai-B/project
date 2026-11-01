@@ -1,0 +1,15 @@
+{
+  "task_id": "T05_passport_application_I0003",
+  "form_id": "passport_application",
+  "identity_id": "I0003",
+  "goal": "Enter the NIN and previous passport number (renewal)",
+  "needs": [
+    "nin",
+    "passport_no"
+  ],
+  "values": {
+    "nin": "95376724238",
+    "passport_no": "C66661351"
+  },
+  "n_steps": 3
+}

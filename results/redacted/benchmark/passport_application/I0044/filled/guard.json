@@ -1,0 +1,135 @@
+{
+ "detector": "hybrid",
+ "task_id": "T05",
+ "needs": [
+  "nin",
+  "passport_no"
+ ],
+ "detections": [
+  {
+   "pii_type": "PERSON",
+   "field": "last_name",
+   "text": "Shehu",
+   "bbox": {
+    "x": 501.5,
+    "y": 190.5,
+    "w": 42.0,
+    "h": 12.0
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "PERSON",
+   "field": "first_name",
+   "text": "Abubakar",
+   "bbox": {
+    "x": 501.0,
+    "y": 238.0,
+    "w": 64.5,
+    "h": 11.5
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "DOB",
+   "field": "date_of_birth",
+   "text": "15/02/1971",
+   "bbox": {
+    "x": 502.5,
+    "y": 284.5,
+    "w": 71.0,
+    "h": 12.0
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "NIN",
+   "field": "nin",
+   "text": "61692845115",
+   "bbox": {
+    "x": 501.5,
+    "y": 332.0,
+    "w": 89.5,
+    "h": 11.5
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "PASSPORT",
+   "field": "passport_no",
+   "text": "A95565484",
+   "bbox": {
+    "x": 501.0,
+    "y": 379.0,
+    "w": 76.5,
+    "h": 11.5
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "PHONE",
+   "field": "phone",
+   "text": "+234 806 608 9151",
+   "bbox": {
+    "x": 501.5,
+    "y": 484.0,
+    "w": 126.5,
+    "h": 11.5
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "EMAIL",
+   "field": "email",
+   "text": "abubakar.shehu44@example.com",
+   "bbox": {
+    "x": 501.5,
+    "y": 530.5,
+    "w": 227.0,
+    "h": 14.5
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "ADDRESS",
+   "field": "address_line",
+   "text": "48 Oron Road, Garki",
+   "bbox": {
+    "x": 501.0,
+    "y": 577.5,
+    "w": 137.5,
+    "h": 13.5
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "ADDRESS",
+   "field": "lga",
+   "text": "Kaduna North",
+   "bbox": {
+    "x": 502.0,
+    "y": 625.0,
+    "w": 91.0,
+    "h": 11.5
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "ADDRESS",
+   "field": "state",
+   "text": "Kaduna",
+   "bbox": {
+    "x": 502.0,
+    "y": 672.0,
+    "w": 50.0,
+    "h": 11.5
+   },
+   "source": "label"
+  }
+ ],
+ "timings_ms": {
+  "ocr": 479.7945419999792,
+  "detect": 18.32316700000547,
+  "mask": 22.63966700002129
+ }
+}

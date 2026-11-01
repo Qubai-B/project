@@ -1,0 +1,8 @@
+{
+  "step": 2,
+  "action": "type",
+  "target_field": "lga",
+  "selector": "#lga",
+  "value": "Eti-Osa",
+  "note": "gold action; the model is scored on target_field (and value for type actions)"
+}

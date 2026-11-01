@@ -1,0 +1,135 @@
+{
+ "detector": "hybrid",
+ "task_id": "T03",
+ "needs": [
+  "email",
+  "phone"
+ ],
+ "detections": [
+  {
+   "pii_type": "LICENCE_NO",
+   "field": "licence_no",
+   "text": "DEL81932GB46",
+   "bbox": {
+    "x": 502.0,
+    "y": 190.5,
+    "w": 108.0,
+    "h": 12.0
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "PERSON",
+   "field": "last_name",
+   "text": "Shehu",
+   "bbox": {
+    "x": 501.5,
+    "y": 295.5,
+    "w": 42.0,
+    "h": 12.0
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "PERSON",
+   "field": "first_name",
+   "text": "Olumide",
+   "bbox": {
+    "x": 501.5,
+    "y": 342.5,
+    "w": 55.0,
+    "h": 12.0
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "DOB",
+   "field": "date_of_birth",
+   "text": "16/02/1993",
+   "bbox": {
+    "x": 502.5,
+    "y": 389.5,
+    "w": 73.0,
+    "h": 12.0
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "NIN",
+   "field": "nin",
+   "text": "06068536153",
+   "bbox": {
+    "x": 501.5,
+    "y": 437.0,
+    "w": 91.0,
+    "h": 11.5
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "PHONE",
+   "field": "phone",
+   "text": "+234 905 193 4637",
+   "bbox": {
+    "x": 501.5,
+    "y": 542.0,
+    "w": 128.5,
+    "h": 11.5
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "EMAIL",
+   "field": "email",
+   "text": "olumide.shehu19@example.com",
+   "bbox": {
+    "x": 501.5,
+    "y": 588.5,
+    "w": 217.5,
+    "h": 14.5
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "ADDRESS",
+   "field": "address_line",
+   "text": "105 Nnebisi Road, New Haven",
+   "bbox": {
+    "x": 502.5,
+    "y": 636.0,
+    "w": 203.0,
+    "h": 13.0
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "ADDRESS",
+   "field": "lga",
+   "text": "Oshimili South",
+   "bbox": {
+    "x": 501.5,
+    "y": 682.5,
+    "w": 95.5,
+    "h": 12.0
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "ADDRESS",
+   "field": "state",
+   "text": "Delta",
+   "bbox": {
+    "x": 502.0,
+    "y": 730.0,
+    "w": 33.5,
+    "h": 11.5
+   },
+   "source": "label"
+  }
+ ],
+ "timings_ms": {
+  "ocr": 525.0374579999999,
+  "detect": 18.827166999997758,
+  "mask": 23.870584000007966
+ }
+}

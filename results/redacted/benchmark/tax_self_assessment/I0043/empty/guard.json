@@ -1,0 +1,15 @@
+{
+ "detector": "hybrid",
+ "task_id": "T01",
+ "needs": [
+  "address_line",
+  "lga",
+  "state"
+ ],
+ "detections": [],
+ "timings_ms": {
+  "ocr": 496.16487500000517,
+  "detect": 12.867875000011963,
+  "mask": 25.893083000028128
+ }
+}

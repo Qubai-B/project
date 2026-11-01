@@ -1,0 +1,7 @@
+{
+  "step": 0,
+  "action": "type",
+  "target_field": "phone",
+  "selector": "#phone",
+  "value": "+234 705 924 6168"
+}

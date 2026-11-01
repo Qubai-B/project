@@ -1,0 +1,75 @@
+{
+ "detector": "hybrid",
+ "task_id": "T03",
+ "needs": [
+  "email",
+  "phone"
+ ],
+ "detections": [
+  {
+   "pii_type": "LICENCE_NO",
+   "field": "licence_no",
+   "text": "LAG83519AB19",
+   "bbox": {
+    "x": 502.0,
+    "y": 190.5,
+    "w": 107.0,
+    "h": 12.0
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "PERSON",
+   "field": "last_name",
+   "text": "Akpan",
+   "bbox": {
+    "x": 501.0,
+    "y": 296.0,
+    "w": 42.0,
+    "h": 14.0
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "PERSON",
+   "field": "first_name",
+   "text": "Blessing",
+   "bbox": {
+    "x": 502.0,
+    "y": 343.0,
+    "w": 55.0,
+    "h": 14.0
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "DOB",
+   "field": "date_of_birth",
+   "text": "23/02/1978",
+   "bbox": {
+    "x": 501.0,
+    "y": 389.5,
+    "w": 74.5,
+    "h": 12.0
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "NIN",
+   "field": "nin",
+   "text": "18244935348",
+   "bbox": {
+    "x": 502.5,
+    "y": 437.0,
+    "w": 90.0,
+    "h": 11.5
+   },
+   "source": "label"
+  }
+ ],
+ "timings_ms": {
+  "ocr": 381.67124999999834,
+  "detect": 16.403208000001612,
+  "mask": 20.985165999997335
+ }
+}

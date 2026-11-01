@@ -1,0 +1,75 @@
+{
+ "detector": "hybrid",
+ "task_id": "T03",
+ "needs": [
+  "email",
+  "phone"
+ ],
+ "detections": [
+  {
+   "pii_type": "LICENCE_NO",
+   "field": "licence_no",
+   "text": "ANA61116GD72",
+   "bbox": {
+    "x": 501.0,
+    "y": 190.5,
+    "w": 109.0,
+    "h": 12.0
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "PERSON",
+   "field": "last_name",
+   "text": "Akpan",
+   "bbox": {
+    "x": 501.0,
+    "y": 296.0,
+    "w": 42.0,
+    "h": 14.0
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "PERSON",
+   "field": "first_name",
+   "text": "Olumide",
+   "bbox": {
+    "x": 501.5,
+    "y": 342.5,
+    "w": 55.0,
+    "h": 12.0
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "DOB",
+   "field": "date_of_birth",
+   "text": "29/04/1966",
+   "bbox": {
+    "x": 501.0,
+    "y": 389.5,
+    "w": 74.5,
+    "h": 12.0
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "NIN",
+   "field": "nin",
+   "text": "55812236231",
+   "bbox": {
+    "x": 501.5,
+    "y": 437.0,
+    "w": 89.0,
+    "h": 11.5
+   },
+   "source": "label"
+  }
+ ],
+ "timings_ms": {
+  "ocr": 451.3003750000024,
+  "detect": 19.113665999999085,
+  "mask": 23.85991599999926
+ }
+}

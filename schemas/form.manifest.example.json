@@ -1,0 +1,13 @@
+{
+  "form_id": "tax_self_assessment",
+  "title": "Personal Income Tax Self-Assessment",
+  "agency": "State Internal Revenue Service (mock)",
+  "fields": [
+    { "name": "tin", "selector": "#tin", "pii_type": "TIN", "identity_key": "tin", "fill_order": 4 },
+    { "name": "bank_account", "selector": "#bank_account", "pii_type": "BANK_ACCOUNT", "identity_key": "bank_account", "fill_order": 11 }
+  ],
+  "tasks": {
+    "T01": { "goal": "Enter the taxpayer's residential address and continue", "needs": ["address_line", "lga", "state"] }
+  },
+  "_pii_types": ["PERSON", "DOB", "NIN", "BVN", "TIN", "PHONE", "EMAIL", "ADDRESS", "FINANCIAL", "BANK_ACCOUNT", "PASSPORT", "LICENCE_NO"]
+}

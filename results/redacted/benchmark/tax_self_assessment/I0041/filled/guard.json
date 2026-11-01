@@ -1,0 +1,160 @@
+{
+ "detector": "hybrid",
+ "task_id": "T01",
+ "needs": [
+  "address_line",
+  "lga",
+  "state"
+ ],
+ "detections": [
+  {
+   "pii_type": "PERSON",
+   "field": "last_name",
+   "text": "Shehu",
+   "bbox": {
+    "x": 501.5,
+    "y": 190.5,
+    "w": 42.0,
+    "h": 12.0
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "PERSON",
+   "field": "first_name",
+   "text": "Olumide",
+   "bbox": {
+    "x": 501.5,
+    "y": 237.5,
+    "w": 55.0,
+    "h": 12.0
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "DOB",
+   "field": "date_of_birth",
+   "text": "16/02/1993",
+   "bbox": {
+    "x": 502.5,
+    "y": 284.5,
+    "w": 73.0,
+    "h": 12.0
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "TIN",
+   "field": "tin",
+   "text": "28628439-0008",
+   "bbox": {
+    "x": 501.0,
+    "y": 332.0,
+    "w": 104.5,
+    "h": 11.5
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "NIN",
+   "field": "nin",
+   "text": "06068536153",
+   "bbox": {
+    "x": 501.5,
+    "y": 379.0,
+    "w": 91.0,
+    "h": 11.5
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "ADDRESS",
+   "field": "address_line",
+   "text": "105 Nnebisi Road, New Haven",
+   "bbox": {
+    "x": 502.5,
+    "y": 484.0,
+    "w": 203.0,
+    "h": 13.0
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "ADDRESS",
+   "field": "lga",
+   "text": "Oshimili South",
+   "bbox": {
+    "x": 501.5,
+    "y": 530.5,
+    "w": 95.5,
+    "h": 12.0
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "ADDRESS",
+   "field": "state",
+   "text": "Delta",
+   "bbox": {
+    "x": 502.0,
+    "y": 578.0,
+    "w": 33.5,
+    "h": 11.5
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "FINANCIAL",
+   "field": "annual_income",
+   "text": "10330000",
+   "bbox": {
+    "x": 502.5,
+    "y": 683.0,
+    "w": 65.0,
+    "h": 11.5
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "BVN",
+   "field": "bvn",
+   "text": "22051522047",
+   "bbox": {
+    "x": 501.0,
+    "y": 730.0,
+    "w": 91.5,
+    "h": 11.5
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "BANK_ACCOUNT",
+   "field": "bank_account",
+   "text": "0340272119",
+   "bbox": {
+    "x": 501.5,
+    "y": 777.0,
+    "w": 81.5,
+    "h": 11.5
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "EMAIL",
+   "field": "email",
+   "text": "olumide.shehu1 9@example.com",
+   "bbox": {
+    "x": 501.5,
+    "y": 823.5,
+    "w": 217.5,
+    "h": 14.5
+   },
+   "source": "label"
+  }
+ ],
+ "timings_ms": {
+  "ocr": 573.4962090000124,
+  "detect": 14.841582999991942,
+  "mask": 27.374374999993734
+ }
+}

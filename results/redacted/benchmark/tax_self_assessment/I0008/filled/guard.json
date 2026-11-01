@@ -1,0 +1,160 @@
+{
+ "detector": "hybrid",
+ "task_id": "T01",
+ "needs": [
+  "address_line",
+  "lga",
+  "state"
+ ],
+ "detections": [
+  {
+   "pii_type": "PERSON",
+   "field": "last_name",
+   "text": "Danjuma",
+   "bbox": {
+    "x": 502.0,
+    "y": 191.0,
+    "w": 58.5,
+    "h": 14.0
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "PERSON",
+   "field": "first_name",
+   "text": "Babatunde",
+   "bbox": {
+    "x": 502.0,
+    "y": 238.0,
+    "w": 71.0,
+    "h": 11.5
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "DOB",
+   "field": "date_of_birth",
+   "text": "24/05/1960",
+   "bbox": {
+    "x": 501.0,
+    "y": 284.5,
+    "w": 74.5,
+    "h": 12.0
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "TIN",
+   "field": "tin",
+   "text": "45594597-0003",
+   "bbox": {
+    "x": 501.0,
+    "y": 332.0,
+    "w": 104.5,
+    "h": 11.5
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "NIN",
+   "field": "nin",
+   "text": "43534624751",
+   "bbox": {
+    "x": 501.0,
+    "y": 379.0,
+    "w": 89.5,
+    "h": 11.5
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "ADDRESS",
+   "field": "address_line",
+   "text": "80 Allen Avenue, Bodija",
+   "bbox": {
+    "x": 501.5,
+    "y": 484.0,
+    "w": 156.5,
+    "h": 14.0
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "ADDRESS",
+   "field": "lga",
+   "text": "Bwari",
+   "bbox": {
+    "x": 502.0,
+    "y": 531.0,
+    "w": 36.0,
+    "h": 11.5
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "ADDRESS",
+   "field": "state",
+   "text": "FCT",
+   "bbox": {
+    "x": 502.0,
+    "y": 577.5,
+    "w": 28.0,
+    "h": 12.0
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "FINANCIAL",
+   "field": "annual_income",
+   "text": "12990000",
+   "bbox": {
+    "x": 502.5,
+    "y": 683.0,
+    "w": 65.0,
+    "h": 11.5
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "BVN",
+   "field": "bvn",
+   "text": "22079911838",
+   "bbox": {
+    "x": 501.0,
+    "y": 730.0,
+    "w": 90.0,
+    "h": 11.5
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "BANK_ACCOUNT",
+   "field": "bank_account",
+   "text": "8303285822",
+   "bbox": {
+    "x": 501.5,
+    "y": 777.0,
+    "w": 82.5,
+    "h": 11.5
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "EMAIL",
+   "field": "email",
+   "text": "babatunde.danjuma73@example.com",
+   "bbox": {
+    "x": 501.5,
+    "y": 823.5,
+    "w": 252.5,
+    "h": 14.5
+   },
+   "source": "label"
+  }
+ ],
+ "timings_ms": {
+  "ocr": 601.5497089999826,
+  "detect": 14.219625000009728,
+  "mask": 28.777999999988424
+ }
+}

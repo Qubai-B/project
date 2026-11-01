@@ -1,0 +1,75 @@
+{
+ "detector": "hybrid",
+ "task_id": "T03",
+ "needs": [
+  "email",
+  "phone"
+ ],
+ "detections": [
+  {
+   "pii_type": "LICENCE_NO",
+   "field": "licence_no",
+   "text": "OY0O88282GC30",
+   "bbox": {
+    "x": 501.5,
+    "y": 190.5,
+    "w": 113.5,
+    "h": 12.0
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "PERSON",
+   "field": "last_name",
+   "text": "Mohammed",
+   "bbox": {
+    "x": 502.0,
+    "y": 296.0,
+    "w": 77.5,
+    "h": 11.5
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "PERSON",
+   "field": "first_name",
+   "text": "Amara",
+   "bbox": {
+    "x": 501.0,
+    "y": 343.0,
+    "w": 43.5,
+    "h": 11.5
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "DOB",
+   "field": "date_of_birth",
+   "text": "16/06/2001",
+   "bbox": {
+    "x": 502.5,
+    "y": 389.5,
+    "w": 71.0,
+    "h": 12.0
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "NIN",
+   "field": "nin",
+   "text": "52816850542",
+   "bbox": {
+    "x": 501.5,
+    "y": 437.0,
+    "w": 90.5,
+    "h": 11.5
+   },
+   "source": "label"
+  }
+ ],
+ "timings_ms": {
+  "ocr": 4134.2283329999955,
+  "detect": 73.74441700000034,
+  "mask": 34.627291999996146
+ }
+}

@@ -1,0 +1,160 @@
+{
+ "detector": "hybrid",
+ "task_id": "T01",
+ "needs": [
+  "address_line",
+  "lga",
+  "state"
+ ],
+ "detections": [
+  {
+   "pii_type": "PERSON",
+   "field": "last_name",
+   "text": "Abdullahi",
+   "bbox": {
+    "x": 501.0,
+    "y": 191.0,
+    "w": 61.0,
+    "h": 11.5
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "PERSON",
+   "field": "first_name",
+   "text": "Usman",
+   "bbox": {
+    "x": 502.0,
+    "y": 238.0,
+    "w": 46.0,
+    "h": 11.5
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "DOB",
+   "field": "date_of_birth",
+   "text": "15/10/1992",
+   "bbox": {
+    "x": 502.5,
+    "y": 284.5,
+    "w": 73.0,
+    "h": 12.0
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "TIN",
+   "field": "tin",
+   "text": "54265498-0007",
+   "bbox": {
+    "x": 501.5,
+    "y": 332.0,
+    "w": 104.0,
+    "h": 11.5
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "NIN",
+   "field": "nin",
+   "text": "49027874296",
+   "bbox": {
+    "x": 501.0,
+    "y": 379.0,
+    "w": 91.5,
+    "h": 11.5
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "ADDRESS",
+   "field": "address_line",
+   "text": "87 Adeola Odeku Street, Asokoro",
+   "bbox": {
+    "x": 501.5,
+    "y": 483.5,
+    "w": 221.0,
+    "h": 13.5
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "ADDRESS",
+   "field": "lga",
+   "text": "Ikpoba-Okha",
+   "bbox": {
+    "x": 502.0,
+    "y": 530.5,
+    "w": 84.5,
+    "h": 14.5
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "ADDRESS",
+   "field": "state",
+   "text": "Edo",
+   "bbox": {
+    "x": 502.0,
+    "y": 578.0,
+    "w": 25.0,
+    "h": 11.5
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "FINANCIAL",
+   "field": "annual_income",
+   "text": "13480000",
+   "bbox": {
+    "x": 502.5,
+    "y": 683.0,
+    "w": 65.0,
+    "h": 11.5
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "BVN",
+   "field": "bvn",
+   "text": "22717565512",
+   "bbox": {
+    "x": 501.0,
+    "y": 730.0,
+    "w": 91.0,
+    "h": 11.5
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "BANK_ACCOUNT",
+   "field": "bank_account",
+   "text": "7274273035",
+   "bbox": {
+    "x": 501.5,
+    "y": 777.0,
+    "w": 82.5,
+    "h": 11.5
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "EMAIL",
+   "field": "email",
+   "text": "usman.abdullahi33@example.com",
+   "bbox": {
+    "x": 501.5,
+    "y": 823.5,
+    "w": 229.0,
+    "h": 14.5
+   },
+   "source": "label"
+  }
+ ],
+ "timings_ms": {
+  "ocr": 913.425583999981,
+  "detect": 20.916375000012977,
+  "mask": 44.92654099999527
+ }
+}

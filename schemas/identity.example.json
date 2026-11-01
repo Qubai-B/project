@@ -1,0 +1,19 @@
+{
+  "id": "I0007",
+  "first_name": "Chiamaka",
+  "last_name": "Okonkwo",
+  "date_of_birth": "14/03/1987",
+  "email": "chiamaka.okonkwo@example.com",
+  "phone": "+234 803 456 7890",
+  "address_line": "12 Adeola Odeku Street, Victoria Island",
+  "lga": "Eti-Osa",
+  "state": "Lagos",
+  "nin": "12345678901",
+  "bvn": "22123456789",
+  "tin": "12345678-0001",
+  "bank_account": "0123456789",
+  "bank_name": "Access Bank",
+  "passport_no": "A12345678",
+  "licence_no": "LAG12345AB67",
+  "annual_income": "4200000"
+}

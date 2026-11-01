@@ -1,0 +1,135 @@
+{
+ "detector": "hybrid",
+ "task_id": "T03",
+ "needs": [
+  "email",
+  "phone"
+ ],
+ "detections": [
+  {
+   "pii_type": "LICENCE_NO",
+   "field": "licence_no",
+   "text": "ABJ42742BH80",
+   "bbox": {
+    "x": 501.0,
+    "y": 191.0,
+    "w": 106.5,
+    "h": 11.5
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "PERSON",
+   "field": "last_name",
+   "text": "Bello",
+   "bbox": {
+    "x": 502.0,
+    "y": 296.0,
+    "w": 32.0,
+    "h": 11.5
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "PERSON",
+   "field": "first_name",
+   "text": "Ngozi",
+   "bbox": {
+    "x": 502.0,
+    "y": 343.0,
+    "w": 36.5,
+    "h": 14.0
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "DOB",
+   "field": "date_of_birth",
+   "text": "27/08/1991",
+   "bbox": {
+    "x": 501.0,
+    "y": 389.5,
+    "w": 72.5,
+    "h": 12.0
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "NIN",
+   "field": "nin",
+   "text": "37631165667",
+   "bbox": {
+    "x": 501.5,
+    "y": 437.0,
+    "w": 89.5,
+    "h": 11.5
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "PHONE",
+   "field": "phone",
+   "text": "+234 810 385 8953",
+   "bbox": {
+    "x": 501.5,
+    "y": 542.0,
+    "w": 128.5,
+    "h": 11.5
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "EMAIL",
+   "field": "email",
+   "text": "ngozi.bello66@example.com",
+   "bbox": {
+    "x": 501.5,
+    "y": 588.5,
+    "w": 191.5,
+    "h": 14.5
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "ADDRESS",
+   "field": "address_line",
+   "text": "28 Isaac John Street, Ikoyi",
+   "bbox": {
+    "x": 501.0,
+    "y": 635.5,
+    "w": 176.0,
+    "h": 14.5
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "ADDRESS",
+   "field": "lga",
+   "text": "Kuje",
+   "bbox": {
+    "x": 502.0,
+    "y": 683.0,
+    "w": 28.5,
+    "h": 14.0
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "ADDRESS",
+   "field": "state",
+   "text": "FCT",
+   "bbox": {
+    "x": 502.0,
+    "y": 729.5,
+    "w": 28.0,
+    "h": 12.0
+   },
+   "source": "label"
+  }
+ ],
+ "timings_ms": {
+  "ocr": 419.56470800000113,
+  "detect": 17.586874999999225,
+  "mask": 21.42204199999931
+ }
+}

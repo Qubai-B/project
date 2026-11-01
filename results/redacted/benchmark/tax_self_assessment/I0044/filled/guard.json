@@ -1,0 +1,160 @@
+{
+ "detector": "hybrid",
+ "task_id": "T01",
+ "needs": [
+  "address_line",
+  "lga",
+  "state"
+ ],
+ "detections": [
+  {
+   "pii_type": "PERSON",
+   "field": "last_name",
+   "text": "Shehu",
+   "bbox": {
+    "x": 501.5,
+    "y": 190.5,
+    "w": 42.0,
+    "h": 12.0
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "PERSON",
+   "field": "first_name",
+   "text": "Abubakar",
+   "bbox": {
+    "x": 501.0,
+    "y": 238.0,
+    "w": 64.5,
+    "h": 11.5
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "DOB",
+   "field": "date_of_birth",
+   "text": "15/02/1971",
+   "bbox": {
+    "x": 502.5,
+    "y": 284.5,
+    "w": 71.0,
+    "h": 12.0
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "TIN",
+   "field": "tin",
+   "text": "15684813-0006",
+   "bbox": {
+    "x": 502.5,
+    "y": 332.0,
+    "w": 103.0,
+    "h": 11.5
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "NIN",
+   "field": "nin",
+   "text": "61692845115",
+   "bbox": {
+    "x": 501.5,
+    "y": 379.0,
+    "w": 89.5,
+    "h": 11.5
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "ADDRESS",
+   "field": "address_line",
+   "text": "48 Oron Road, Garki",
+   "bbox": {
+    "x": 501.0,
+    "y": 483.5,
+    "w": 137.5,
+    "h": 13.5
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "ADDRESS",
+   "field": "lga",
+   "text": "Kaduna North",
+   "bbox": {
+    "x": 502.0,
+    "y": 531.0,
+    "w": 91.0,
+    "h": 11.5
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "ADDRESS",
+   "field": "state",
+   "text": "Kaduna",
+   "bbox": {
+    "x": 502.0,
+    "y": 578.0,
+    "w": 50.0,
+    "h": 11.5
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "FINANCIAL",
+   "field": "annual_income",
+   "text": "6440000",
+   "bbox": {
+    "x": 501.5,
+    "y": 683.0,
+    "w": 57.5,
+    "h": 11.5
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "BVN",
+   "field": "bvn",
+   "text": "22447962757",
+   "bbox": {
+    "x": 501.0,
+    "y": 730.0,
+    "w": 91.5,
+    "h": 11.5
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "BANK_ACCOUNT",
+   "field": "bank_account",
+   "text": "6163022531",
+   "bbox": {
+    "x": 501.5,
+    "y": 777.0,
+    "w": 80.5,
+    "h": 11.5
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "EMAIL",
+   "field": "email",
+   "text": "abubakar.shehu44@example.com",
+   "bbox": {
+    "x": 501.5,
+    "y": 823.5,
+    "w": 227.0,
+    "h": 14.5
+   },
+   "source": "label"
+  }
+ ],
+ "timings_ms": {
+  "ocr": 541.1287500000128,
+  "detect": 12.550208999982715,
+  "mask": 25.528667000003225
+ }
+}

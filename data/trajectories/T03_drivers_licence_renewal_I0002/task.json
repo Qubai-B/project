@@ -1,0 +1,15 @@
+{
+  "task_id": "T03_drivers_licence_renewal_I0002",
+  "form_id": "drivers_licence_renewal",
+  "identity_id": "I0002",
+  "goal": "Enter the applicant's phone number and email address",
+  "needs": [
+    "phone",
+    "email"
+  ],
+  "values": {
+    "phone": "+234 906 649 3045",
+    "email": "ladi.olawale94@example.com"
+  },
+  "n_steps": 3
+}

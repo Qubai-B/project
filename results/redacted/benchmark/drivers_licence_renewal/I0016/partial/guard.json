@@ -1,0 +1,75 @@
+{
+ "detector": "hybrid",
+ "task_id": "T03",
+ "needs": [
+  "email",
+  "phone"
+ ],
+ "detections": [
+  {
+   "pii_type": "LICENCE_NO",
+   "field": "licence_no",
+   "text": "KAN25866AF78",
+   "bbox": {
+    "x": 502.0,
+    "y": 191.0,
+    "w": 107.0,
+    "h": 11.5
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "PERSON",
+   "field": "last_name",
+   "text": "Okafor",
+   "bbox": {
+    "x": 501.5,
+    "y": 295.5,
+    "w": 44.5,
+    "h": 12.0
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "PERSON",
+   "field": "first_name",
+   "text": "Ngozi",
+   "bbox": {
+    "x": 502.0,
+    "y": 343.0,
+    "w": 36.5,
+    "h": 14.0
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "DOB",
+   "field": "date_of_birth",
+   "text": "01/09/1984",
+   "bbox": {
+    "x": 501.5,
+    "y": 389.5,
+    "w": 74.0,
+    "h": 12.0
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "NIN",
+   "field": "nin",
+   "text": "93745299124",
+   "bbox": {
+    "x": 501.5,
+    "y": 437.0,
+    "w": 91.0,
+    "h": 11.5
+   },
+   "source": "label"
+  }
+ ],
+ "timings_ms": {
+  "ocr": 434.9620409999986,
+  "detect": 17.488667000002067,
+  "mask": 21.74670799999845
+ }
+}

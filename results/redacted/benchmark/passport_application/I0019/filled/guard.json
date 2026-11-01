@@ -1,0 +1,135 @@
+{
+ "detector": "hybrid",
+ "task_id": "T05",
+ "needs": [
+  "nin",
+  "passport_no"
+ ],
+ "detections": [
+  {
+   "pii_type": "PERSON",
+   "field": "last_name",
+   "text": "Balogun",
+   "bbox": {
+    "x": 502.0,
+    "y": 191.0,
+    "w": 53.5,
+    "h": 14.0
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "PERSON",
+   "field": "first_name",
+   "text": "Folake",
+   "bbox": {
+    "x": 502.0,
+    "y": 238.0,
+    "w": 43.5,
+    "h": 11.5
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "DOB",
+   "field": "date_of_birth",
+   "text": "08/09/1998",
+   "bbox": {
+    "x": 501.5,
+    "y": 284.5,
+    "w": 74.0,
+    "h": 12.0
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "NIN",
+   "field": "nin",
+   "text": "43524082400",
+   "bbox": {
+    "x": 501.0,
+    "y": 332.0,
+    "w": 91.5,
+    "h": 11.5
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "PASSPORT",
+   "field": "passport_no",
+   "text": "B74119726",
+   "bbox": {
+    "x": 502.0,
+    "y": 379.0,
+    "w": 74.0,
+    "h": 11.5
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "PHONE",
+   "field": "phone",
+   "text": "+234 907 383 9595",
+   "bbox": {
+    "x": 501.5,
+    "y": 484.0,
+    "w": 128.5,
+    "h": 11.5
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "EMAIL",
+   "field": "email",
+   "text": "folake.balogun95@example.com",
+   "bbox": {
+    "x": 501.0,
+    "y": 530.5,
+    "w": 218.0,
+    "h": 14.5
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "ADDRESS",
+   "field": "address_line",
+   "text": "77 Olu Obasanjo Road, GRA",
+   "bbox": {
+    "x": 501.5,
+    "y": 577.5,
+    "w": 193.0,
+    "h": 14.5
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "ADDRESS",
+   "field": "lga",
+   "text": "Fagge",
+   "bbox": {
+    "x": 502.0,
+    "y": 625.0,
+    "w": 41.0,
+    "h": 14.0
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "ADDRESS",
+   "field": "state",
+   "text": "Kano",
+   "bbox": {
+    "x": 502.0,
+    "y": 672.0,
+    "w": 34.0,
+    "h": 11.5
+   },
+   "source": "label"
+  }
+ ],
+ "timings_ms": {
+  "ocr": 430.54100000000517,
+  "detect": 16.867957999991745,
+  "mask": 20.775124999985906
+ }
+}

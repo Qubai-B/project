@@ -1,0 +1,21 @@
+{
+  "form_id": "drivers_licence_renewal",
+  "title": "Driver's Licence Renewal",
+  "agency": "Federal Road Safety Corps (mock)",
+  "fields": [
+    { "name": "licence_no",    "selector": "#licence_no",    "pii_type": "LICENCE_NO", "identity_key": "licence_no",    "fill_order": 1 },
+    { "name": "last_name",     "selector": "#last_name",     "pii_type": "PERSON",     "identity_key": "last_name",     "fill_order": 2 },
+    { "name": "first_name",    "selector": "#first_name",    "pii_type": "PERSON",     "identity_key": "first_name",    "fill_order": 3 },
+    { "name": "date_of_birth", "selector": "#date_of_birth", "pii_type": "DOB",        "identity_key": "date_of_birth", "fill_order": 4 },
+    { "name": "nin",           "selector": "#nin",           "pii_type": "NIN",        "identity_key": "nin",           "fill_order": 5 },
+    { "name": "phone",         "selector": "#phone",         "pii_type": "PHONE",      "identity_key": "phone",         "fill_order": 6 },
+    { "name": "email",         "selector": "#email",         "pii_type": "EMAIL",      "identity_key": "email",         "fill_order": 7 },
+    { "name": "address_line",  "selector": "#address_line",  "pii_type": "ADDRESS",    "identity_key": "address_line",  "fill_order": 8 },
+    { "name": "lga",           "selector": "#lga",           "pii_type": "ADDRESS",    "identity_key": "lga",           "fill_order": 9 },
+    { "name": "state",         "selector": "#state",         "pii_type": "ADDRESS",    "identity_key": "state",         "fill_order": 10 }
+  ],
+  "tasks": {
+    "T03": { "goal": "Enter the applicant's phone number and email address",      "needs": ["phone", "email"] },
+    "T04": { "goal": "Enter the existing licence number and NIN for verification", "needs": ["licence_no", "nin"] }
+  }
+}

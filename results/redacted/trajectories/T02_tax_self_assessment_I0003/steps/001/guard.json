@@ -1,0 +1,136 @@
+{
+ "detector": "hybrid",
+ "task_id": "T02",
+ "needs": [
+  "annual_income",
+  "bank_account",
+  "bvn"
+ ],
+ "detections": [
+  {
+   "pii_type": "PERSON",
+   "field": "last_name",
+   "text": "Abdullahi",
+   "bbox": {
+    "x": 501.0,
+    "y": 191.0,
+    "w": 61.0,
+    "h": 11.5
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "PERSON",
+   "field": "first_name",
+   "text": "Yetunde",
+   "bbox": {
+    "x": 501.0,
+    "y": 238.0,
+    "w": 54.0,
+    "h": 11.5
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "DOB",
+   "field": "date_of_birth",
+   "text": "13/05/1970",
+   "bbox": {
+    "x": 502.5,
+    "y": 284.5,
+    "w": 73.0,
+    "h": 12.0
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "TIN",
+   "field": "tin",
+   "text": "78387461-0008",
+   "bbox": {
+    "x": 501.5,
+    "y": 332.0,
+    "w": 104.0,
+    "h": 11.5
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "NIN",
+   "field": "nin",
+   "text": "95376724238",
+   "bbox": {
+    "x": 501.5,
+    "y": 379.0,
+    "w": 91.0,
+    "h": 11.5
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "ADDRESS",
+   "field": "address_line",
+   "text": "52 Murtala Mohammed Way, GRA",
+   "bbox": {
+    "x": 501.5,
+    "y": 483.5,
+    "w": 227.0,
+    "h": 14.5
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "ADDRESS",
+   "field": "lga",
+   "text": "Ikeja",
+   "bbox": {
+    "x": 502.0,
+    "y": 531.0,
+    "w": 30.0,
+    "h": 14.0
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "ADDRESS",
+   "field": "state",
+   "text": "Lagos",
+   "bbox": {
+    "x": 502.0,
+    "y": 578.0,
+    "w": 39.5,
+    "h": 14.0
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "FINANCIAL",
+   "field": "annual_income",
+   "text": "25000000",
+   "bbox": {
+    "x": 501.0,
+    "y": 683.0,
+    "w": 66.5,
+    "h": 11.5
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "EMAIL",
+   "field": "email",
+   "text": "yetunde.abdullahi30@example.com",
+   "bbox": {
+    "x": 501.0,
+    "y": 813.5,
+    "w": 238.0,
+    "h": 26.5
+   },
+   "source": "label"
+  }
+ ],
+ "timings_ms": {
+  "ocr": 551.7884170000116,
+  "detect": 13.535416999957306,
+  "mask": 27.229207999994287
+ }
+}

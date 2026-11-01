@@ -1,0 +1,204 @@
+{
+  "source_html": "page.html",
+  "screenshot": "screenshot.png",
+  "viewport": {
+    "width": 1280,
+    "height": 1000,
+    "device_scale_factor": 1
+  },
+  "form_id": "drivers_licence_renewal",
+  "identity_id": "I0045",
+  "fill_state": "filled",
+  "pii": [
+    {
+      "field": "licence_no",
+      "pii_type": "LICENCE_NO",
+      "value": "LAG38124EH35",
+      "bbox": {
+        "x": 501,
+        "y": 188,
+        "w": 109.2,
+        "h": 17
+      },
+      "input_bbox": {
+        "x": 490,
+        "y": 180,
+        "w": 560,
+        "h": 33
+      },
+      "needed": false,
+      "visible": true
+    },
+    {
+      "field": "last_name",
+      "pii_type": "PERSON",
+      "value": "Shehu",
+      "bbox": {
+        "x": 501,
+        "y": 293,
+        "w": 43.4,
+        "h": 17
+      },
+      "input_bbox": {
+        "x": 490,
+        "y": 285,
+        "w": 560,
+        "h": 33
+      },
+      "needed": false,
+      "visible": true
+    },
+    {
+      "field": "first_name",
+      "pii_type": "PERSON",
+      "value": "Ladi",
+      "bbox": {
+        "x": 501,
+        "y": 340,
+        "w": 28.4,
+        "h": 17
+      },
+      "input_bbox": {
+        "x": 490,
+        "y": 332,
+        "w": 560,
+        "h": 33
+      },
+      "needed": false,
+      "visible": true
+    },
+    {
+      "field": "date_of_birth",
+      "pii_type": "DOB",
+      "value": "06/01/1960",
+      "bbox": {
+        "x": 501,
+        "y": 387,
+        "w": 75.1,
+        "h": 17
+      },
+      "input_bbox": {
+        "x": 490,
+        "y": 379,
+        "w": 560,
+        "h": 33
+      },
+      "needed": false,
+      "visible": true
+    },
+    {
+      "field": "nin",
+      "pii_type": "NIN",
+      "value": "92755719285",
+      "bbox": {
+        "x": 501,
+        "y": 434,
+        "w": 91.8,
+        "h": 17
+      },
+      "input_bbox": {
+        "x": 490,
+        "y": 426,
+        "w": 560,
+        "h": 33
+      },
+      "needed": false,
+      "visible": true
+    },
+    {
+      "field": "phone",
+      "pii_type": "PHONE",
+      "value": "+234 706 341 7001",
+      "bbox": {
+        "x": 501,
+        "y": 539,
+        "w": 129.7,
+        "h": 17
+      },
+      "input_bbox": {
+        "x": 490,
+        "y": 531,
+        "w": 560,
+        "h": 33
+      },
+      "needed": false,
+      "visible": true
+    },
+    {
+      "field": "email",
+      "pii_type": "EMAIL",
+      "value": "ladi.shehu17@example.com",
+      "bbox": {
+        "x": 501,
+        "y": 586,
+        "w": 189.5,
+        "h": 17
+      },
+      "input_bbox": {
+        "x": 490,
+        "y": 578,
+        "w": 560,
+        "h": 33
+      },
+      "needed": false,
+      "visible": true
+    },
+    {
+      "field": "address_line",
+      "pii_type": "ADDRESS",
+      "value": "47 Ogui Road, Nasarawa GRA",
+      "bbox": {
+        "x": 501,
+        "y": 633,
+        "w": 205.1,
+        "h": 17
+      },
+      "input_bbox": {
+        "x": 490,
+        "y": 625,
+        "w": 560,
+        "h": 33
+      },
+      "needed": false,
+      "visible": true
+    },
+    {
+      "field": "lga",
+      "pii_type": "ADDRESS",
+      "value": "Eti-Osa",
+      "bbox": {
+        "x": 501,
+        "y": 680,
+        "w": 50.0,
+        "h": 17
+      },
+      "input_bbox": {
+        "x": 490,
+        "y": 672,
+        "w": 560,
+        "h": 33
+      },
+      "needed": false,
+      "visible": true
+    },
+    {
+      "field": "state",
+      "pii_type": "ADDRESS",
+      "value": "Lagos",
+      "bbox": {
+        "x": 501,
+        "y": 727,
+        "w": 40.9,
+        "h": 17
+      },
+      "input_bbox": {
+        "x": 490,
+        "y": 719,
+        "w": 560,
+        "h": 33
+      },
+      "needed": false,
+      "visible": true
+    }
+  ]
+}

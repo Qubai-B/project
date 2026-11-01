@@ -1,0 +1,74 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="utf-8">
+<title>Personal Income Tax Self-Assessment — Mock Portal</title>
+<style>
+/* Shared look for all mock portals: plain, like a Nigerian federal/state e-service page. */
+body { font-family: Arial, Helvetica, sans-serif; margin: 0; background: #f3f6f4; color: #1a1a1a; }
+header { background: #008751; color: #fff; padding: 20px 48px; }
+header h1 { margin: 0; font-size: 22px; }
+header p  { margin: 4px 0 0; font-size: 13px; opacity: .9; }
+main { max-width: 820px; margin: 32px auto; background: #fff; padding: 32px 48px; border: 1px solid #d6dbd8; }
+fieldset { border: none; padding: 0; margin: 0 0 28px; }
+legend { font-weight: bold; font-size: 16px; margin-bottom: 12px; color: #008751; }
+.row { display: grid; grid-template-columns: 260px 1fr; align-items: center; margin-bottom: 14px; }
+label { font-size: 14px; }
+input { font-size: 15px; padding: 7px 10px; border: 1px solid #555; background: #fafafa; width: 100%; box-sizing: border-box; }
+.actions { display: flex; justify-content: flex-end; gap: 12px; }
+button { font-size: 15px; padding: 10px 22px; border: none; background: #008751; color: #fff; }
+button.secondary { background: #fff; color: #008751; border: 1px solid #008751; }
+footer { text-align: center; font-size: 12px; color: #666; padding: 24px; }
+</style>
+</head>
+<body>
+<header>
+  <h1>Personal Income Tax Self-Assessment</h1>
+  <p>State Internal Revenue Service — demonstration portal, synthetic data only</p>
+</header>
+<main>
+  <form id="tax_self_assessment" autocomplete="off">
+
+    <fieldset>
+      <legend>1. Taxpayer Identity</legend>
+      <div class="row"><label for="last_name">Surname</label>
+        <input id="last_name" name="last_name" value="Akinwande"></div>
+      <div class="row"><label for="first_name">First Name</label>
+        <input id="first_name" name="first_name" value="Fatima"></div>
+      <div class="row"><label for="date_of_birth">Date of Birth (DD/MM/YYYY)</label>
+        <input id="date_of_birth" name="date_of_birth" value="26/07/1998"></div>
+      <div class="row"><label for="tin">Tax Identification Number (TIN)</label>
+        <input id="tin" name="tin" value="63904155-0007"></div>
+      <div class="row"><label for="nin">National Identification Number (NIN)</label>
+        <input id="nin" name="nin" value="81177589178"></div>
+    </fieldset>
+
+    <fieldset>
+      <legend>2. Residential Address</legend>
+      <div class="row"><label for="address_line">Street Address</label>
+        <input id="address_line" name="address_line" value="7 Aba Road, Maitama"></div>
+      <div class="row"><label for="lga">Local Government Area</label>
+        <input id="lga" name="lga" value=""></div>
+      <div class="row"><label for="state">State of Residence</label>
+        <input id="state" name="state" value=""></div>
+    </fieldset>
+
+    <fieldset>
+      <legend>3. Income and Bank Details</legend>
+      <div class="row"><label for="annual_income">Annual Income (₦)</label>
+        <input id="annual_income" name="annual_income" value=""></div>
+      <div class="row"><label for="bvn">Bank Verification Number (BVN)</label>
+        <input id="bvn" name="bvn" value=""></div>
+      <div class="row"><label for="bank_account">Bank Account Number (NUBAN)</label>
+        <input id="bank_account" name="bank_account" value=""></div>
+      <div class="row"><label for="email">Email Address</label>
+        <input id="email" name="email" value=""></div>
+    </fieldset>
+
+    <div class="actions">
+      <button type="button" class="secondary" id="btn_back">Back</button>
+      <button type="button" id="btn_next">Save and Continue</button>
+    </div>
+  </form>
+</main>
+<footer>Demonstration form — no real data is collected</footer>
+
+</body></html>

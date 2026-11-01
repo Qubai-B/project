@@ -1,0 +1,186 @@
+{
+  "source_html": "page.html",
+  "screenshot": "screenshot.png",
+  "viewport": {
+    "width": 1280,
+    "height": 1000,
+    "device_scale_factor": 1
+  },
+  "form_id": "drivers_licence_renewal",
+  "identity_id": "I0003",
+  "task_id": "T03",
+  "step": 1,
+  "pii": [
+    {
+      "field": "licence_no",
+      "pii_type": "LICENCE_NO",
+      "value": "LAG88172BG58",
+      "bbox": {
+        "x": 501,
+        "y": 188,
+        "w": 110.1,
+        "h": 17
+      },
+      "input_bbox": {
+        "x": 490,
+        "y": 180,
+        "w": 560,
+        "h": 33
+      },
+      "needed": false,
+      "visible": true
+    },
+    {
+      "field": "last_name",
+      "pii_type": "PERSON",
+      "value": "Abdullahi",
+      "bbox": {
+        "x": 501,
+        "y": 293,
+        "w": 61.7,
+        "h": 17
+      },
+      "input_bbox": {
+        "x": 490,
+        "y": 285,
+        "w": 560,
+        "h": 33
+      },
+      "needed": false,
+      "visible": true
+    },
+    {
+      "field": "first_name",
+      "pii_type": "PERSON",
+      "value": "Yetunde",
+      "bbox": {
+        "x": 501,
+        "y": 340,
+        "w": 54.5,
+        "h": 17
+      },
+      "input_bbox": {
+        "x": 490,
+        "y": 332,
+        "w": 560,
+        "h": 33
+      },
+      "needed": false,
+      "visible": true
+    },
+    {
+      "field": "date_of_birth",
+      "pii_type": "DOB",
+      "value": "13/05/1970",
+      "bbox": {
+        "x": 501,
+        "y": 387,
+        "w": 75.1,
+        "h": 17
+      },
+      "input_bbox": {
+        "x": 490,
+        "y": 379,
+        "w": 560,
+        "h": 33
+      },
+      "needed": false,
+      "visible": true
+    },
+    {
+      "field": "nin",
+      "pii_type": "NIN",
+      "value": "95376724238",
+      "bbox": {
+        "x": 501,
+        "y": 434,
+        "w": 91.8,
+        "h": 17
+      },
+      "input_bbox": {
+        "x": 490,
+        "y": 426,
+        "w": 560,
+        "h": 33
+      },
+      "needed": false,
+      "visible": true
+    },
+    {
+      "field": "phone",
+      "pii_type": "PHONE",
+      "value": "+234 705 924 6168",
+      "bbox": {
+        "x": 501,
+        "y": 539,
+        "w": 129.7,
+        "h": 17
+      },
+      "input_bbox": {
+        "x": 490,
+        "y": 531,
+        "w": 560,
+        "h": 33
+      },
+      "needed": true,
+      "visible": true
+    },
+    {
+      "field": "address_line",
+      "pii_type": "ADDRESS",
+      "value": "52 Murtala Mohammed Way, GRA",
+      "bbox": {
+        "x": 501,
+        "y": 633,
+        "w": 227.6,
+        "h": 17
+      },
+      "input_bbox": {
+        "x": 490,
+        "y": 625,
+        "w": 560,
+        "h": 33
+      },
+      "needed": false,
+      "visible": true
+    },
+    {
+      "field": "lga",
+      "pii_type": "ADDRESS",
+      "value": "Ikeja",
+      "bbox": {
+        "x": 501,
+        "y": 680,
+        "w": 31.7,
+        "h": 17
+      },
+      "input_bbox": {
+        "x": 490,
+        "y": 672,
+        "w": 560,
+        "h": 33
+      },
+      "needed": false,
+      "visible": true
+    },
+    {
+      "field": "state",
+      "pii_type": "ADDRESS",
+      "value": "Lagos",
+      "bbox": {
+        "x": 501,
+        "y": 727,
+        "w": 40.9,
+        "h": 17
+      },
+      "input_bbox": {
+        "x": 490,
+        "y": 719,
+        "w": 560,
+        "h": 33
+      },
+      "needed": false,
+      "visible": true
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Driver's Licence Renewal — Mock Portal</title>
+<link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+<header>
+  <h1>Driver's Licence Renewal</h1>
+  <p>Federal Road Safety Corps — demonstration portal, synthetic data only</p>
+</header>
+<main>
+  <form id="drivers_licence_renewal" autocomplete="off">
+
+    <fieldset>
+      <legend>1. Existing Licence</legend>
+      <div class="row"><label for="licence_no">Driver's Licence Number</label>
+        <input id="licence_no" name="licence_no" value="{{ v.licence_no }}"></div>
+    </fieldset>
+
+    <fieldset>
+      <legend>2. Applicant Details</legend>
+      <div class="row"><label for="last_name">Surname</label>
+        <input id="last_name" name="last_name" value="{{ v.last_name }}"></div>
+      <div class="row"><label for="first_name">First Name</label>
+        <input id="first_name" name="first_name" value="{{ v.first_name }}"></div>
+      <div class="row"><label for="date_of_birth">Date of Birth (DD/MM/YYYY)</label>
+        <input id="date_of_birth" name="date_of_birth" value="{{ v.date_of_birth }}"></div>
+      <div class="row"><label for="nin">National Identification Number (NIN)</label>
+        <input id="nin" name="nin" value="{{ v.nin }}"></div>
+    </fieldset>
+
+    <fieldset>
+      <legend>3. Contact Details</legend>
+      <div class="row"><label for="phone">Phone Number</label>
+        <input id="phone" name="phone" value="{{ v.phone }}"></div>
+      <div class="row"><label for="email">Email Address</label>
+        <input id="email" name="email" value="{{ v.email }}"></div>
+      <div class="row"><label for="address_line">Street Address</label>
+        <input id="address_line" name="address_line" value="{{ v.address_line }}"></div>
+      <div class="row"><label for="lga">Local Government Area</label>
+        <input id="lga" name="lga" value="{{ v.lga }}"></div>
+      <div class="row"><label for="state">State</label>
+        <input id="state" name="state" value="{{ v.state }}"></div>
+    </fieldset>
+
+    <div class="actions">
+      <button type="button" class="secondary" id="btn_back">Back</button>
+      <button type="button" id="btn_next">Save and Continue</button>
+    </div>
+  </form>
+</main>
+<footer>Demonstration form — no real data is collected</footer>
+</body>
+</html>

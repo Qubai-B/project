@@ -1,0 +1,75 @@
+{
+ "detector": "hybrid",
+ "task_id": "T05",
+ "needs": [
+  "nin",
+  "passport_no"
+ ],
+ "detections": [
+  {
+   "pii_type": "PERSON",
+   "field": "last_name",
+   "text": "Oni",
+   "bbox": {
+    "x": 501.5,
+    "y": 190.5,
+    "w": 22.0,
+    "h": 12.0
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "PERSON",
+   "field": "first_name",
+   "text": "Osas",
+   "bbox": {
+    "x": 501.5,
+    "y": 237.5,
+    "w": 34.0,
+    "h": 12.0
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "DOB",
+   "field": "date_of_birth",
+   "text": "10/01/1964",
+   "bbox": {
+    "x": 502.5,
+    "y": 284.5,
+    "w": 73.0,
+    "h": 12.0
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "NIN",
+   "field": "nin",
+   "text": "26398214658",
+   "bbox": {
+    "x": 501.0,
+    "y": 332.0,
+    "w": 91.5,
+    "h": 11.5
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "PASSPORT",
+   "field": "passport_no",
+   "text": "B53188224",
+   "bbox": {
+    "x": 502.0,
+    "y": 379.0,
+    "w": 75.5,
+    "h": 11.5
+   },
+   "source": "label"
+  }
+ ],
+ "timings_ms": {
+  "ocr": 391.1909999999921,
+  "detect": 17.538458000004198,
+  "mask": 21.188834000014367
+ }
+}

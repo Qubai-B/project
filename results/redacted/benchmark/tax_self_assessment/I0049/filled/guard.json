@@ -1,0 +1,160 @@
+{
+ "detector": "hybrid",
+ "task_id": "T01",
+ "needs": [
+  "address_line",
+  "lga",
+  "state"
+ ],
+ "detections": [
+  {
+   "pii_type": "PERSON",
+   "field": "last_name",
+   "text": "Bankole",
+   "bbox": {
+    "x": 502.0,
+    "y": 191.0,
+    "w": 52.5,
+    "h": 11.5
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "PERSON",
+   "field": "first_name",
+   "text": "Nnamdi",
+   "bbox": {
+    "x": 502.0,
+    "y": 238.0,
+    "w": 50.0,
+    "h": 11.5
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "DOB",
+   "field": "date_of_birth",
+   "text": "24/06/1989",
+   "bbox": {
+    "x": 501.0,
+    "y": 284.5,
+    "w": 74.5,
+    "h": 12.0
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "TIN",
+   "field": "tin",
+   "text": "38876195-0006",
+   "bbox": {
+    "x": 501.5,
+    "y": 332.0,
+    "w": 104.0,
+    "h": 11.5
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "NIN",
+   "field": "nin",
+   "text": "63259532787",
+   "bbox": {
+    "x": 501.5,
+    "y": 379.0,
+    "w": 91.0,
+    "h": 11.5
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "ADDRESS",
+   "field": "address_line",
+   "text": "38 Ogui Road, Rumuola",
+   "bbox": {
+    "x": 501.5,
+    "y": 483.5,
+    "w": 160.0,
+    "h": 14.5
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "ADDRESS",
+   "field": "lga",
+   "text": "Nnewi North",
+   "bbox": {
+    "x": 502.0,
+    "y": 531.0,
+    "w": 81.0,
+    "h": 11.5
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "ADDRESS",
+   "field": "state",
+   "text": "Anambra",
+   "bbox": {
+    "x": 501.0,
+    "y": 578.0,
+    "w": 60.5,
+    "h": 11.5
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "FINANCIAL",
+   "field": "annual_income",
+   "text": "930000",
+   "bbox": {
+    "x": 501.5,
+    "y": 683.0,
+    "w": 49.0,
+    "h": 11.5
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "BVN",
+   "field": "bvn",
+   "text": "22747016873",
+   "bbox": {
+    "x": 501.0,
+    "y": 730.0,
+    "w": 91.5,
+    "h": 11.5
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "BANK_ACCOUNT",
+   "field": "bank_account",
+   "text": "0208985103",
+   "bbox": {
+    "x": 501.5,
+    "y": 777.0,
+    "w": 82.5,
+    "h": 11.5
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "EMAIL",
+   "field": "email",
+   "text": "nnamdi.bankole32@example.com",
+   "bbox": {
+    "x": 501.5,
+    "y": 823.5,
+    "w": 226.0,
+    "h": 14.5
+   },
+   "source": "label"
+  }
+ ],
+ "timings_ms": {
+  "ocr": 527.0131670000069,
+  "detect": 12.118624999999383,
+  "mask": 23.939667000007603
+ }
+}

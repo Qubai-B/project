@@ -1,0 +1,88 @@
+{
+ "detector": "hybrid",
+ "task_id": "T01",
+ "needs": [
+  "address_line",
+  "lga",
+  "state"
+ ],
+ "detections": [
+  {
+   "pii_type": "PERSON",
+   "field": "last_name",
+   "text": "Bello",
+   "bbox": {
+    "x": 502.0,
+    "y": 191.0,
+    "w": 32.0,
+    "h": 11.5
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "PERSON",
+   "field": "first_name",
+   "text": "Abubakar",
+   "bbox": {
+    "x": 501.0,
+    "y": 238.0,
+    "w": 64.5,
+    "h": 11.5
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "DOB",
+   "field": "date_of_birth",
+   "text": "17/05/1967",
+   "bbox": {
+    "x": 502.5,
+    "y": 284.5,
+    "w": 73.0,
+    "h": 12.0
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "TIN",
+   "field": "tin",
+   "text": "68526649-0001",
+   "bbox": {
+    "x": 501.5,
+    "y": 332.0,
+    "w": 102.0,
+    "h": 11.5
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "NIN",
+   "field": "nin",
+   "text": "14294019655",
+   "bbox": {
+    "x": 502.5,
+    "y": 379.0,
+    "w": 90.0,
+    "h": 11.5
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "ADDRESS",
+   "field": "address_line",
+   "text": "52 Isaac John Street, Trans Amadi",
+   "bbox": {
+    "x": 501.5,
+    "y": 483.5,
+    "w": 228.0,
+    "h": 13.5
+   },
+   "source": "label"
+  }
+ ],
+ "timings_ms": {
+  "ocr": 599.6915000000058,
+  "detect": 15.458957999982204,
+  "mask": 31.579249999992953
+ }
+}

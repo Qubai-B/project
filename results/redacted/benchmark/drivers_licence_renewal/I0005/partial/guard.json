@@ -1,0 +1,75 @@
+{
+ "detector": "hybrid",
+ "task_id": "T03",
+ "needs": [
+  "email",
+  "phone"
+ ],
+ "detections": [
+  {
+   "pii_type": "LICENCE_NO",
+   "field": "licence_no",
+   "text": "ABJ10942BA39",
+   "bbox": {
+    "x": 501.0,
+    "y": 191.0,
+    "w": 105.5,
+    "h": 11.5
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "PERSON",
+   "field": "last_name",
+   "text": "Nwosu",
+   "bbox": {
+    "x": 502.0,
+    "y": 296.0,
+    "w": 44.0,
+    "h": 11.5
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "PERSON",
+   "field": "first_name",
+   "text": "Preye",
+   "bbox": {
+    "x": 502.0,
+    "y": 343.0,
+    "w": 37.5,
+    "h": 14.0
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "DOB",
+   "field": "date_of_birth",
+   "text": "27/10/1994",
+   "bbox": {
+    "x": 501.0,
+    "y": 389.5,
+    "w": 74.5,
+    "h": 12.0
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "NIN",
+   "field": "nin",
+   "text": "27824896383",
+   "bbox": {
+    "x": 501.0,
+    "y": 437.0,
+    "w": 91.5,
+    "h": 11.5
+   },
+   "source": "label"
+  }
+ ],
+ "timings_ms": {
+  "ocr": 382.2584580000008,
+  "detect": 16.481583999999216,
+  "mask": 20.87845700000024
+ }
+}

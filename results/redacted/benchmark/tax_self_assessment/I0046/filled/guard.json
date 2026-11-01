@@ -1,0 +1,160 @@
+{
+ "detector": "hybrid",
+ "task_id": "T01",
+ "needs": [
+  "address_line",
+  "lga",
+  "state"
+ ],
+ "detections": [
+  {
+   "pii_type": "PERSON",
+   "field": "last_name",
+   "text": "Obi",
+   "bbox": {
+    "x": 501.5,
+    "y": 190.5,
+    "w": 22.0,
+    "h": 12.0
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "PERSON",
+   "field": "first_name",
+   "text": "Chinedu",
+   "bbox": {
+    "x": 501.5,
+    "y": 237.5,
+    "w": 54.5,
+    "h": 12.0
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "DOB",
+   "field": "date_of_birth",
+   "text": "15/02/1968",
+   "bbox": {
+    "x": 502.5,
+    "y": 284.5,
+    "w": 73.0,
+    "h": 12.0
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "TIN",
+   "field": "tin",
+   "text": "84040798-0003",
+   "bbox": {
+    "x": 501.5,
+    "y": 332.0,
+    "w": 104.0,
+    "h": 11.5
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "NIN",
+   "field": "nin",
+   "text": "88442258313",
+   "bbox": {
+    "x": 501.5,
+    "y": 379.0,
+    "w": 91.0,
+    "h": 11.5
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "ADDRESS",
+   "field": "address_line",
+   "text": "86 Ring Road, Maitama",
+   "bbox": {
+    "x": 501.5,
+    "y": 484.0,
+    "w": 156.5,
+    "h": 14.0
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "ADDRESS",
+   "field": "lga",
+   "text": "Awka South",
+   "bbox": {
+    "x": 501.0,
+    "y": 530.5,
+    "w": 79.0,
+    "h": 12.0
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "ADDRESS",
+   "field": "state",
+   "text": "Anambra",
+   "bbox": {
+    "x": 501.0,
+    "y": 578.0,
+    "w": 60.5,
+    "h": 11.5
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "FINANCIAL",
+   "field": "annual_income",
+   "text": "3620000",
+   "bbox": {
+    "x": 501.5,
+    "y": 683.0,
+    "w": 57.5,
+    "h": 11.5
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "BVN",
+   "field": "bvn",
+   "text": "22237058957",
+   "bbox": {
+    "x": 501.0,
+    "y": 730.0,
+    "w": 91.5,
+    "h": 11.5
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "BANK_ACCOUNT",
+   "field": "bank_account",
+   "text": "0370292681",
+   "bbox": {
+    "x": 501.5,
+    "y": 777.0,
+    "w": 80.5,
+    "h": 11.5
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "EMAIL",
+   "field": "email",
+   "text": "chinedu.obi23@example.com",
+   "bbox": {
+    "x": 501.5,
+    "y": 823.5,
+    "w": 196.5,
+    "h": 14.5
+   },
+   "source": "label"
+  }
+ ],
+ "timings_ms": {
+  "ocr": 625.709167000025,
+  "detect": 13.69249999999056,
+  "mask": 27.999124999979585
+ }
+}

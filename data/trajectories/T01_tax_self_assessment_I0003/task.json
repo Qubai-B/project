@@ -1,0 +1,17 @@
+{
+  "task_id": "T01_tax_self_assessment_I0003",
+  "form_id": "tax_self_assessment",
+  "identity_id": "I0003",
+  "goal": "Enter the taxpayer's residential address and continue",
+  "needs": [
+    "address_line",
+    "lga",
+    "state"
+  ],
+  "values": {
+    "address_line": "52 Murtala Mohammed Way, GRA",
+    "lga": "Ikeja",
+    "state": "Lagos"
+  },
+  "n_steps": 4
+}

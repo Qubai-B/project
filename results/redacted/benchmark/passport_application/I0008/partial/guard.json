@@ -1,0 +1,75 @@
+{
+ "detector": "hybrid",
+ "task_id": "T05",
+ "needs": [
+  "nin",
+  "passport_no"
+ ],
+ "detections": [
+  {
+   "pii_type": "PERSON",
+   "field": "last_name",
+   "text": "Danjuma",
+   "bbox": {
+    "x": 502.0,
+    "y": 191.0,
+    "w": 58.5,
+    "h": 14.0
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "PERSON",
+   "field": "first_name",
+   "text": "Babatunde",
+   "bbox": {
+    "x": 502.0,
+    "y": 238.0,
+    "w": 71.0,
+    "h": 11.5
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "DOB",
+   "field": "date_of_birth",
+   "text": "24/05/1960",
+   "bbox": {
+    "x": 501.0,
+    "y": 284.5,
+    "w": 74.5,
+    "h": 12.0
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "NIN",
+   "field": "nin",
+   "text": "43534624751",
+   "bbox": {
+    "x": 501.0,
+    "y": 332.0,
+    "w": 89.5,
+    "h": 11.5
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "PASSPORT",
+   "field": "passport_no",
+   "text": "A59597086",
+   "bbox": {
+    "x": 501.0,
+    "y": 379.0,
+    "w": 76.5,
+    "h": 11.5
+   },
+   "source": "label"
+  }
+ ],
+ "timings_ms": {
+  "ocr": 391.07475000000136,
+  "detect": 17.82908399999883,
+  "mask": 24.63062500000035
+ }
+}

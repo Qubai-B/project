@@ -1,0 +1,88 @@
+{
+ "detector": "hybrid",
+ "task_id": "T01",
+ "needs": [
+  "address_line",
+  "lga",
+  "state"
+ ],
+ "detections": [
+  {
+   "pii_type": "PERSON",
+   "field": "last_name",
+   "text": "Dakolo",
+   "bbox": {
+    "x": 502.0,
+    "y": 191.0,
+    "w": 45.0,
+    "h": 11.5
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "PERSON",
+   "field": "first_name",
+   "text": "Olumide",
+   "bbox": {
+    "x": 501.5,
+    "y": 237.5,
+    "w": 55.0,
+    "h": 12.0
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "DOB",
+   "field": "date_of_birth",
+   "text": "07/01/1987",
+   "bbox": {
+    "x": 501.5,
+    "y": 284.5,
+    "w": 74.0,
+    "h": 12.0
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "TIN",
+   "field": "tin",
+   "text": "83871890-0006",
+   "bbox": {
+    "x": 501.5,
+    "y": 332.0,
+    "w": 104.0,
+    "h": 11.5
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "NIN",
+   "field": "nin",
+   "text": "78377701436",
+   "bbox": {
+    "x": 501.5,
+    "y": 379.0,
+    "w": 91.0,
+    "h": 11.5
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "ADDRESS",
+   "field": "address_line",
+   "text": "25 Allen Avenue, Wuse 2",
+   "bbox": {
+    "x": 501.0,
+    "y": 484.0,
+    "w": 166.0,
+    "h": 13.0
+   },
+   "source": "label"
+  }
+ ],
+ "timings_ms": {
+  "ocr": 979.8043750000147,
+  "detect": 28.427125000007436,
+  "mask": 42.98937499996214
+ }
+}

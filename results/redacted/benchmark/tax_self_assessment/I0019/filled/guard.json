@@ -1,0 +1,160 @@
+{
+ "detector": "hybrid",
+ "task_id": "T01",
+ "needs": [
+  "address_line",
+  "lga",
+  "state"
+ ],
+ "detections": [
+  {
+   "pii_type": "PERSON",
+   "field": "last_name",
+   "text": "Balogun",
+   "bbox": {
+    "x": 502.0,
+    "y": 191.0,
+    "w": 53.5,
+    "h": 14.0
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "PERSON",
+   "field": "first_name",
+   "text": "Folake",
+   "bbox": {
+    "x": 502.0,
+    "y": 238.0,
+    "w": 43.5,
+    "h": 11.5
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "DOB",
+   "field": "date_of_birth",
+   "text": "08/09/1998",
+   "bbox": {
+    "x": 501.5,
+    "y": 284.5,
+    "w": 74.0,
+    "h": 12.0
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "TIN",
+   "field": "tin",
+   "text": "74251933-0008",
+   "bbox": {
+    "x": 501.5,
+    "y": 332.0,
+    "w": 104.0,
+    "h": 11.5
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "NIN",
+   "field": "nin",
+   "text": "43524082400",
+   "bbox": {
+    "x": 501.0,
+    "y": 379.0,
+    "w": 91.5,
+    "h": 11.5
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "ADDRESS",
+   "field": "address_line",
+   "text": "77 Olu Obasanjo Road, GRA",
+   "bbox": {
+    "x": 501.5,
+    "y": 483.5,
+    "w": 193.0,
+    "h": 14.5
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "ADDRESS",
+   "field": "lga",
+   "text": "Fagge",
+   "bbox": {
+    "x": 502.0,
+    "y": 531.0,
+    "w": 41.0,
+    "h": 14.0
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "ADDRESS",
+   "field": "state",
+   "text": "Kano",
+   "bbox": {
+    "x": 502.0,
+    "y": 578.0,
+    "w": 34.0,
+    "h": 11.5
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "FINANCIAL",
+   "field": "annual_income",
+   "text": "3630000",
+   "bbox": {
+    "x": 501.5,
+    "y": 683.0,
+    "w": 57.5,
+    "h": 11.5
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "BVN",
+   "field": "bvn",
+   "text": "22842710947",
+   "bbox": {
+    "x": 501.0,
+    "y": 730.0,
+    "w": 91.5,
+    "h": 11.5
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "BANK_ACCOUNT",
+   "field": "bank_account",
+   "text": "1463320861",
+   "bbox": {
+    "x": 502.5,
+    "y": 777.0,
+    "w": 79.5,
+    "h": 11.5
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "EMAIL",
+   "field": "email",
+   "text": "folake.balogun95@example.com",
+   "bbox": {
+    "x": 501.0,
+    "y": 823.5,
+    "w": 218.0,
+    "h": 14.5
+   },
+   "source": "label"
+  }
+ ],
+ "timings_ms": {
+  "ocr": 1068.4306670000012,
+  "detect": 23.0702499999893,
+  "mask": 43.964500000015505
+ }
+}

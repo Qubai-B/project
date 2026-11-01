@@ -1,0 +1,88 @@
+{
+ "detector": "hybrid",
+ "task_id": "T01",
+ "needs": [
+  "address_line",
+  "lga",
+  "state"
+ ],
+ "detections": [
+  {
+   "pii_type": "PERSON",
+   "field": "last_name",
+   "text": "Bassey",
+   "bbox": {
+    "x": 502.0,
+    "y": 191.0,
+    "w": 48.0,
+    "h": 14.0
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "PERSON",
+   "field": "first_name",
+   "text": "Chukwuemeka",
+   "bbox": {
+    "x": 501.5,
+    "y": 237.5,
+    "w": 98.0,
+    "h": 12.0
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "DOB",
+   "field": "date_of_birth",
+   "text": "27/01/2003",
+   "bbox": {
+    "x": 501.0,
+    "y": 284.5,
+    "w": 74.5,
+    "h": 12.0
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "TIN",
+   "field": "tin",
+   "text": "17672593-0001",
+   "bbox": {
+    "x": 502.5,
+    "y": 332.0,
+    "w": 101.0,
+    "h": 11.5
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "NIN",
+   "field": "nin",
+   "text": "02606474687",
+   "bbox": {
+    "x": 501.5,
+    "y": 379.0,
+    "w": 91.0,
+    "h": 11.5
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "ADDRESS",
+   "field": "address_line",
+   "text": "63 Wetheral Road, Wuse 2",
+   "bbox": {
+    "x": 501.5,
+    "y": 484.0,
+    "w": 178.5,
+    "h": 13.0
+   },
+   "source": "label"
+  }
+ ],
+ "timings_ms": {
+  "ocr": 508.47175000001243,
+  "detect": 14.610500000003412,
+  "mask": 26.7715829999986
+ }
+}

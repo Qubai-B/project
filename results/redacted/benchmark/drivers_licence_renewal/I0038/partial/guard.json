@@ -1,0 +1,75 @@
+{
+ "detector": "hybrid",
+ "task_id": "T03",
+ "needs": [
+  "email",
+  "phone"
+ ],
+ "detections": [
+  {
+   "pii_type": "LICENCE_NO",
+   "field": "licence_no",
+   "text": "LAG88997CF20",
+   "bbox": {
+    "x": 502.0,
+    "y": 190.5,
+    "w": 107.0,
+    "h": 12.0
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "PERSON",
+   "field": "last_name",
+   "text": "Udeh",
+   "bbox": {
+    "x": 502.0,
+    "y": 296.0,
+    "w": 34.0,
+    "h": 11.5
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "PERSON",
+   "field": "first_name",
+   "text": "Ese",
+   "bbox": {
+    "x": 502.0,
+    "y": 343.0,
+    "w": 24.5,
+    "h": 11.5
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "DOB",
+   "field": "date_of_birth",
+   "text": "26/07/1988",
+   "bbox": {
+    "x": 501.0,
+    "y": 389.5,
+    "w": 74.5,
+    "h": 12.0
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "NIN",
+   "field": "nin",
+   "text": "20377889255",
+   "bbox": {
+    "x": 501.0,
+    "y": 437.0,
+    "w": 91.5,
+    "h": 11.5
+   },
+   "source": "label"
+  }
+ ],
+ "timings_ms": {
+  "ocr": 1010.517667000002,
+  "detect": 64.71741600000058,
+  "mask": 208.37991700000202
+ }
+}

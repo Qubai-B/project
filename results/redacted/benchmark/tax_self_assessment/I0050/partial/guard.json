@@ -1,0 +1,88 @@
+{
+ "detector": "hybrid",
+ "task_id": "T01",
+ "needs": [
+  "address_line",
+  "lga",
+  "state"
+ ],
+ "detections": [
+  {
+   "pii_type": "PERSON",
+   "field": "last_name",
+   "text": "Lawal",
+   "bbox": {
+    "x": 502.0,
+    "y": 191.0,
+    "w": 37.5,
+    "h": 11.5
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "PERSON",
+   "field": "first_name",
+   "text": "Ifeoma",
+   "bbox": {
+    "x": 502.0,
+    "y": 237.5,
+    "w": 44.5,
+    "h": 12.0
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "DOB",
+   "field": "date_of_birth",
+   "text": "14/02/1975",
+   "bbox": {
+    "x": 502.5,
+    "y": 284.5,
+    "w": 73.5,
+    "h": 12.0
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "TIN",
+   "field": "tin",
+   "text": "84870921-0006",
+   "bbox": {
+    "x": 501.5,
+    "y": 332.0,
+    "w": 104.0,
+    "h": 11.5
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "NIN",
+   "field": "nin",
+   "text": "98358416878",
+   "bbox": {
+    "x": 501.5,
+    "y": 379.0,
+    "w": 91.0,
+    "h": 11.5
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "ADDRESS",
+   "field": "address_line",
+   "text": "47 Awolowo Road, Bodija",
+   "bbox": {
+    "x": 501.0,
+    "y": 484.0,
+    "w": 169.5,
+    "h": 14.0
+   },
+   "source": "label"
+  }
+ ],
+ "timings_ms": {
+  "ocr": 546.186500000033,
+  "detect": 13.29466599997886,
+  "mask": 26.766583999972227
+ }
+}

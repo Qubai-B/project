@@ -1,0 +1,75 @@
+{
+ "detector": "hybrid",
+ "task_id": "T03",
+ "needs": [
+  "email",
+  "phone"
+ ],
+ "detections": [
+  {
+   "pii_type": "LICENCE_NO",
+   "field": "licence_no",
+   "text": "PLA99705ED21",
+   "bbox": {
+    "x": 502.0,
+    "y": 191.0,
+    "w": 104.0,
+    "h": 11.5
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "PERSON",
+   "field": "last_name",
+   "text": "Abdullahi",
+   "bbox": {
+    "x": 501.0,
+    "y": 296.0,
+    "w": 61.0,
+    "h": 11.5
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "PERSON",
+   "field": "first_name",
+   "text": "Ngozi",
+   "bbox": {
+    "x": 502.0,
+    "y": 343.0,
+    "w": 36.5,
+    "h": 14.0
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "DOB",
+   "field": "date_of_birth",
+   "text": "09/07/2006",
+   "bbox": {
+    "x": 501.5,
+    "y": 389.5,
+    "w": 74.0,
+    "h": 12.0
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "NIN",
+   "field": "nin",
+   "text": "17187026217",
+   "bbox": {
+    "x": 502.5,
+    "y": 437.0,
+    "w": 90.0,
+    "h": 11.5
+   },
+   "source": "label"
+  }
+ ],
+ "timings_ms": {
+  "ocr": 382.23724999999575,
+  "detect": 16.413833000001432,
+  "mask": 20.641584000003377
+ }
+}

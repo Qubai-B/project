@@ -1,0 +1,7 @@
+{
+  "step": 1,
+  "action": "type",
+  "target_field": "bvn",
+  "selector": "#bvn",
+  "value": "22386379402"
+}

@@ -1,0 +1,135 @@
+{
+ "detector": "hybrid",
+ "task_id": "T03",
+ "needs": [
+  "email",
+  "phone"
+ ],
+ "detections": [
+  {
+   "pii_type": "LICENCE_NO",
+   "field": "licence_no",
+   "text": "ABJ10942BA39",
+   "bbox": {
+    "x": 501.0,
+    "y": 191.0,
+    "w": 105.5,
+    "h": 11.5
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "PERSON",
+   "field": "last_name",
+   "text": "Nwosu",
+   "bbox": {
+    "x": 502.0,
+    "y": 296.0,
+    "w": 44.0,
+    "h": 11.5
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "PERSON",
+   "field": "first_name",
+   "text": "Preye",
+   "bbox": {
+    "x": 502.0,
+    "y": 343.0,
+    "w": 37.5,
+    "h": 14.0
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "DOB",
+   "field": "date_of_birth",
+   "text": "27/10/1994",
+   "bbox": {
+    "x": 501.0,
+    "y": 389.5,
+    "w": 74.5,
+    "h": 12.0
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "NIN",
+   "field": "nin",
+   "text": "27824896383",
+   "bbox": {
+    "x": 501.0,
+    "y": 437.0,
+    "w": 91.5,
+    "h": 11.5
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "PHONE",
+   "field": "phone",
+   "text": "+234 907 935 2133",
+   "bbox": {
+    "x": 501.5,
+    "y": 542.0,
+    "w": 128.5,
+    "h": 11.5
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "EMAIL",
+   "field": "email",
+   "text": "preye.nwosu94@example.com",
+   "bbox": {
+    "x": 501.5,
+    "y": 588.5,
+    "w": 205.0,
+    "h": 14.5
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "ADDRESS",
+   "field": "address_line",
+   "text": "98 Isaac John Street, Asokoro",
+   "bbox": {
+    "x": 501.5,
+    "y": 635.5,
+    "w": 199.5,
+    "h": 13.5
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "ADDRESS",
+   "field": "lga",
+   "text": "Gwagwalada",
+   "bbox": {
+    "x": 501.5,
+    "y": 682.5,
+    "w": 86.0,
+    "h": 14.5
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "ADDRESS",
+   "field": "state",
+   "text": "FCT",
+   "bbox": {
+    "x": 502.0,
+    "y": 729.5,
+    "w": 28.0,
+    "h": 12.0
+   },
+   "source": "label"
+  }
+ ],
+ "timings_ms": {
+  "ocr": 417.95483300000046,
+  "detect": 17.74895899999862,
+  "mask": 21.446875000002308
+ }
+}

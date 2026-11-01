@@ -1,0 +1,75 @@
+{
+ "detector": "hybrid",
+ "task_id": "T03",
+ "needs": [
+  "email",
+  "phone"
+ ],
+ "detections": [
+  {
+   "pii_type": "LICENCE_NO",
+   "field": "licence_no",
+   "text": "ENU53506EB57",
+   "bbox": {
+    "x": 502.0,
+    "y": 191.0,
+    "w": 108.5,
+    "h": 11.5
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "PERSON",
+   "field": "last_name",
+   "text": "Obi",
+   "bbox": {
+    "x": 501.5,
+    "y": 295.5,
+    "w": 22.0,
+    "h": 12.0
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "PERSON",
+   "field": "first_name",
+   "text": "Fatima",
+   "bbox": {
+    "x": 502.0,
+    "y": 343.0,
+    "w": 44.5,
+    "h": 11.5
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "DOB",
+   "field": "date_of_birth",
+   "text": "12/11/1967",
+   "bbox": {
+    "x": 502.5,
+    "y": 389.5,
+    "w": 72.0,
+    "h": 12.0
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "NIN",
+   "field": "nin",
+   "text": "52772217043",
+   "bbox": {
+    "x": 501.5,
+    "y": 437.0,
+    "w": 91.0,
+    "h": 11.5
+   },
+   "source": "label"
+  }
+ ],
+ "timings_ms": {
+  "ocr": 413.2022080000013,
+  "detect": 17.344334000000572,
+  "mask": 22.068791999998894
+ }
+}

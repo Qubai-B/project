@@ -1,0 +1,88 @@
+{
+ "detector": "hybrid",
+ "task_id": "T01",
+ "needs": [
+  "address_line",
+  "lga",
+  "state"
+ ],
+ "detections": [
+  {
+   "pii_type": "PERSON",
+   "field": "last_name",
+   "text": "Abdullahi",
+   "bbox": {
+    "x": 501.0,
+    "y": 191.0,
+    "w": 61.0,
+    "h": 11.5
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "PERSON",
+   "field": "first_name",
+   "text": "Ngozi",
+   "bbox": {
+    "x": 502.0,
+    "y": 238.0,
+    "w": 36.5,
+    "h": 14.0
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "DOB",
+   "field": "date_of_birth",
+   "text": "09/07/2006",
+   "bbox": {
+    "x": 501.5,
+    "y": 284.5,
+    "w": 74.0,
+    "h": 12.0
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "TIN",
+   "field": "tin",
+   "text": "94127561-0008",
+   "bbox": {
+    "x": 501.5,
+    "y": 332.0,
+    "w": 104.0,
+    "h": 11.5
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "NIN",
+   "field": "nin",
+   "text": "17187026217",
+   "bbox": {
+    "x": 502.5,
+    "y": 379.0,
+    "w": 90.0,
+    "h": 11.5
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "ADDRESS",
+   "field": "address_line",
+   "text": "64 Awolowo Road, Ikoyi",
+   "bbox": {
+    "x": 501.5,
+    "y": 484.0,
+    "w": 158.0,
+    "h": 14.0
+   },
+   "source": "label"
+  }
+ ],
+ "timings_ms": {
+  "ocr": 709.2715830000031,
+  "detect": 20.455457999986493,
+  "mask": 36.68904200000611
+ }
+}

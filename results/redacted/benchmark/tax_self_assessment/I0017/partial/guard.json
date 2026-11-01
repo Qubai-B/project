@@ -1,0 +1,88 @@
+{
+ "detector": "hybrid",
+ "task_id": "T01",
+ "needs": [
+  "address_line",
+  "lga",
+  "state"
+ ],
+ "detections": [
+  {
+   "pii_type": "PERSON",
+   "field": "last_name",
+   "text": "Obi",
+   "bbox": {
+    "x": 501.5,
+    "y": 190.5,
+    "w": 22.0,
+    "h": 12.0
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "PERSON",
+   "field": "first_name",
+   "text": "Ibrahim",
+   "bbox": {
+    "x": 502.0,
+    "y": 238.0,
+    "w": 48.5,
+    "h": 11.5
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "DOB",
+   "field": "date_of_birth",
+   "text": "21/06/1967",
+   "bbox": {
+    "x": 501.0,
+    "y": 284.5,
+    "w": 74.5,
+    "h": 12.0
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "TIN",
+   "field": "tin",
+   "text": "72372114-0007",
+   "bbox": {
+    "x": 501.5,
+    "y": 332.0,
+    "w": 103.0,
+    "h": 11.5
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "NIN",
+   "field": "nin",
+   "text": "57262849877",
+   "bbox": {
+    "x": 501.5,
+    "y": 379.0,
+    "w": 91.0,
+    "h": 11.5
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "ADDRESS",
+   "field": "address_line",
+   "text": "406 Wetheral Road, GRA",
+   "bbox": {
+    "x": 502.5,
+    "y": 483.5,
+    "w": 168.5,
+    "h": 13.5
+   },
+   "source": "label"
+  }
+ ],
+ "timings_ms": {
+  "ocr": 714.2444169999749,
+  "detect": 18.021250000003874,
+  "mask": 36.33445900001675
+ }
+}

@@ -1,0 +1,8 @@
+{
+  "task_id": "T01_tax_self_assessment_I0007",
+  "form_id": "tax_self_assessment",
+  "identity_id": "I0007",
+  "goal": "Enter the taxpayer's residential address and continue",
+  "needs": ["address_line", "lga", "state"],
+  "n_steps": 4
+}

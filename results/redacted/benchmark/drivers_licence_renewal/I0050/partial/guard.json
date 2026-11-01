@@ -1,0 +1,75 @@
+{
+ "detector": "hybrid",
+ "task_id": "T03",
+ "needs": [
+  "email",
+  "phone"
+ ],
+ "detections": [
+  {
+   "pii_type": "LICENCE_NO",
+   "field": "licence_no",
+   "text": "RIV62610AA14",
+   "bbox": {
+    "x": 502.0,
+    "y": 191.0,
+    "w": 102.0,
+    "h": 11.5
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "PERSON",
+   "field": "last_name",
+   "text": "Lawal",
+   "bbox": {
+    "x": 502.0,
+    "y": 296.0,
+    "w": 37.5,
+    "h": 11.5
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "PERSON",
+   "field": "first_name",
+   "text": "Ifeoma",
+   "bbox": {
+    "x": 502.0,
+    "y": 342.5,
+    "w": 44.5,
+    "h": 12.0
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "DOB",
+   "field": "date_of_birth",
+   "text": "14/02/1975",
+   "bbox": {
+    "x": 502.5,
+    "y": 389.5,
+    "w": 73.5,
+    "h": 12.0
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "NIN",
+   "field": "nin",
+   "text": "98358416878",
+   "bbox": {
+    "x": 501.5,
+    "y": 437.0,
+    "w": 91.0,
+    "h": 11.5
+   },
+   "source": "label"
+  }
+ ],
+ "timings_ms": {
+  "ocr": 404.8771249999987,
+  "detect": 19.00016700000151,
+  "mask": 21.318375000006995
+ }
+}

@@ -1,0 +1,7 @@
+{
+  "step": 0,
+  "action": "type",
+  "target_field": "licence_no",
+  "selector": "#licence_no",
+  "value": "LAG88172BG58"
+}

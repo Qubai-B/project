@@ -1,0 +1,135 @@
+{
+ "detector": "hybrid",
+ "task_id": "T05",
+ "needs": [
+  "nin",
+  "passport_no"
+ ],
+ "detections": [
+  {
+   "pii_type": "PERSON",
+   "field": "last_name",
+   "text": "Igbinedion",
+   "bbox": {
+    "x": 502.0,
+    "y": 191.0,
+    "w": 67.5,
+    "h": 14.0
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "PERSON",
+   "field": "first_name",
+   "text": "Tamuno",
+   "bbox": {
+    "x": 501.0,
+    "y": 238.0,
+    "w": 53.0,
+    "h": 11.5
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "DOB",
+   "field": "date_of_birth",
+   "text": "07/11/1975",
+   "bbox": {
+    "x": 501.5,
+    "y": 284.5,
+    "w": 73.0,
+    "h": 12.0
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "NIN",
+   "field": "nin",
+   "text": "43244510762",
+   "bbox": {
+    "x": 501.0,
+    "y": 332.0,
+    "w": 91.0,
+    "h": 11.5
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "PASSPORT",
+   "field": "passport_no",
+   "text": "B87277086",
+   "bbox": {
+    "x": 502.0,
+    "y": 379.0,
+    "w": 75.5,
+    "h": 11.5
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "PHONE",
+   "field": "phone",
+   "text": "+234 813 146 4612",
+   "bbox": {
+    "x": 501.5,
+    "y": 484.0,
+    "w": 128.5,
+    "h": 11.5
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "EMAIL",
+   "field": "email",
+   "text": "tamuno.igbinedion86@example.com",
+   "bbox": {
+    "x": 501.0,
+    "y": 530.5,
+    "w": 243.0,
+    "h": 14.5
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "ADDRESS",
+   "field": "address_line",
+   "text": "51 Awolowo Road, Victoria Island",
+   "bbox": {
+    "x": 501.5,
+    "y": 578.0,
+    "w": 221.0,
+    "h": 13.0
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "ADDRESS",
+   "field": "lga",
+   "text": "Warri South",
+   "bbox": {
+    "x": 501.0,
+    "y": 624.5,
+    "w": 78.0,
+    "h": 12.0
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "ADDRESS",
+   "field": "state",
+   "text": "Delta",
+   "bbox": {
+    "x": 502.0,
+    "y": 672.0,
+    "w": 33.5,
+    "h": 11.5
+   },
+   "source": "label"
+  }
+ ],
+ "timings_ms": {
+  "ocr": 491.24720899999375,
+  "detect": 18.885457999999744,
+  "mask": 23.64462499997444
+ }
+}

@@ -1,0 +1,135 @@
+{
+ "detector": "hybrid",
+ "task_id": "T03",
+ "needs": [
+  "email",
+  "phone"
+ ],
+ "detections": [
+  {
+   "pii_type": "LICENCE_NO",
+   "field": "licence_no",
+   "text": "ENU98184ED35",
+   "bbox": {
+    "x": 502.0,
+    "y": 191.0,
+    "w": 109.5,
+    "h": 11.5
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "PERSON",
+   "field": "last_name",
+   "text": "Garba",
+   "bbox": {
+    "x": 501.5,
+    "y": 295.5,
+    "w": 40.5,
+    "h": 12.0
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "PERSON",
+   "field": "first_name",
+   "text": "Kehinde",
+   "bbox": {
+    "x": 502.0,
+    "y": 343.0,
+    "w": 53.5,
+    "h": 11.5
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "DOB",
+   "field": "date_of_birth",
+   "text": "28/07/1982",
+   "bbox": {
+    "x": 501.0,
+    "y": 389.5,
+    "w": 74.5,
+    "h": 12.0
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "NIN",
+   "field": "nin",
+   "text": "29946804436",
+   "bbox": {
+    "x": 501.0,
+    "y": 437.0,
+    "w": 91.5,
+    "h": 11.5
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "PHONE",
+   "field": "phone",
+   "text": "+234 813 667 3085",
+   "bbox": {
+    "x": 501.5,
+    "y": 542.0,
+    "w": 128.5,
+    "h": 11.5
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "EMAIL",
+   "field": "email",
+   "text": "kehinde.garba52@example.com",
+   "bbox": {
+    "x": 501.5,
+    "y": 588.5,
+    "w": 215.0,
+    "h": 14.5
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "ADDRESS",
+   "field": "address_line",
+   "text": "25 Airport Road, Lekki Phase 1",
+   "bbox": {
+    "x": 501.0,
+    "y": 636.0,
+    "w": 204.5,
+    "h": 14.0
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "ADDRESS",
+   "field": "lga",
+   "text": "Enugu South",
+   "bbox": {
+    "x": 502.0,
+    "y": 682.5,
+    "w": 85.0,
+    "h": 14.5
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "ADDRESS",
+   "field": "state",
+   "text": "Enugu",
+   "bbox": {
+    "x": 502.0,
+    "y": 730.0,
+    "w": 41.5,
+    "h": 14.0
+   },
+   "source": "label"
+  }
+ ],
+ "timings_ms": {
+  "ocr": 428.5142499999992,
+  "detect": 16.77216599999909,
+  "mask": 21.248959000001122
+ }
+}

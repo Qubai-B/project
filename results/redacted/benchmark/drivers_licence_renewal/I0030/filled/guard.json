@@ -1,0 +1,135 @@
+{
+ "detector": "hybrid",
+ "task_id": "T03",
+ "needs": [
+  "email",
+  "phone"
+ ],
+ "detections": [
+  {
+   "pii_type": "LICENCE_NO",
+   "field": "licence_no",
+   "text": "ENU32871BA26",
+   "bbox": {
+    "x": 502.0,
+    "y": 191.0,
+    "w": 108.5,
+    "h": 11.5
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "PERSON",
+   "field": "last_name",
+   "text": "Akinwande",
+   "bbox": {
+    "x": 501.0,
+    "y": 296.0,
+    "w": 73.0,
+    "h": 11.5
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "PERSON",
+   "field": "first_name",
+   "text": "Halima",
+   "bbox": {
+    "x": 502.0,
+    "y": 343.0,
+    "w": 45.0,
+    "h": 11.5
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "DOB",
+   "field": "date_of_birth",
+   "text": "14/10/1987",
+   "bbox": {
+    "x": 502.5,
+    "y": 389.5,
+    "w": 73.0,
+    "h": 12.0
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "NIN",
+   "field": "nin",
+   "text": "17139005329",
+   "bbox": {
+    "x": 502.5,
+    "y": 437.0,
+    "w": 90.0,
+    "h": 11.5
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "PHONE",
+   "field": "phone",
+   "text": "+234 816 657 6876",
+   "bbox": {
+    "x": 501.5,
+    "y": 542.0,
+    "w": 128.5,
+    "h": 11.5
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "EMAIL",
+   "field": "email",
+   "text": "halima.akinwande13@example.com",
+   "bbox": {
+    "x": 501.5,
+    "y": 588.5,
+    "w": 240.0,
+    "h": 14.5
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "ADDRESS",
+   "field": "address_line",
+   "text": "8 Ogui Road, Garki",
+   "bbox": {
+    "x": 501.5,
+    "y": 635.5,
+    "w": 127.0,
+    "h": 14.5
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "ADDRESS",
+   "field": "lga",
+   "text": "Enugu North",
+   "bbox": {
+    "x": 502.0,
+    "y": 683.0,
+    "w": 82.5,
+    "h": 14.0
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "ADDRESS",
+   "field": "state",
+   "text": "Enugu",
+   "bbox": {
+    "x": 502.0,
+    "y": 730.0,
+    "w": 41.5,
+    "h": 14.0
+   },
+   "source": "label"
+  }
+ ],
+ "timings_ms": {
+  "ocr": 429.14291599999643,
+  "detect": 17.440874999998357,
+  "mask": 22.591166999994527
+ }
+}

@@ -1,0 +1,75 @@
+{
+ "detector": "hybrid",
+ "task_id": "T03",
+ "needs": [
+  "email",
+  "phone"
+ ],
+ "detections": [
+  {
+   "pii_type": "LICENCE_NO",
+   "field": "licence_no",
+   "text": "ANA98815CB66",
+   "bbox": {
+    "x": 501.0,
+    "y": 190.5,
+    "w": 109.5,
+    "h": 12.0
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "PERSON",
+   "field": "last_name",
+   "text": "Igwe",
+   "bbox": {
+    "x": 502.0,
+    "y": 296.0,
+    "w": 30.0,
+    "h": 14.0
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "PERSON",
+   "field": "first_name",
+   "text": "Ifeoma",
+   "bbox": {
+    "x": 502.0,
+    "y": 342.5,
+    "w": 44.5,
+    "h": 12.0
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "DOB",
+   "field": "date_of_birth",
+   "text": "17/08/1973",
+   "bbox": {
+    "x": 502.5,
+    "y": 389.5,
+    "w": 73.0,
+    "h": 12.0
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "NIN",
+   "field": "nin",
+   "text": "56238692221",
+   "bbox": {
+    "x": 501.5,
+    "y": 437.0,
+    "w": 89.0,
+    "h": 11.5
+   },
+   "source": "label"
+  }
+ ],
+ "timings_ms": {
+  "ocr": 379.1287079999961,
+  "detect": 16.224250000000495,
+  "mask": 21.07524899999902
+ }
+}

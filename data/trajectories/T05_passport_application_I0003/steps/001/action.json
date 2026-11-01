@@ -1,0 +1,7 @@
+{
+  "step": 1,
+  "action": "type",
+  "target_field": "passport_no",
+  "selector": "#passport_no",
+  "value": "C66661351"
+}

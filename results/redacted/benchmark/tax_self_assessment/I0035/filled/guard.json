@@ -1,0 +1,160 @@
+{
+ "detector": "hybrid",
+ "task_id": "T01",
+ "needs": [
+  "address_line",
+  "lga",
+  "state"
+ ],
+ "detections": [
+  {
+   "pii_type": "PERSON",
+   "field": "last_name",
+   "text": "Igbinedion",
+   "bbox": {
+    "x": 502.0,
+    "y": 191.0,
+    "w": 67.5,
+    "h": 14.0
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "PERSON",
+   "field": "first_name",
+   "text": "Tamuno",
+   "bbox": {
+    "x": 501.0,
+    "y": 238.0,
+    "w": 53.0,
+    "h": 11.5
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "DOB",
+   "field": "date_of_birth",
+   "text": "07/11/1975",
+   "bbox": {
+    "x": 501.5,
+    "y": 284.5,
+    "w": 73.0,
+    "h": 12.0
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "TIN",
+   "field": "tin",
+   "text": "15677713-0007",
+   "bbox": {
+    "x": 502.5,
+    "y": 332.0,
+    "w": 103.0,
+    "h": 11.5
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "NIN",
+   "field": "nin",
+   "text": "43244510762",
+   "bbox": {
+    "x": 501.0,
+    "y": 379.0,
+    "w": 91.0,
+    "h": 11.5
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "ADDRESS",
+   "field": "address_line",
+   "text": "51 Awolowo Road, Victoria Island",
+   "bbox": {
+    "x": 501.5,
+    "y": 484.0,
+    "w": 221.0,
+    "h": 13.0
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "ADDRESS",
+   "field": "lga",
+   "text": "Warri South",
+   "bbox": {
+    "x": 501.0,
+    "y": 530.5,
+    "w": 78.0,
+    "h": 12.0
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "ADDRESS",
+   "field": "state",
+   "text": "Delta",
+   "bbox": {
+    "x": 502.0,
+    "y": 578.0,
+    "w": 33.5,
+    "h": 11.5
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "FINANCIAL",
+   "field": "annual_income",
+   "text": "5310000",
+   "bbox": {
+    "x": 501.5,
+    "y": 683.0,
+    "w": 57.5,
+    "h": 11.5
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "BVN",
+   "field": "bvn",
+   "text": "22268388516",
+   "bbox": {
+    "x": 501.0,
+    "y": 730.0,
+    "w": 91.5,
+    "h": 11.5
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "BANK_ACCOUNT",
+   "field": "bank_account",
+   "text": "4375461598",
+   "bbox": {
+    "x": 501.0,
+    "y": 777.0,
+    "w": 83.0,
+    "h": 11.5
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "EMAIL",
+   "field": "email",
+   "text": "tamuno.igbinedion86@example.com",
+   "bbox": {
+    "x": 501.0,
+    "y": 823.5,
+    "w": 243.0,
+    "h": 14.5
+   },
+   "source": "label"
+  }
+ ],
+ "timings_ms": {
+  "ocr": 754.3071659999896,
+  "detect": 16.907916999997497,
+  "mask": 35.60987600002363
+ }
+}

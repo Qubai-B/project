@@ -1,0 +1,109 @@
+{
+  "source_html": "page.html",
+  "screenshot": "screenshot.png",
+  "viewport": {
+    "width": 1280,
+    "height": 1000,
+    "device_scale_factor": 1
+  },
+  "form_id": "drivers_licence_renewal",
+  "identity_id": "I0019",
+  "fill_state": "partial",
+  "pii": [
+    {
+      "field": "licence_no",
+      "pii_type": "LICENCE_NO",
+      "value": "KAN24953BG72",
+      "bbox": {
+        "x": 501,
+        "y": 188,
+        "w": 110.9,
+        "h": 17
+      },
+      "input_bbox": {
+        "x": 490,
+        "y": 180,
+        "w": 560,
+        "h": 33
+      },
+      "needed": false,
+      "visible": true
+    },
+    {
+      "field": "last_name",
+      "pii_type": "PERSON",
+      "value": "Balogun",
+      "bbox": {
+        "x": 501,
+        "y": 293,
+        "w": 55.0,
+        "h": 17
+      },
+      "input_bbox": {
+        "x": 490,
+        "y": 285,
+        "w": 560,
+        "h": 33
+      },
+      "needed": false,
+      "visible": true
+    },
+    {
+      "field": "first_name",
+      "pii_type": "PERSON",
+      "value": "Folake",
+      "bbox": {
+        "x": 501,
+        "y": 340,
+        "w": 45.0,
+        "h": 17
+      },
+      "input_bbox": {
+        "x": 490,
+        "y": 332,
+        "w": 560,
+        "h": 33
+      },
+      "needed": false,
+      "visible": true
+    },
+    {
+      "field": "date_of_birth",
+      "pii_type": "DOB",
+      "value": "08/09/1998",
+      "bbox": {
+        "x": 501,
+        "y": 387,
+        "w": 75.1,
+        "h": 17
+      },
+      "input_bbox": {
+        "x": 490,
+        "y": 379,
+        "w": 560,
+        "h": 33
+      },
+      "needed": false,
+      "visible": true
+    },
+    {
+      "field": "nin",
+      "pii_type": "NIN",
+      "value": "43524082400",
+      "bbox": {
+        "x": 501,
+        "y": 434,
+        "w": 91.8,
+        "h": 17
+      },
+      "input_bbox": {
+        "x": 490,
+        "y": 426,
+        "w": 560,
+        "h": 33
+      },
+      "needed": false,
+      "visible": true
+    }
+  ]
+}

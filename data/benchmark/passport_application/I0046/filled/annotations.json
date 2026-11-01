@@ -1,0 +1,204 @@
+{
+  "source_html": "page.html",
+  "screenshot": "screenshot.png",
+  "viewport": {
+    "width": 1280,
+    "height": 1000,
+    "device_scale_factor": 1
+  },
+  "form_id": "passport_application",
+  "identity_id": "I0046",
+  "fill_state": "filled",
+  "pii": [
+    {
+      "field": "last_name",
+      "pii_type": "PERSON",
+      "value": "Obi",
+      "bbox": {
+        "x": 501,
+        "y": 188,
+        "w": 23.3,
+        "h": 17
+      },
+      "input_bbox": {
+        "x": 490,
+        "y": 180,
+        "w": 560,
+        "h": 33
+      },
+      "needed": false,
+      "visible": true
+    },
+    {
+      "field": "first_name",
+      "pii_type": "PERSON",
+      "value": "Chinedu",
+      "bbox": {
+        "x": 501,
+        "y": 235,
+        "w": 55.9,
+        "h": 17
+      },
+      "input_bbox": {
+        "x": 490,
+        "y": 227,
+        "w": 560,
+        "h": 33
+      },
+      "needed": false,
+      "visible": true
+    },
+    {
+      "field": "date_of_birth",
+      "pii_type": "DOB",
+      "value": "15/02/1968",
+      "bbox": {
+        "x": 501,
+        "y": 282,
+        "w": 75.1,
+        "h": 17
+      },
+      "input_bbox": {
+        "x": 490,
+        "y": 274,
+        "w": 560,
+        "h": 33
+      },
+      "needed": false,
+      "visible": true
+    },
+    {
+      "field": "nin",
+      "pii_type": "NIN",
+      "value": "88442258313",
+      "bbox": {
+        "x": 501,
+        "y": 329,
+        "w": 91.8,
+        "h": 17
+      },
+      "input_bbox": {
+        "x": 490,
+        "y": 321,
+        "w": 560,
+        "h": 33
+      },
+      "needed": false,
+      "visible": true
+    },
+    {
+      "field": "passport_no",
+      "pii_type": "PASSPORT",
+      "value": "B74245343",
+      "bbox": {
+        "x": 501,
+        "y": 376,
+        "w": 76.7,
+        "h": 17
+      },
+      "input_bbox": {
+        "x": 490,
+        "y": 368,
+        "w": 560,
+        "h": 33
+      },
+      "needed": false,
+      "visible": true
+    },
+    {
+      "field": "phone",
+      "pii_type": "PHONE",
+      "value": "+234 906 189 6236",
+      "bbox": {
+        "x": 501,
+        "y": 481,
+        "w": 129.7,
+        "h": 17
+      },
+      "input_bbox": {
+        "x": 490,
+        "y": 473,
+        "w": 560,
+        "h": 33
+      },
+      "needed": false,
+      "visible": true
+    },
+    {
+      "field": "email",
+      "pii_type": "EMAIL",
+      "value": "chinedu.obi23@example.com",
+      "bbox": {
+        "x": 501,
+        "y": 528,
+        "w": 197.8,
+        "h": 17
+      },
+      "input_bbox": {
+        "x": 490,
+        "y": 520,
+        "w": 560,
+        "h": 33
+      },
+      "needed": false,
+      "visible": true
+    },
+    {
+      "field": "address_line",
+      "pii_type": "ADDRESS",
+      "value": "86 Ring Road, Maitama",
+      "bbox": {
+        "x": 501,
+        "y": 575,
+        "w": 157.6,
+        "h": 17
+      },
+      "input_bbox": {
+        "x": 490,
+        "y": 567,
+        "w": 560,
+        "h": 33
+      },
+      "needed": false,
+      "visible": true
+    },
+    {
+      "field": "lga",
+      "pii_type": "ADDRESS",
+      "value": "Awka South",
+      "bbox": {
+        "x": 501,
+        "y": 622,
+        "w": 79.8,
+        "h": 17
+      },
+      "input_bbox": {
+        "x": 490,
+        "y": 614,
+        "w": 560,
+        "h": 33
+      },
+      "needed": false,
+      "visible": true
+    },
+    {
+      "field": "state",
+      "pii_type": "ADDRESS",
+      "value": "Anambra",
+      "bbox": {
+        "x": 501,
+        "y": 669,
+        "w": 60.9,
+        "h": 17
+      },
+      "input_bbox": {
+        "x": 490,
+        "y": 661,
+        "w": 560,
+        "h": 33
+      },
+      "needed": false,
+      "visible": true
+    }
+  ]
+}

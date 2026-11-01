@@ -1,0 +1,75 @@
+{
+ "detector": "hybrid",
+ "task_id": "T05",
+ "needs": [
+  "nin",
+  "passport_no"
+ ],
+ "detections": [
+  {
+   "pii_type": "PERSON",
+   "field": "last_name",
+   "text": "Obi",
+   "bbox": {
+    "x": 501.5,
+    "y": 190.5,
+    "w": 22.0,
+    "h": 12.0
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "PERSON",
+   "field": "first_name",
+   "text": "Fatima",
+   "bbox": {
+    "x": 502.0,
+    "y": 238.0,
+    "w": 44.5,
+    "h": 11.5
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "DOB",
+   "field": "date_of_birth",
+   "text": "12/11/1967",
+   "bbox": {
+    "x": 502.5,
+    "y": 284.5,
+    "w": 72.0,
+    "h": 12.0
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "NIN",
+   "field": "nin",
+   "text": "52772217043",
+   "bbox": {
+    "x": 501.5,
+    "y": 332.0,
+    "w": 91.0,
+    "h": 11.5
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "PASSPORT",
+   "field": "passport_no",
+   "text": "A98010774",
+   "bbox": {
+    "x": 501.0,
+    "y": 379.0,
+    "w": 76.5,
+    "h": 11.5
+   },
+   "source": "label"
+  }
+ ],
+ "timings_ms": {
+  "ocr": 423.9048750000052,
+  "detect": 19.03820800001199,
+  "mask": 23.77629200000797
+ }
+}

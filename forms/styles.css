@@ -1,0 +1,15 @@
+/* Shared look for all mock portals: plain, like a Nigerian federal/state e-service page. */
+body { font-family: Arial, Helvetica, sans-serif; margin: 0; background: #f3f6f4; color: #1a1a1a; }
+header { background: #008751; color: #fff; padding: 20px 48px; }
+header h1 { margin: 0; font-size: 22px; }
+header p  { margin: 4px 0 0; font-size: 13px; opacity: .9; }
+main { max-width: 820px; margin: 32px auto; background: #fff; padding: 32px 48px; border: 1px solid #d6dbd8; }
+fieldset { border: none; padding: 0; margin: 0 0 28px; }
+legend { font-weight: bold; font-size: 16px; margin-bottom: 12px; color: #008751; }
+.row { display: grid; grid-template-columns: 260px 1fr; align-items: center; margin-bottom: 14px; }
+label { font-size: 14px; }
+input { font-size: 15px; padding: 7px 10px; border: 1px solid #555; background: #fafafa; width: 100%; box-sizing: border-box; }
+.actions { display: flex; justify-content: flex-end; gap: 12px; }
+button { font-size: 15px; padding: 10px 22px; border: none; background: #008751; color: #fff; }
+button.secondary { background: #fff; color: #008751; border: 1px solid #008751; }
+footer { text-align: center; font-size: 12px; color: #666; padding: 24px; }

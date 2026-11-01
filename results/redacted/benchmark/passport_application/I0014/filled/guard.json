@@ -1,0 +1,135 @@
+{
+ "detector": "hybrid",
+ "task_id": "T05",
+ "needs": [
+  "nin",
+  "passport_no"
+ ],
+ "detections": [
+  {
+   "pii_type": "PERSON",
+   "field": "last_name",
+   "text": "Akpan",
+   "bbox": {
+    "x": 501.0,
+    "y": 191.0,
+    "w": 42.0,
+    "h": 14.0
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "PERSON",
+   "field": "first_name",
+   "text": "Olumide",
+   "bbox": {
+    "x": 501.5,
+    "y": 237.5,
+    "w": 55.0,
+    "h": 12.0
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "DOB",
+   "field": "date_of_birth",
+   "text": "29/04/1966",
+   "bbox": {
+    "x": 501.0,
+    "y": 284.5,
+    "w": 74.5,
+    "h": 12.0
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "NIN",
+   "field": "nin",
+   "text": "55812236231",
+   "bbox": {
+    "x": 501.5,
+    "y": 332.0,
+    "w": 89.0,
+    "h": 11.5
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "PASSPORT",
+   "field": "passport_no",
+   "text": "B50079111",
+   "bbox": {
+    "x": 502.0,
+    "y": 379.0,
+    "w": 71.0,
+    "h": 11.5
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "PHONE",
+   "field": "phone",
+   "text": "+234 810 381 8206",
+   "bbox": {
+    "x": 501.5,
+    "y": 484.0,
+    "w": 128.5,
+    "h": 11.5
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "EMAIL",
+   "field": "email",
+   "text": "olumide.akpan81@example.com",
+   "bbox": {
+    "x": 501.5,
+    "y": 530.5,
+    "w": 217.5,
+    "h": 14.5
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "ADDRESS",
+   "field": "address_line",
+   "text": "10 Olu Obasanjo Road, Wuse 2",
+   "bbox": {
+    "x": 502.5,
+    "y": 577.5,
+    "w": 209.5,
+    "h": 14.5
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "ADDRESS",
+   "field": "lga",
+   "text": "Onitsha North",
+   "bbox": {
+    "x": 501.5,
+    "y": 624.5,
+    "w": 91.5,
+    "h": 12.0
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "ADDRESS",
+   "field": "state",
+   "text": "Anambra",
+   "bbox": {
+    "x": 501.0,
+    "y": 672.0,
+    "w": 60.5,
+    "h": 11.5
+   },
+   "source": "label"
+  }
+ ],
+ "timings_ms": {
+  "ocr": 429.3174579999999,
+  "detect": 17.443042000010678,
+  "mask": 21.05316600000151
+ }
+}

@@ -1,0 +1,160 @@
+{
+ "detector": "hybrid",
+ "task_id": "T01",
+ "needs": [
+  "address_line",
+  "lga",
+  "state"
+ ],
+ "detections": [
+  {
+   "pii_type": "PERSON",
+   "field": "last_name",
+   "text": "Udeh",
+   "bbox": {
+    "x": 502.0,
+    "y": 191.0,
+    "w": 34.0,
+    "h": 11.5
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "PERSON",
+   "field": "first_name",
+   "text": "Ese",
+   "bbox": {
+    "x": 502.0,
+    "y": 238.0,
+    "w": 24.5,
+    "h": 11.5
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "DOB",
+   "field": "date_of_birth",
+   "text": "26/07/1988",
+   "bbox": {
+    "x": 501.0,
+    "y": 284.5,
+    "w": 74.5,
+    "h": 12.0
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "TIN",
+   "field": "tin",
+   "text": "22684373-0009",
+   "bbox": {
+    "x": 501.0,
+    "y": 332.0,
+    "w": 104.5,
+    "h": 11.5
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "NIN",
+   "field": "nin",
+   "text": "20377889255",
+   "bbox": {
+    "x": 501.0,
+    "y": 379.0,
+    "w": 91.5,
+    "h": 11.5
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "ADDRESS",
+   "field": "address_line",
+   "text": "92 Allen Avenue, Ugbowo",
+   "bbox": {
+    "x": 501.5,
+    "y": 484.0,
+    "w": 169.5,
+    "h": 14.0
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "ADDRESS",
+   "field": "lga",
+   "text": "Lagos Island",
+   "bbox": {
+    "x": 502.0,
+    "y": 531.0,
+    "w": 83.5,
+    "h": 14.0
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "ADDRESS",
+   "field": "state",
+   "text": "Lagos",
+   "bbox": {
+    "x": 502.0,
+    "y": 578.0,
+    "w": 39.5,
+    "h": 14.0
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "FINANCIAL",
+   "field": "annual_income",
+   "text": "24460000",
+   "bbox": {
+    "x": 501.0,
+    "y": 683.0,
+    "w": 66.5,
+    "h": 11.5
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "BVN",
+   "field": "bvn",
+   "text": "22466590515",
+   "bbox": {
+    "x": 501.0,
+    "y": 730.0,
+    "w": 91.5,
+    "h": 11.5
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "BANK_ACCOUNT",
+   "field": "bank_account",
+   "text": "7208584394",
+   "bbox": {
+    "x": 501.5,
+    "y": 777.0,
+    "w": 82.5,
+    "h": 11.5
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "EMAIL",
+   "field": "email",
+   "text": "ese.udeh58@example.com",
+   "bbox": {
+    "x": 501.5,
+    "y": 823.5,
+    "w": 181.5,
+    "h": 14.5
+   },
+   "source": "label"
+  }
+ ],
+ "timings_ms": {
+  "ocr": 730.1984169999969,
+  "detect": 15.1102920000028,
+  "mask": 30.58820800001172
+ }
+}

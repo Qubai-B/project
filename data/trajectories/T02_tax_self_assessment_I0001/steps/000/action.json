@@ -1,0 +1,7 @@
+{
+  "step": 0,
+  "action": "type",
+  "target_field": "annual_income",
+  "selector": "#annual_income",
+  "value": "14680000"
+}

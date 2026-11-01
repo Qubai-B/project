@@ -1,0 +1,135 @@
+{
+ "detector": "hybrid",
+ "task_id": "T05",
+ "needs": [
+  "nin",
+  "passport_no"
+ ],
+ "detections": [
+  {
+   "pii_type": "PERSON",
+   "field": "last_name",
+   "text": "Yusuf",
+   "bbox": {
+    "x": 501.0,
+    "y": 190.5,
+    "w": 38.0,
+    "h": 12.0
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "PERSON",
+   "field": "first_name",
+   "text": "Tamuno",
+   "bbox": {
+    "x": 501.0,
+    "y": 238.0,
+    "w": 53.0,
+    "h": 11.5
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "DOB",
+   "field": "date_of_birth",
+   "text": "29/11/1960",
+   "bbox": {
+    "x": 501.0,
+    "y": 284.5,
+    "w": 73.5,
+    "h": 12.0
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "NIN",
+   "field": "nin",
+   "text": "28588424745",
+   "bbox": {
+    "x": 501.0,
+    "y": 332.0,
+    "w": 91.5,
+    "h": 11.5
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "PASSPORT",
+   "field": "passport_no",
+   "text": "B59470729",
+   "bbox": {
+    "x": 502.0,
+    "y": 379.0,
+    "w": 75.5,
+    "h": 11.5
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "PHONE",
+   "field": "phone",
+   "text": "+234 706 402 6352",
+   "bbox": {
+    "x": 501.5,
+    "y": 484.0,
+    "w": 128.5,
+    "h": 11.5
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "EMAIL",
+   "field": "email",
+   "text": "tamuno.yusuf17@example.com",
+   "bbox": {
+    "x": 501.0,
+    "y": 530.5,
+    "w": 210.5,
+    "h": 14.5
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "ADDRESS",
+   "field": "address_line",
+   "text": "96 Airport Road, Ikoyi",
+   "bbox": {
+    "x": 501.5,
+    "y": 578.0,
+    "w": 142.0,
+    "h": 14.0
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "ADDRESS",
+   "field": "lga",
+   "text": "Jos North",
+   "bbox": {
+    "x": 501.5,
+    "y": 625.0,
+    "w": 63.0,
+    "h": 11.5
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "ADDRESS",
+   "field": "state",
+   "text": "Plateau",
+   "bbox": {
+    "x": 502.0,
+    "y": 672.0,
+    "w": 49.0,
+    "h": 11.5
+   },
+   "source": "label"
+  }
+ ],
+ "timings_ms": {
+  "ocr": 485.0544170000006,
+  "detect": 17.29779099999007,
+  "mask": 21.83850099999063
+ }
+}

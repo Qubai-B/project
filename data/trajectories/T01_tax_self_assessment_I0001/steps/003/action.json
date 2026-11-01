@@ -1,0 +1,7 @@
+{
+  "step": 3,
+  "action": "click",
+  "target_field": "btn_next",
+  "selector": "#btn_next",
+  "value": null
+}

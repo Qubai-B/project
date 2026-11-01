@@ -1,0 +1,242 @@
+{
+  "source_html": "page.html",
+  "screenshot": "screenshot.png",
+  "viewport": {
+    "width": 1280,
+    "height": 1054,
+    "device_scale_factor": 1
+  },
+  "form_id": "tax_self_assessment",
+  "identity_id": "I0019",
+  "fill_state": "filled",
+  "pii": [
+    {
+      "field": "last_name",
+      "pii_type": "PERSON",
+      "value": "Balogun",
+      "bbox": {
+        "x": 501,
+        "y": 188,
+        "w": 55.0,
+        "h": 17
+      },
+      "input_bbox": {
+        "x": 490,
+        "y": 180,
+        "w": 560,
+        "h": 33
+      },
+      "needed": false,
+      "visible": true
+    },
+    {
+      "field": "first_name",
+      "pii_type": "PERSON",
+      "value": "Folake",
+      "bbox": {
+        "x": 501,
+        "y": 235,
+        "w": 45.0,
+        "h": 17
+      },
+      "input_bbox": {
+        "x": 490,
+        "y": 227,
+        "w": 560,
+        "h": 33
+      },
+      "needed": false,
+      "visible": true
+    },
+    {
+      "field": "date_of_birth",
+      "pii_type": "DOB",
+      "value": "08/09/1998",
+      "bbox": {
+        "x": 501,
+        "y": 282,
+        "w": 75.1,
+        "h": 17
+      },
+      "input_bbox": {
+        "x": 490,
+        "y": 274,
+        "w": 560,
+        "h": 33
+      },
+      "needed": false,
+      "visible": true
+    },
+    {
+      "field": "tin",
+      "pii_type": "TIN",
+      "value": "74251933-0008",
+      "bbox": {
+        "x": 501,
+        "y": 329,
+        "w": 105.1,
+        "h": 17
+      },
+      "input_bbox": {
+        "x": 490,
+        "y": 321,
+        "w": 560,
+        "h": 33
+      },
+      "needed": false,
+      "visible": true
+    },
+    {
+      "field": "nin",
+      "pii_type": "NIN",
+      "value": "43524082400",
+      "bbox": {
+        "x": 501,
+        "y": 376,
+        "w": 91.8,
+        "h": 17
+      },
+      "input_bbox": {
+        "x": 490,
+        "y": 368,
+        "w": 560,
+        "h": 33
+      },
+      "needed": false,
+      "visible": true
+    },
+    {
+      "field": "address_line",
+      "pii_type": "ADDRESS",
+      "value": "77 Olu Obasanjo Road, GRA",
+      "bbox": {
+        "x": 501,
+        "y": 481,
+        "w": 193.4,
+        "h": 17
+      },
+      "input_bbox": {
+        "x": 490,
+        "y": 473,
+        "w": 560,
+        "h": 33
+      },
+      "needed": false,
+      "visible": true
+    },
+    {
+      "field": "lga",
+      "pii_type": "ADDRESS",
+      "value": "Fagge",
+      "bbox": {
+        "x": 501,
+        "y": 528,
+        "w": 42.5,
+        "h": 17
+      },
+      "input_bbox": {
+        "x": 490,
+        "y": 520,
+        "w": 560,
+        "h": 33
+      },
+      "needed": false,
+      "visible": true
+    },
+    {
+      "field": "state",
+      "pii_type": "ADDRESS",
+      "value": "Kano",
+      "bbox": {
+        "x": 501,
+        "y": 575,
+        "w": 35.0,
+        "h": 17
+      },
+      "input_bbox": {
+        "x": 490,
+        "y": 567,
+        "w": 560,
+        "h": 33
+      },
+      "needed": false,
+      "visible": true
+    },
+    {
+      "field": "annual_income",
+      "pii_type": "FINANCIAL",
+      "value": "3630000",
+      "bbox": {
+        "x": 501,
+        "y": 680,
+        "w": 58.4,
+        "h": 17
+      },
+      "input_bbox": {
+        "x": 490,
+        "y": 672,
+        "w": 560,
+        "h": 33
+      },
+      "needed": false,
+      "visible": true
+    },
+    {
+      "field": "bvn",
+      "pii_type": "BVN",
+      "value": "22842710947",
+      "bbox": {
+        "x": 501,
+        "y": 727,
+        "w": 91.8,
+        "h": 17
+      },
+      "input_bbox": {
+        "x": 490,
+        "y": 719,
+        "w": 560,
+        "h": 33
+      },
+      "needed": false,
+      "visible": true
+    },
+    {
+      "field": "bank_account",
+      "pii_type": "BANK_ACCOUNT",
+      "value": "1463320861",
+      "bbox": {
+        "x": 501,
+        "y": 774,
+        "w": 83.4,
+        "h": 17
+      },
+      "input_bbox": {
+        "x": 490,
+        "y": 766,
+        "w": 560,
+        "h": 33
+      },
+      "needed": false,
+      "visible": true
+    },
+    {
+      "field": "email",
+      "pii_type": "EMAIL",
+      "value": "folake.balogun95@example.com",
+      "bbox": {
+        "x": 501,
+        "y": 821,
+        "w": 218.7,
+        "h": 17
+      },
+      "input_bbox": {
+        "x": 490,
+        "y": 813,
+        "w": 560,
+        "h": 33
+      },
+      "needed": false,
+      "visible": true
+    }
+  ]
+}

@@ -1,0 +1,135 @@
+{
+ "detector": "hybrid",
+ "task_id": "T03",
+ "needs": [
+  "email",
+  "phone"
+ ],
+ "detections": [
+  {
+   "pii_type": "LICENCE_NO",
+   "field": "licence_no",
+   "text": "OYO18799BB21",
+   "bbox": {
+    "x": 501.5,
+    "y": 190.5,
+    "w": 109.0,
+    "h": 12.0
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "PERSON",
+   "field": "last_name",
+   "text": "Onyeka",
+   "bbox": {
+    "x": 501.5,
+    "y": 295.5,
+    "w": 50.5,
+    "h": 14.5
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "PERSON",
+   "field": "first_name",
+   "text": "Adaeze",
+   "bbox": {
+    "x": 501.0,
+    "y": 343.0,
+    "w": 50.5,
+    "h": 11.5
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "DOB",
+   "field": "date_of_birth",
+   "text": "18/06/1994",
+   "bbox": {
+    "x": 502.5,
+    "y": 389.5,
+    "w": 73.0,
+    "h": 12.0
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "NIN",
+   "field": "nin",
+   "text": "84789611836",
+   "bbox": {
+    "x": 501.5,
+    "y": 437.0,
+    "w": 89.5,
+    "h": 11.5
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "PHONE",
+   "field": "phone",
+   "text": "+234 916 699 9984",
+   "bbox": {
+    "x": 501.5,
+    "y": 542.0,
+    "w": 128.5,
+    "h": 11.5
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "EMAIL",
+   "field": "email",
+   "text": "adaeze.onyeka80@example.com",
+   "bbox": {
+    "x": 501.5,
+    "y": 588.5,
+    "w": 221.5,
+    "h": 14.5
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "ADDRESS",
+   "field": "address_line",
+   "text": "92 Sapele Road, Bodija",
+   "bbox": {
+    "x": 501.5,
+    "y": 635.5,
+    "w": 156.5,
+    "h": 14.5
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "ADDRESS",
+   "field": "lga",
+   "text": "Ogbomosho North",
+   "bbox": {
+    "x": 501.5,
+    "y": 682.5,
+    "w": 121.5,
+    "h": 14.5
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "ADDRESS",
+   "field": "state",
+   "text": "Oyo",
+   "bbox": {
+    "x": 501.5,
+    "y": 729.5,
+    "w": 26.5,
+    "h": 14.5
+   },
+   "source": "label"
+  }
+ ],
+ "timings_ms": {
+  "ocr": 418.64691600000015,
+  "detect": 16.678542000001073,
+  "mask": 21.873416000005363
+ }
+}

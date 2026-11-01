@@ -1,0 +1,8 @@
+.venv/
+__pycache__/
+.env
+*.pyc
+# generated data is kept in git for the PoC; uncomment to exclude
+# data/benchmark/
+# data/trajectories/
+# results/redacted/

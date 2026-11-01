@@ -1,0 +1,7 @@
+{
+  "step": 0,
+  "action": "type",
+  "target_field": "nin",
+  "selector": "#nin",
+  "value": "95376724238"
+}

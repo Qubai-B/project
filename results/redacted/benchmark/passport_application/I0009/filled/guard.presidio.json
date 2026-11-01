@@ -1,0 +1,99 @@
+{
+ "detector": "presidio",
+ "task_id": "T05",
+ "needs": [
+  "nin",
+  "passport_no"
+ ],
+ "detections": [
+  {
+   "pii_type": "PERSON",
+   "field": null,
+   "text": "Akpan",
+   "bbox": {
+    "x": 501.0,
+    "y": 191.0,
+    "w": 42.0,
+    "h": 14.0
+   },
+   "source": "presidio"
+  },
+  {
+   "pii_type": "DOB",
+   "field": null,
+   "text": "23/02/1978",
+   "bbox": {
+    "x": 501.0,
+    "y": 284.5,
+    "w": 74.5,
+    "h": 12.0
+   },
+   "source": "presidio"
+  },
+  {
+   "pii_type": "DOB",
+   "field": null,
+   "text": "18244935348",
+   "bbox": {
+    "x": 502.5,
+    "y": 332.0,
+    "w": 90.0,
+    "h": 11.5
+   },
+   "source": "presidio"
+  },
+  {
+   "pii_type": "PHONE",
+   "field": null,
+   "text": "+234 909 406 2697",
+   "bbox": {
+    "x": 501.5,
+    "y": 484.0,
+    "w": 128.5,
+    "h": 11.5
+   },
+   "source": "presidio"
+  },
+  {
+   "pii_type": "EMAIL",
+   "field": null,
+   "text": "blessing.akpan86@example.com",
+   "bbox": {
+    "x": 501.5,
+    "y": 530.5,
+    "w": 220.0,
+    "h": 14.5
+   },
+   "source": "presidio"
+  },
+  {
+   "pii_type": "ADDRESS",
+   "field": null,
+   "text": "113 Aba Road, Garki",
+   "bbox": {
+    "x": 502.5,
+    "y": 577.5,
+    "w": 136.0,
+    "h": 13.5
+   },
+   "source": "presidio"
+  },
+  {
+   "pii_type": "ADDRESS",
+   "field": null,
+   "text": "Lagos",
+   "bbox": {
+    "x": 502.0,
+    "y": 672.0,
+    "w": 39.5,
+    "h": 14.0
+   },
+   "source": "presidio"
+  }
+ ],
+ "timings_ms": {
+  "ocr": 1252.8639169999992,
+  "detect": 290.16979200000037,
+  "mask": 0.0
+ }
+}

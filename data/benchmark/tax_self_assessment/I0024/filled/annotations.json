@@ -1,0 +1,242 @@
+{
+  "source_html": "page.html",
+  "screenshot": "screenshot.png",
+  "viewport": {
+    "width": 1280,
+    "height": 1054,
+    "device_scale_factor": 1
+  },
+  "form_id": "tax_self_assessment",
+  "identity_id": "I0024",
+  "fill_state": "filled",
+  "pii": [
+    {
+      "field": "last_name",
+      "pii_type": "PERSON",
+      "value": "Oni",
+      "bbox": {
+        "x": 501,
+        "y": 188,
+        "w": 23.3,
+        "h": 17
+      },
+      "input_bbox": {
+        "x": 490,
+        "y": 180,
+        "w": 560,
+        "h": 33
+      },
+      "needed": false,
+      "visible": true
+    },
+    {
+      "field": "first_name",
+      "pii_type": "PERSON",
+      "value": "Osas",
+      "bbox": {
+        "x": 501,
+        "y": 235,
+        "w": 35.0,
+        "h": 17
+      },
+      "input_bbox": {
+        "x": 490,
+        "y": 227,
+        "w": 560,
+        "h": 33
+      },
+      "needed": false,
+      "visible": true
+    },
+    {
+      "field": "date_of_birth",
+      "pii_type": "DOB",
+      "value": "10/01/1964",
+      "bbox": {
+        "x": 501,
+        "y": 282,
+        "w": 75.1,
+        "h": 17
+      },
+      "input_bbox": {
+        "x": 490,
+        "y": 274,
+        "w": 560,
+        "h": 33
+      },
+      "needed": false,
+      "visible": true
+    },
+    {
+      "field": "tin",
+      "pii_type": "TIN",
+      "value": "82287061-0008",
+      "bbox": {
+        "x": 501,
+        "y": 329,
+        "w": 105.1,
+        "h": 17
+      },
+      "input_bbox": {
+        "x": 490,
+        "y": 321,
+        "w": 560,
+        "h": 33
+      },
+      "needed": false,
+      "visible": true
+    },
+    {
+      "field": "nin",
+      "pii_type": "NIN",
+      "value": "26398214658",
+      "bbox": {
+        "x": 501,
+        "y": 376,
+        "w": 91.8,
+        "h": 17
+      },
+      "input_bbox": {
+        "x": 490,
+        "y": 368,
+        "w": 560,
+        "h": 33
+      },
+      "needed": false,
+      "visible": true
+    },
+    {
+      "field": "address_line",
+      "pii_type": "ADDRESS",
+      "value": "61 Bodija Estate Road, Independence Layout",
+      "bbox": {
+        "x": 501,
+        "y": 481,
+        "w": 301.9,
+        "h": 17
+      },
+      "input_bbox": {
+        "x": 490,
+        "y": 473,
+        "w": 560,
+        "h": 33
+      },
+      "needed": false,
+      "visible": true
+    },
+    {
+      "field": "lga",
+      "pii_type": "ADDRESS",
+      "value": "Uvwie",
+      "bbox": {
+        "x": 501,
+        "y": 528,
+        "w": 40.8,
+        "h": 17
+      },
+      "input_bbox": {
+        "x": 490,
+        "y": 520,
+        "w": 560,
+        "h": 33
+      },
+      "needed": false,
+      "visible": true
+    },
+    {
+      "field": "state",
+      "pii_type": "ADDRESS",
+      "value": "Delta",
+      "bbox": {
+        "x": 501,
+        "y": 575,
+        "w": 35.0,
+        "h": 17
+      },
+      "input_bbox": {
+        "x": 490,
+        "y": 567,
+        "w": 560,
+        "h": 33
+      },
+      "needed": false,
+      "visible": true
+    },
+    {
+      "field": "annual_income",
+      "pii_type": "FINANCIAL",
+      "value": "17420000",
+      "bbox": {
+        "x": 501,
+        "y": 680,
+        "w": 66.7,
+        "h": 17
+      },
+      "input_bbox": {
+        "x": 490,
+        "y": 672,
+        "w": 560,
+        "h": 33
+      },
+      "needed": false,
+      "visible": true
+    },
+    {
+      "field": "bvn",
+      "pii_type": "BVN",
+      "value": "22404499727",
+      "bbox": {
+        "x": 501,
+        "y": 727,
+        "w": 91.8,
+        "h": 17
+      },
+      "input_bbox": {
+        "x": 490,
+        "y": 719,
+        "w": 560,
+        "h": 33
+      },
+      "needed": false,
+      "visible": true
+    },
+    {
+      "field": "bank_account",
+      "pii_type": "BANK_ACCOUNT",
+      "value": "5777263354",
+      "bbox": {
+        "x": 501,
+        "y": 774,
+        "w": 83.4,
+        "h": 17
+      },
+      "input_bbox": {
+        "x": 490,
+        "y": 766,
+        "w": 560,
+        "h": 33
+      },
+      "needed": false,
+      "visible": true
+    },
+    {
+      "field": "email",
+      "pii_type": "EMAIL",
+      "value": "osas.oni91@example.com",
+      "bbox": {
+        "x": 501,
+        "y": 821,
+        "w": 177.0,
+        "h": 17
+      },
+      "input_bbox": {
+        "x": 490,
+        "y": 813,
+        "w": 560,
+        "h": 33
+      },
+      "needed": false,
+      "visible": true
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+ "detector": "hybrid",
+ "task_id": "T03",
+ "needs": [
+  "email",
+  "phone"
+ ],
+ "detections": [],
+ "timings_ms": {
+  "ocr": 359.0843330000002,
+  "detect": 16.608749999999617,
+  "mask": 20.498041999999828
+ }
+}

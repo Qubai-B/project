@@ -1,0 +1,7 @@
+{
+  "step": 1,
+  "action": "type",
+  "target_field": "email",
+  "selector": "#email",
+  "value": "ladi.olawale94@example.com"
+}

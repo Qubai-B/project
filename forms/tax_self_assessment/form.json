@@ -1,0 +1,23 @@
+{
+  "form_id": "tax_self_assessment",
+  "title": "Personal Income Tax Self-Assessment",
+  "agency": "State Internal Revenue Service (mock)",
+  "fields": [
+    { "name": "last_name",     "selector": "#last_name",     "pii_type": "PERSON",       "identity_key": "last_name",     "fill_order": 1 },
+    { "name": "first_name",    "selector": "#first_name",    "pii_type": "PERSON",       "identity_key": "first_name",    "fill_order": 2 },
+    { "name": "date_of_birth", "selector": "#date_of_birth", "pii_type": "DOB",          "identity_key": "date_of_birth", "fill_order": 3 },
+    { "name": "tin",           "selector": "#tin",           "pii_type": "TIN",          "identity_key": "tin",           "fill_order": 4 },
+    { "name": "nin",           "selector": "#nin",           "pii_type": "NIN",          "identity_key": "nin",           "fill_order": 5 },
+    { "name": "address_line",  "selector": "#address_line",  "pii_type": "ADDRESS",      "identity_key": "address_line",  "fill_order": 6 },
+    { "name": "lga",           "selector": "#lga",           "pii_type": "ADDRESS",      "identity_key": "lga",           "fill_order": 7 },
+    { "name": "state",         "selector": "#state",         "pii_type": "ADDRESS",      "identity_key": "state",         "fill_order": 8 },
+    { "name": "annual_income", "selector": "#annual_income", "pii_type": "FINANCIAL",    "identity_key": "annual_income", "fill_order": 9 },
+    { "name": "bvn",           "selector": "#bvn",           "pii_type": "BVN",          "identity_key": "bvn",           "fill_order": 10 },
+    { "name": "bank_account",  "selector": "#bank_account",  "pii_type": "BANK_ACCOUNT", "identity_key": "bank_account",  "fill_order": 11 },
+    { "name": "email",         "selector": "#email",         "pii_type": "EMAIL",        "identity_key": "email",         "fill_order": 12 }
+  ],
+  "tasks": {
+    "T01": { "goal": "Enter the taxpayer's residential address and continue",     "needs": ["address_line", "lga", "state"] },
+    "T02": { "goal": "Enter the annual income and bank details for refunds",      "needs": ["annual_income", "bvn", "bank_account"] }
+  }
+}

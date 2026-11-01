@@ -1,0 +1,12 @@
+{
+  "source_html": "page.html",
+  "screenshot": "screenshot.png",
+  "viewport": { "width": 1280, "height": 1720, "device_scale_factor": 1 },
+  "form_id": "tax_self_assessment",
+  "identity_id": "I0007",
+  "fill_state": "filled",
+  "pii": [
+    { "field": "tin",          "pii_type": "TIN",          "value": "12345678-0001", "bbox": { "x": 412, "y": 388, "w": 236, "h": 34 }, "visible": true },
+    { "field": "bank_account", "pii_type": "BANK_ACCOUNT", "value": "0123456789",    "bbox": { "x": 412, "y": 912, "w": 236, "h": 34 }, "visible": true }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "task_id": "T01_tax_self_assessment_I0002",
+  "form_id": "tax_self_assessment",
+  "identity_id": "I0002",
+  "goal": "Enter the taxpayer's residential address and continue",
+  "needs": [
+    "address_line",
+    "lga",
+    "state"
+  ],
+  "values": {
+    "address_line": "119 Ogui Road, GRA",
+    "lga": "Kosofe",
+    "state": "Lagos"
+  },
+  "n_steps": 4
+}

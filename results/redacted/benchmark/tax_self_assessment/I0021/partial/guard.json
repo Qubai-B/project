@@ -1,0 +1,88 @@
+{
+ "detector": "hybrid",
+ "task_id": "T01",
+ "needs": [
+  "address_line",
+  "lga",
+  "state"
+ ],
+ "detections": [
+  {
+   "pii_type": "PERSON",
+   "field": "last_name",
+   "text": "Oni",
+   "bbox": {
+    "x": 501.5,
+    "y": 190.5,
+    "w": 22.0,
+    "h": 12.0
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "PERSON",
+   "field": "first_name",
+   "text": "Efe",
+   "bbox": {
+    "x": 502.0,
+    "y": 237.5,
+    "w": 21.0,
+    "h": 12.0
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "DOB",
+   "field": "date_of_birth",
+   "text": "30/06/1998",
+   "bbox": {
+    "x": 501.5,
+    "y": 284.5,
+    "w": 74.0,
+    "h": 12.0
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "TIN",
+   "field": "tin",
+   "text": "72907576-0005",
+   "bbox": {
+    "x": 501.5,
+    "y": 332.0,
+    "w": 104.5,
+    "h": 11.5
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "NIN",
+   "field": "nin",
+   "text": "34936183242",
+   "bbox": {
+    "x": 501.5,
+    "y": 379.0,
+    "w": 90.5,
+    "h": 11.5
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "ADDRESS",
+   "field": "address_line",
+   "text": "90 Nnebisi Road, GRA",
+   "bbox": {
+    "x": 501.5,
+    "y": 483.5,
+    "w": 151.5,
+    "h": 13.5
+   },
+   "source": "label"
+  }
+ ],
+ "timings_ms": {
+  "ocr": 637.6716670000064,
+  "detect": 19.392707999998038,
+  "mask": 38.45112499999459
+ }
+}

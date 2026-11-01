@@ -1,0 +1,135 @@
+{
+ "detector": "hybrid",
+ "task_id": "T04",
+ "needs": [
+  "licence_no",
+  "nin"
+ ],
+ "detections": [
+  {
+   "pii_type": "LICENCE_NO",
+   "field": "licence_no",
+   "text": "LAG31417HG44",
+   "bbox": {
+    "x": 500.0,
+    "y": 188.5,
+    "w": 111.5,
+    "h": 18.5
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "PERSON",
+   "field": "last_name",
+   "text": "Olawale",
+   "bbox": {
+    "x": 501.5,
+    "y": 295.5,
+    "w": 53.0,
+    "h": 12.0
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "PERSON",
+   "field": "first_name",
+   "text": "Ladi",
+   "bbox": {
+    "x": 502.0,
+    "y": 343.0,
+    "w": 26.5,
+    "h": 11.5
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "DOB",
+   "field": "date_of_birth",
+   "text": "10/02/1957",
+   "bbox": {
+    "x": 502.5,
+    "y": 389.5,
+    "w": 73.0,
+    "h": 12.0
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "NIN",
+   "field": "nin",
+   "text": "49593103413",
+   "bbox": {
+    "x": 501.0,
+    "y": 437.0,
+    "w": 91.5,
+    "h": 11.5
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "PHONE",
+   "field": "phone",
+   "text": "+234 906 649 3045",
+   "bbox": {
+    "x": 501.5,
+    "y": 542.0,
+    "w": 128.5,
+    "h": 11.5
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "EMAIL",
+   "field": "email",
+   "text": "ladi.olawale94@example.com",
+   "bbox": {
+    "x": 501.5,
+    "y": 588.5,
+    "w": 198.5,
+    "h": 14.5
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "ADDRESS",
+   "field": "address_line",
+   "text": "119 Ogui Road, GRA",
+   "bbox": {
+    "x": 502.5,
+    "y": 635.5,
+    "w": 139.5,
+    "h": 14.5
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "ADDRESS",
+   "field": "lga",
+   "text": "Kosofe",
+   "bbox": {
+    "x": 502.0,
+    "y": 682.5,
+    "w": 45.0,
+    "h": 12.0
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "ADDRESS",
+   "field": "state",
+   "text": "Lagos",
+   "bbox": {
+    "x": 502.0,
+    "y": 730.0,
+    "w": 39.5,
+    "h": 14.0
+   },
+   "source": "label"
+  }
+ ],
+ "timings_ms": {
+  "ocr": 755.4940410000199,
+  "detect": 28.07783399998698,
+  "mask": 30.46062499998925
+ }
+}

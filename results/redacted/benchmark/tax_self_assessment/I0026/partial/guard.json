@@ -1,0 +1,88 @@
+{
+ "detector": "hybrid",
+ "task_id": "T01",
+ "needs": [
+  "address_line",
+  "lga",
+  "state"
+ ],
+ "detections": [
+  {
+   "pii_type": "PERSON",
+   "field": "last_name",
+   "text": "Igwe",
+   "bbox": {
+    "x": 502.0,
+    "y": 191.0,
+    "w": 30.0,
+    "h": 14.0
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "PERSON",
+   "field": "first_name",
+   "text": "Ifeoma",
+   "bbox": {
+    "x": 502.0,
+    "y": 237.5,
+    "w": 44.5,
+    "h": 12.0
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "DOB",
+   "field": "date_of_birth",
+   "text": "17/08/1973",
+   "bbox": {
+    "x": 502.5,
+    "y": 284.5,
+    "w": 73.0,
+    "h": 12.0
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "TIN",
+   "field": "tin",
+   "text": "95618110-0005",
+   "bbox": {
+    "x": 501.5,
+    "y": 332.0,
+    "w": 103.5,
+    "h": 11.5
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "NIN",
+   "field": "nin",
+   "text": "56238692221",
+   "bbox": {
+    "x": 501.5,
+    "y": 379.0,
+    "w": 89.0,
+    "h": 11.5
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "ADDRESS",
+   "field": "address_line",
+   "text": "42 Awolowo Road, Garki",
+   "bbox": {
+    "x": 501.0,
+    "y": 483.5,
+    "w": 163.5,
+    "h": 13.5
+   },
+   "source": "label"
+  }
+ ],
+ "timings_ms": {
+  "ocr": 673.1920000000002,
+  "detect": 31.28845900002375,
+  "mask": 37.34712599998602
+ }
+}

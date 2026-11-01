@@ -1,0 +1,135 @@
+{
+ "detector": "hybrid",
+ "task_id": "T03",
+ "needs": [
+  "email",
+  "phone"
+ ],
+ "detections": [
+  {
+   "pii_type": "LICENCE_NO",
+   "field": "licence_no",
+   "text": "PLA25814DF25",
+   "bbox": {
+    "x": 502.0,
+    "y": 191.0,
+    "w": 105.5,
+    "h": 11.5
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "PERSON",
+   "field": "last_name",
+   "text": "Dakolo",
+   "bbox": {
+    "x": 502.0,
+    "y": 296.0,
+    "w": 45.0,
+    "h": 11.5
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "PERSON",
+   "field": "first_name",
+   "text": "Olumide",
+   "bbox": {
+    "x": 501.5,
+    "y": 342.5,
+    "w": 55.0,
+    "h": 12.0
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "DOB",
+   "field": "date_of_birth",
+   "text": "07/01/1987",
+   "bbox": {
+    "x": 501.5,
+    "y": 389.5,
+    "w": 74.0,
+    "h": 12.0
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "NIN",
+   "field": "nin",
+   "text": "78377701436",
+   "bbox": {
+    "x": 501.5,
+    "y": 437.0,
+    "w": 91.0,
+    "h": 11.5
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "PHONE",
+   "field": "phone",
+   "text": "+234 909 110 9464",
+   "bbox": {
+    "x": 501.5,
+    "y": 542.0,
+    "w": 127.5,
+    "h": 11.5
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "EMAIL",
+   "field": "email",
+   "text": "olumide.dakolo36@example.com",
+   "bbox": {
+    "x": 501.5,
+    "y": 588.5,
+    "w": 221.0,
+    "h": 14.5
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "ADDRESS",
+   "field": "address_line",
+   "text": "25 Allen Avenue, Wuse 2",
+   "bbox": {
+    "x": 501.0,
+    "y": 636.0,
+    "w": 166.0,
+    "h": 13.0
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "ADDRESS",
+   "field": "lga",
+   "text": "Jos South",
+   "bbox": {
+    "x": 501.5,
+    "y": 682.5,
+    "w": 65.5,
+    "h": 12.0
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "ADDRESS",
+   "field": "state",
+   "text": "Plateau",
+   "bbox": {
+    "x": 502.0,
+    "y": 730.0,
+    "w": 49.0,
+    "h": 11.5
+   },
+   "source": "label"
+  }
+ ],
+ "timings_ms": {
+  "ocr": 452.8630000000007,
+  "detect": 17.156333999999163,
+  "mask": 26.635875000000198
+ }
+}

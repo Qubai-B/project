@@ -1,0 +1,13 @@
+{
+  "source_html": "page.html",
+  "screenshot": "screenshot.png",
+  "viewport": {
+    "width": 1280,
+    "height": 1000,
+    "device_scale_factor": 1
+  },
+  "form_id": "passport_application",
+  "identity_id": "I0009",
+  "fill_state": "empty",
+  "pii": []
+}

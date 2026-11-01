@@ -1,0 +1,88 @@
+{
+ "detector": "hybrid",
+ "task_id": "T01",
+ "needs": [
+  "address_line",
+  "lga",
+  "state"
+ ],
+ "detections": [
+  {
+   "pii_type": "PERSON",
+   "field": "last_name",
+   "text": "Igbinedion",
+   "bbox": {
+    "x": 502.0,
+    "y": 191.0,
+    "w": 67.5,
+    "h": 14.0
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "PERSON",
+   "field": "first_name",
+   "text": "Tamuno",
+   "bbox": {
+    "x": 501.0,
+    "y": 238.0,
+    "w": 53.0,
+    "h": 11.5
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "DOB",
+   "field": "date_of_birth",
+   "text": "07/11/1975",
+   "bbox": {
+    "x": 501.5,
+    "y": 284.5,
+    "w": 73.0,
+    "h": 12.0
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "TIN",
+   "field": "tin",
+   "text": "15677713-0007",
+   "bbox": {
+    "x": 502.5,
+    "y": 332.0,
+    "w": 103.0,
+    "h": 11.5
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "NIN",
+   "field": "nin",
+   "text": "43244510762",
+   "bbox": {
+    "x": 501.0,
+    "y": 379.0,
+    "w": 91.0,
+    "h": 11.5
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "ADDRESS",
+   "field": "address_line",
+   "text": "51 Awolowo Road, Victoria Island",
+   "bbox": {
+    "x": 501.5,
+    "y": 484.0,
+    "w": 221.0,
+    "h": 13.0
+   },
+   "source": "label"
+  }
+ ],
+ "timings_ms": {
+  "ocr": 692.5390840000034,
+  "detect": 17.241915999989033,
+  "mask": 33.1767090000028
+ }
+}

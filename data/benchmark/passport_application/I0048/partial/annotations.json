@@ -1,0 +1,109 @@
+{
+  "source_html": "page.html",
+  "screenshot": "screenshot.png",
+  "viewport": {
+    "width": 1280,
+    "height": 1000,
+    "device_scale_factor": 1
+  },
+  "form_id": "passport_application",
+  "identity_id": "I0048",
+  "fill_state": "partial",
+  "pii": [
+    {
+      "field": "last_name",
+      "pii_type": "PERSON",
+      "value": "Nwachukwu",
+      "bbox": {
+        "x": 501,
+        "y": 188,
+        "w": 80.9,
+        "h": 17
+      },
+      "input_bbox": {
+        "x": 490,
+        "y": 180,
+        "w": 560,
+        "h": 33
+      },
+      "needed": false,
+      "visible": true
+    },
+    {
+      "field": "first_name",
+      "pii_type": "PERSON",
+      "value": "Preye",
+      "bbox": {
+        "x": 501,
+        "y": 235,
+        "w": 39.2,
+        "h": 17
+      },
+      "input_bbox": {
+        "x": 490,
+        "y": 227,
+        "w": 560,
+        "h": 33
+      },
+      "needed": false,
+      "visible": true
+    },
+    {
+      "field": "date_of_birth",
+      "pii_type": "DOB",
+      "value": "09/07/1970",
+      "bbox": {
+        "x": 501,
+        "y": 282,
+        "w": 75.1,
+        "h": 17
+      },
+      "input_bbox": {
+        "x": 490,
+        "y": 274,
+        "w": 560,
+        "h": 33
+      },
+      "needed": false,
+      "visible": true
+    },
+    {
+      "field": "nin",
+      "pii_type": "NIN",
+      "value": "69078447364",
+      "bbox": {
+        "x": 501,
+        "y": 329,
+        "w": 91.8,
+        "h": 17
+      },
+      "input_bbox": {
+        "x": 490,
+        "y": 321,
+        "w": 560,
+        "h": 33
+      },
+      "needed": false,
+      "visible": true
+    },
+    {
+      "field": "passport_no",
+      "pii_type": "PASSPORT",
+      "value": "B27551135",
+      "bbox": {
+        "x": 501,
+        "y": 376,
+        "w": 75.6,
+        "h": 17
+      },
+      "input_bbox": {
+        "x": 490,
+        "y": 368,
+        "w": 560,
+        "h": 33
+      },
+      "needed": false,
+      "visible": true
+    }
+  ]
+}

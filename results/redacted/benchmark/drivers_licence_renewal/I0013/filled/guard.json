@@ -1,0 +1,135 @@
+{
+ "detector": "hybrid",
+ "task_id": "T03",
+ "needs": [
+  "email",
+  "phone"
+ ],
+ "detections": [
+  {
+   "pii_type": "LICENCE_NO",
+   "field": "licence_no",
+   "text": "KAN30861HH43",
+   "bbox": {
+    "x": 502.0,
+    "y": 191.0,
+    "w": 109.5,
+    "h": 11.5
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "PERSON",
+   "field": "last_name",
+   "text": "Nwachukwu",
+   "bbox": {
+    "x": 502.0,
+    "y": 296.0,
+    "w": 79.0,
+    "h": 11.5
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "PERSON",
+   "field": "first_name",
+   "text": "Emeka",
+   "bbox": {
+    "x": 502.0,
+    "y": 343.0,
+    "w": 45.0,
+    "h": 11.5
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "DOB",
+   "field": "date_of_birth",
+   "text": "11/03/1957",
+   "bbox": {
+    "x": 502.5,
+    "y": 390.0,
+    "w": 72.0,
+    "h": 11.5
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "NIN",
+   "field": "nin",
+   "text": "67632016328",
+   "bbox": {
+    "x": 501.5,
+    "y": 437.0,
+    "w": 91.0,
+    "h": 11.5
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "PHONE",
+   "field": "phone",
+   "text": "+234 915 970 2193",
+   "bbox": {
+    "x": 501.5,
+    "y": 542.0,
+    "w": 128.5,
+    "h": 11.5
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "EMAIL",
+   "field": "email",
+   "text": "emeka.nwachukwu61@example.com",
+   "bbox": {
+    "x": 501.5,
+    "y": 588.5,
+    "w": 247.5,
+    "h": 14.5
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "ADDRESS",
+   "field": "address_line",
+   "text": "59 Airport Road, New Haven",
+   "bbox": {
+    "x": 501.5,
+    "y": 636.0,
+    "w": 189.0,
+    "h": 14.0
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "ADDRESS",
+   "field": "lga",
+   "text": "Fagge",
+   "bbox": {
+    "x": 502.0,
+    "y": 683.0,
+    "w": 41.0,
+    "h": 14.0
+   },
+   "source": "label"
+  },
+  {
+   "pii_type": "ADDRESS",
+   "field": "state",
+   "text": "Kano",
+   "bbox": {
+    "x": 502.0,
+    "y": 730.0,
+    "w": 34.0,
+    "h": 11.5
+   },
+   "source": "label"
+  }
+ ],
+ "timings_ms": {
+  "ocr": 444.04499999999916,
+  "detect": 17.538500000000568,
+  "mask": 21.929000000000087
+ }
+}

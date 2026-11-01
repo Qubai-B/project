@@ -1,0 +1,242 @@
+{
+  "source_html": "page.html",
+  "screenshot": "screenshot.png",
+  "viewport": {
+    "width": 1280,
+    "height": 1054,
+    "device_scale_factor": 1
+  },
+  "form_id": "tax_self_assessment",
+  "identity_id": "I0036",
+  "fill_state": "filled",
+  "pii": [
+    {
+      "field": "last_name",
+      "pii_type": "PERSON",
+      "value": "Okafor",
+      "bbox": {
+        "x": 501,
+        "y": 188,
+        "w": 45.0,
+        "h": 17
+      },
+      "input_bbox": {
+        "x": 490,
+        "y": 180,
+        "w": 560,
+        "h": 33
+      },
+      "needed": false,
+      "visible": true
+    },
+    {
+      "field": "first_name",
+      "pii_type": "PERSON",
+      "value": "Abubakar",
+      "bbox": {
+        "x": 501,
+        "y": 235,
+        "w": 64.2,
+        "h": 17
+      },
+      "input_bbox": {
+        "x": 490,
+        "y": 227,
+        "w": 560,
+        "h": 33
+      },
+      "needed": false,
+      "visible": true
+    },
+    {
+      "field": "date_of_birth",
+      "pii_type": "DOB",
+      "value": "16/01/1985",
+      "bbox": {
+        "x": 501,
+        "y": 282,
+        "w": 75.1,
+        "h": 17
+      },
+      "input_bbox": {
+        "x": 490,
+        "y": 274,
+        "w": 560,
+        "h": 33
+      },
+      "needed": false,
+      "visible": true
+    },
+    {
+      "field": "tin",
+      "pii_type": "TIN",
+      "value": "96629889-0003",
+      "bbox": {
+        "x": 501,
+        "y": 329,
+        "w": 105.1,
+        "h": 17
+      },
+      "input_bbox": {
+        "x": 490,
+        "y": 321,
+        "w": 560,
+        "h": 33
+      },
+      "needed": false,
+      "visible": true
+    },
+    {
+      "field": "nin",
+      "pii_type": "NIN",
+      "value": "36968164535",
+      "bbox": {
+        "x": 501,
+        "y": 376,
+        "w": 91.8,
+        "h": 17
+      },
+      "input_bbox": {
+        "x": 490,
+        "y": 368,
+        "w": 560,
+        "h": 33
+      },
+      "needed": false,
+      "visible": true
+    },
+    {
+      "field": "address_line",
+      "pii_type": "ADDRESS",
+      "value": "12 Airport Road, Rumuola",
+      "bbox": {
+        "x": 501,
+        "y": 481,
+        "w": 173.4,
+        "h": 17
+      },
+      "input_bbox": {
+        "x": 490,
+        "y": 473,
+        "w": 560,
+        "h": 33
+      },
+      "needed": false,
+      "visible": true
+    },
+    {
+      "field": "lga",
+      "pii_type": "ADDRESS",
+      "value": "Enugu North",
+      "bbox": {
+        "x": 501,
+        "y": 528,
+        "w": 84.2,
+        "h": 17
+      },
+      "input_bbox": {
+        "x": 490,
+        "y": 520,
+        "w": 560,
+        "h": 33
+      },
+      "needed": false,
+      "visible": true
+    },
+    {
+      "field": "state",
+      "pii_type": "ADDRESS",
+      "value": "Enugu",
+      "bbox": {
+        "x": 501,
+        "y": 575,
+        "w": 43.4,
+        "h": 17
+      },
+      "input_bbox": {
+        "x": 490,
+        "y": 567,
+        "w": 560,
+        "h": 33
+      },
+      "needed": false,
+      "visible": true
+    },
+    {
+      "field": "annual_income",
+      "pii_type": "FINANCIAL",
+      "value": "20830000",
+      "bbox": {
+        "x": 501,
+        "y": 680,
+        "w": 66.7,
+        "h": 17
+      },
+      "input_bbox": {
+        "x": 490,
+        "y": 672,
+        "w": 560,
+        "h": 33
+      },
+      "needed": false,
+      "visible": true
+    },
+    {
+      "field": "bvn",
+      "pii_type": "BVN",
+      "value": "22218188355",
+      "bbox": {
+        "x": 501,
+        "y": 727,
+        "w": 91.8,
+        "h": 17
+      },
+      "input_bbox": {
+        "x": 490,
+        "y": 719,
+        "w": 560,
+        "h": 33
+      },
+      "needed": false,
+      "visible": true
+    },
+    {
+      "field": "bank_account",
+      "pii_type": "BANK_ACCOUNT",
+      "value": "1014766981",
+      "bbox": {
+        "x": 501,
+        "y": 774,
+        "w": 83.4,
+        "h": 17
+      },
+      "input_bbox": {
+        "x": 490,
+        "y": 766,
+        "w": 560,
+        "h": 33
+      },
+      "needed": false,
+      "visible": true
+    },
+    {
+      "field": "email",
+      "pii_type": "EMAIL",
+      "value": "abubakar.okafor22@example.com",
+      "bbox": {
+        "x": 501,
+        "y": 821,
+        "w": 228.7,
+        "h": 17
+      },
+      "input_bbox": {
+        "x": 490,
+        "y": 813,
+        "w": 560,
+        "h": 33
+      },
+      "needed": false,
+      "visible": true
+    }
+  ]
+}

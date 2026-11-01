@@ -1,0 +1,13 @@
+{
+  "source_html": "page.html",
+  "screenshot": "screenshot.png",
+  "viewport": {
+    "width": 1280,
+    "height": 1000,
+    "device_scale_factor": 1
+  },
+  "form_id": "drivers_licence_renewal",
+  "identity_id": "I0046",
+  "fill_state": "empty",
+  "pii": []
+}

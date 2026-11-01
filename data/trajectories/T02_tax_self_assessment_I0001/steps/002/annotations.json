@@ -1,0 +1,224 @@
+{
+  "source_html": "page.html",
+  "screenshot": "screenshot.png",
+  "viewport": {
+    "width": 1280,
+    "height": 1054,
+    "device_scale_factor": 1
+  },
+  "form_id": "tax_self_assessment",
+  "identity_id": "I0001",
+  "task_id": "T02",
+  "step": 2,
+  "pii": [
+    {
+      "field": "last_name",
+      "pii_type": "PERSON",
+      "value": "Okafor",
+      "bbox": {
+        "x": 501,
+        "y": 188,
+        "w": 45.0,
+        "h": 17
+      },
+      "input_bbox": {
+        "x": 490,
+        "y": 180,
+        "w": 560,
+        "h": 33
+      },
+      "needed": false,
+      "visible": true
+    },
+    {
+      "field": "first_name",
+      "pii_type": "PERSON",
+      "value": "Nnamdi",
+      "bbox": {
+        "x": 501,
+        "y": 235,
+        "w": 51.7,
+        "h": 17
+      },
+      "input_bbox": {
+        "x": 490,
+        "y": 227,
+        "w": 560,
+        "h": 33
+      },
+      "needed": false,
+      "visible": true
+    },
+    {
+      "field": "date_of_birth",
+      "pii_type": "DOB",
+      "value": "04/09/1989",
+      "bbox": {
+        "x": 501,
+        "y": 282,
+        "w": 75.1,
+        "h": 17
+      },
+      "input_bbox": {
+        "x": 490,
+        "y": 274,
+        "w": 560,
+        "h": 33
+      },
+      "needed": false,
+      "visible": true
+    },
+    {
+      "field": "tin",
+      "pii_type": "TIN",
+      "value": "66722344-0006",
+      "bbox": {
+        "x": 501,
+        "y": 329,
+        "w": 105.1,
+        "h": 17
+      },
+      "input_bbox": {
+        "x": 490,
+        "y": 321,
+        "w": 560,
+        "h": 33
+      },
+      "needed": false,
+      "visible": true
+    },
+    {
+      "field": "nin",
+      "pii_type": "NIN",
+      "value": "96001338908",
+      "bbox": {
+        "x": 501,
+        "y": 376,
+        "w": 91.8,
+        "h": 17
+      },
+      "input_bbox": {
+        "x": 490,
+        "y": 368,
+        "w": 560,
+        "h": 33
+      },
+      "needed": false,
+      "visible": true
+    },
+    {
+      "field": "address_line",
+      "pii_type": "ADDRESS",
+      "value": "95 Herbert Macaulay Way, Lekki Phase 1",
+      "bbox": {
+        "x": 501,
+        "y": 481,
+        "w": 274.3,
+        "h": 17
+      },
+      "input_bbox": {
+        "x": 490,
+        "y": 473,
+        "w": 560,
+        "h": 33
+      },
+      "needed": false,
+      "visible": true
+    },
+    {
+      "field": "lga",
+      "pii_type": "ADDRESS",
+      "value": "Jos North",
+      "bbox": {
+        "x": 501,
+        "y": 528,
+        "w": 64.2,
+        "h": 17
+      },
+      "input_bbox": {
+        "x": 490,
+        "y": 520,
+        "w": 560,
+        "h": 33
+      },
+      "needed": false,
+      "visible": true
+    },
+    {
+      "field": "state",
+      "pii_type": "ADDRESS",
+      "value": "Plateau",
+      "bbox": {
+        "x": 501,
+        "y": 575,
+        "w": 50.9,
+        "h": 17
+      },
+      "input_bbox": {
+        "x": 490,
+        "y": 567,
+        "w": 560,
+        "h": 33
+      },
+      "needed": false,
+      "visible": true
+    },
+    {
+      "field": "annual_income",
+      "pii_type": "FINANCIAL",
+      "value": "14680000",
+      "bbox": {
+        "x": 501,
+        "y": 680,
+        "w": 66.7,
+        "h": 17
+      },
+      "input_bbox": {
+        "x": 490,
+        "y": 672,
+        "w": 560,
+        "h": 33
+      },
+      "needed": true,
+      "visible": true
+    },
+    {
+      "field": "bvn",
+      "pii_type": "BVN",
+      "value": "22386379402",
+      "bbox": {
+        "x": 501,
+        "y": 727,
+        "w": 91.8,
+        "h": 17
+      },
+      "input_bbox": {
+        "x": 490,
+        "y": 719,
+        "w": 560,
+        "h": 33
+      },
+      "needed": true,
+      "visible": true
+    },
+    {
+      "field": "email",
+      "pii_type": "EMAIL",
+      "value": "nnamdi.okafor36@example.com",
+      "bbox": {
+        "x": 501,
+        "y": 821,
+        "w": 216.2,
+        "h": 17
+      },
+      "input_bbox": {
+        "x": 490,
+        "y": 813,
+        "w": 560,
+        "h": 33
+      },
+      "needed": false,
+      "visible": true
+    }
+  ]
+}

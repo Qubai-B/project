@@ -1,0 +1,14 @@
+{
+ "detector": "hybrid",
+ "task_id": "T05",
+ "needs": [
+  "nin",
+  "passport_no"
+ ],
+ "detections": [],
+ "timings_ms": {
+  "ocr": 370.8760840000025,
+  "detect": 16.732290999996735,
+  "mask": 21.02520799999752
+ }
+}

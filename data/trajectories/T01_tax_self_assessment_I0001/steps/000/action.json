@@ -1,0 +1,7 @@
+{
+  "step": 0,
+  "action": "type",
+  "target_field": "address_line",
+  "selector": "#address_line",
+  "value": "95 Herbert Macaulay Way, Lekki Phase 1"
+}

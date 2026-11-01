@@ -1,0 +1,7 @@
+{
+  "step": 1,
+  "action": "type",
+  "target_field": "lga",
+  "selector": "#lga",
+  "value": "Kosofe"
+}

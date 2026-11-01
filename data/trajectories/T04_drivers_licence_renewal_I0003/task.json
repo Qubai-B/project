@@ -1,0 +1,15 @@
+{
+  "task_id": "T04_drivers_licence_renewal_I0003",
+  "form_id": "drivers_licence_renewal",
+  "identity_id": "I0003",
+  "goal": "Enter the existing licence number and NIN for verification",
+  "needs": [
+    "licence_no",
+    "nin"
+  ],
+  "values": {
+    "licence_no": "LAG88172BG58",
+    "nin": "95376724238"
+  },
+  "n_steps": 3
+}
