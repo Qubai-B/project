@@ -268,7 +268,7 @@ screenshots captured from live browser state.
 ## 10. Reproduction
 
 ```
-git clone <repo> && cd bessie
+git clone https://github.com/Qubai-B/project.git && cd project
 ./setup.sh                     # venv from requirements.lock, spaCy model, Chromium; checks Tesseract
 cp .env.example .env           # add ANTHROPIC_API_KEY for Experiments 2 and 3
 ./run_all.sh                   # ~20 min CPU for the guard pass; VLM stages skipped without a key

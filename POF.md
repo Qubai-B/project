@@ -3,7 +3,7 @@
 **Project:** Data minimization at the perception layer for screenshot-driven AI agents\
 **Context:** Nigerian government e-services\
 **Stage:** proof of concept built and partly evaluated · 15 October 2026\
-**Repository:** `bessie/` (this folder) · full technical record in `PROJECT_RECORD.md`
+**Repository:** https://github.com/Qubai-B/project · full technical record in `PROJECT_RECORD.md`
 
 ---
 
@@ -121,7 +121,7 @@ that a missed value is a privacy failure while an extra black box is only a util
 ## 9. How to look at it yourself
 
 ```
-cd bessie
+git clone https://github.com/Qubai-B/project.git && cd project
 ./setup.sh            # one-time: Python environment, OCR model, headless browser
 ./run_all.sh          # regenerates everything; ~20 minutes on a laptop
 ```

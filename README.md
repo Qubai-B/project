@@ -1,4 +1,4 @@
-# bessie — perception-layer data minimization for screenshot-driven agents
+# Perception-layer data minimization for screenshot-driven agents
 
 **Supervisor progress report: [`POF.md`](POF.md)** · **Full write-up: [`PROJECT_RECORD.md`](PROJECT_RECORD.md)** (decisions, methodology, results, conclusion) · numeric summary: `results/REPORT.md`.
 
@@ -15,7 +15,7 @@ convention across folders; if you can see the `.png`, the `.html` that produced
 it is next to it.
 
 ```
-bessie/
+<repo root>/
 ├── forms/                          # SOURCE: mock portal templates (hand-written)
 │   └── <form_id>/
 │       ├── index.html              # Jinja2 template, {{ v.<field> }} placeholders
@@ -144,7 +144,7 @@ Experiment 3 is offline: the model predicts one step at a time on recorded gold 
 ## Setup (replicates the exact environment on any machine)
 
 ```
-git clone <repo> bessie && cd bessie
+git clone https://github.com/Qubai-B/project.git && cd project
 ./setup.sh                      # creates .venv from requirements.lock, downloads the spaCy model and Chromium
 source .venv/bin/activate
 ```
