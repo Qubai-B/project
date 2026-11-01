@@ -1,6 +1,6 @@
 # Perception-layer data minimization for screenshot-driven agents
 
-**Supervisor progress report: [`POC.md`](POC.md)** · **Full write-up: [`PROJECT_RECORD.md`](PROJECT_RECORD.md)** (decisions, methodology, results, conclusion) · numeric summary: `results/REPORT.md`.
+**Supervisor progress report: [`POC.md`](POC.md)** · **Full write-up: [`PROJECT_RECORD.md`](PROJECT_RECORD.md)** (decisions, methodology, results, conclusion) · **Chronological log: [`LOG.md`](LOG.md)** · numeric summary: `results/REPORT.md`.
 
 Proof of concept for a visual redaction guard that masks PII in screenshots
 before they reach a vision-language model, evaluated on mock Nigerian government e-service forms (tax self-assessment, driver's licence renewal,
