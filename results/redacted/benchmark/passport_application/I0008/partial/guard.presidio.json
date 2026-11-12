@@ -1,0 +1,51 @@
+{
+ "detector": "presidio",
+ "task_id": "T05",
+ "needs": [
+  "nin",
+  "passport_no"
+ ],
+ "detections": [
+  {
+   "pii_type": "PERSON",
+   "field": null,
+   "text": "Danjuma",
+   "bbox": {
+    "x": 502.0,
+    "y": 191.0,
+    "w": 58.5,
+    "h": 14.0
+   },
+   "source": "presidio"
+  },
+  {
+   "pii_type": "DOB",
+   "field": null,
+   "text": "24/05/1960",
+   "bbox": {
+    "x": 501.0,
+    "y": 284.5,
+    "w": 74.5,
+    "h": 12.0
+   },
+   "source": "presidio"
+  },
+  {
+   "pii_type": "DOB",
+   "field": null,
+   "text": "43534624751",
+   "bbox": {
+    "x": 501.0,
+    "y": 332.0,
+    "w": 89.5,
+    "h": 11.5
+   },
+   "source": "presidio"
+  }
+ ],
+ "timings_ms": {
+  "ocr": 1379.4903999660164,
+  "detect": 247.24109994713217,
+  "mask": 0.0
+ }
+}

@@ -1,0 +1,39 @@
+{
+ "detector": "presidio",
+ "task_id": "T05",
+ "needs": [
+  "nin",
+  "passport_no"
+ ],
+ "detections": [
+  {
+   "pii_type": "PERSON",
+   "field": null,
+   "text": "Abubakar",
+   "bbox": {
+    "x": 501.0,
+    "y": 238.0,
+    "w": 64.5,
+    "h": 11.5
+   },
+   "source": "presidio"
+  },
+  {
+   "pii_type": "DOB",
+   "field": null,
+   "text": "16/01/1985",
+   "bbox": {
+    "x": 502.5,
+    "y": 284.5,
+    "w": 73.5,
+    "h": 12.0
+   },
+   "source": "presidio"
+  }
+ ],
+ "timings_ms": {
+  "ocr": 1256.891900091432,
+  "detect": 180.91109988745302,
+  "mask": 0.0
+ }
+}

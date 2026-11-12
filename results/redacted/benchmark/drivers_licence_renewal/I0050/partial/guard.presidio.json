@@ -1,0 +1,39 @@
+{
+ "detector": "presidio",
+ "task_id": "T03",
+ "needs": [
+  "email",
+  "phone"
+ ],
+ "detections": [
+  {
+   "pii_type": "PERSON",
+   "field": null,
+   "text": "Lawal",
+   "bbox": {
+    "x": 502.0,
+    "y": 296.0,
+    "w": 37.5,
+    "h": 11.5
+   },
+   "source": "presidio"
+  },
+  {
+   "pii_type": "DOB",
+   "field": null,
+   "text": "14/02/1975",
+   "bbox": {
+    "x": 502.5,
+    "y": 389.5,
+    "w": 73.5,
+    "h": 12.0
+   },
+   "source": "presidio"
+  }
+ ],
+ "timings_ms": {
+  "ocr": 1278.03660009522,
+  "detect": 196.6291000135243,
+  "mask": 0.0
+ }
+}

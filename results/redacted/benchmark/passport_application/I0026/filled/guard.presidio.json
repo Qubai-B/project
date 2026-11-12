@@ -1,0 +1,75 @@
+{
+ "detector": "presidio",
+ "task_id": "T05",
+ "needs": [
+  "nin",
+  "passport_no"
+ ],
+ "detections": [
+  {
+   "pii_type": "PERSON",
+   "field": null,
+   "text": "Igwe",
+   "bbox": {
+    "x": 502.0,
+    "y": 191.0,
+    "w": 30.0,
+    "h": 14.0
+   },
+   "source": "presidio"
+  },
+  {
+   "pii_type": "DOB",
+   "field": null,
+   "text": "17/08/1973",
+   "bbox": {
+    "x": 502.5,
+    "y": 284.5,
+    "w": 73.0,
+    "h": 12.0
+   },
+   "source": "presidio"
+  },
+  {
+   "pii_type": "DOB",
+   "field": null,
+   "text": "+234 813 129 1753",
+   "bbox": {
+    "x": 501.5,
+    "y": 484.0,
+    "w": 128.5,
+    "h": 11.5
+   },
+   "source": "presidio"
+  },
+  {
+   "pii_type": "EMAIL",
+   "field": null,
+   "text": "ifeoma.igwe22@example.com",
+   "bbox": {
+    "x": 501.5,
+    "y": 530.5,
+    "w": 200.0,
+    "h": 14.5
+   },
+   "source": "presidio"
+  },
+  {
+   "pii_type": "ADDRESS",
+   "field": null,
+   "text": "Onitsha North",
+   "bbox": {
+    "x": 501.5,
+    "y": 624.5,
+    "w": 91.5,
+    "h": 12.0
+   },
+   "source": "presidio"
+  }
+ ],
+ "timings_ms": {
+  "ocr": 1444.900400005281,
+  "detect": 241.56520003452897,
+  "mask": 0.0
+ }
+}

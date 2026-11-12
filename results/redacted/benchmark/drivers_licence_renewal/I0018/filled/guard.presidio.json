@@ -1,0 +1,87 @@
+{
+ "detector": "presidio",
+ "task_id": "T03",
+ "needs": [
+  "email",
+  "phone"
+ ],
+ "detections": [
+  {
+   "pii_type": "DOB",
+   "field": null,
+   "text": "07/01/1987",
+   "bbox": {
+    "x": 501.5,
+    "y": 389.5,
+    "w": 74.0,
+    "h": 12.0
+   },
+   "source": "presidio"
+  },
+  {
+   "pii_type": "PHONE",
+   "field": null,
+   "text": "+234 909 110 9464",
+   "bbox": {
+    "x": 501.5,
+    "y": 542.0,
+    "w": 127.5,
+    "h": 11.5
+   },
+   "source": "presidio"
+  },
+  {
+   "pii_type": "EMAIL",
+   "field": null,
+   "text": "olumide.dakolo36@example.com",
+   "bbox": {
+    "x": 501.5,
+    "y": 588.5,
+    "w": 221.0,
+    "h": 14.5
+   },
+   "source": "presidio"
+  },
+  {
+   "pii_type": "ADDRESS",
+   "field": null,
+   "text": "25 Allen Avenue, Wuse 2",
+   "bbox": {
+    "x": 501.0,
+    "y": 636.0,
+    "w": 166.0,
+    "h": 13.0
+   },
+   "source": "presidio"
+  },
+  {
+   "pii_type": "ADDRESS",
+   "field": null,
+   "text": "Jos South",
+   "bbox": {
+    "x": 501.5,
+    "y": 682.5,
+    "w": 65.5,
+    "h": 12.0
+   },
+   "source": "presidio"
+  },
+  {
+   "pii_type": "ADDRESS",
+   "field": null,
+   "text": "Plateau",
+   "bbox": {
+    "x": 502.0,
+    "y": 730.0,
+    "w": 49.0,
+    "h": 11.5
+   },
+   "source": "presidio"
+  }
+ ],
+ "timings_ms": {
+  "ocr": 2821.009299950674,
+  "detect": 626.4540000120178,
+  "mask": 0.0
+ }
+}

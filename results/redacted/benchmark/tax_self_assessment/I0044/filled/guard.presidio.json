@@ -1,0 +1,136 @@
+{
+ "detector": "presidio",
+ "task_id": "T01",
+ "needs": [
+  "address_line",
+  "lga",
+  "state"
+ ],
+ "detections": [
+  {
+   "pii_type": "PERSON",
+   "field": null,
+   "text": "Shehu",
+   "bbox": {
+    "x": 501.5,
+    "y": 190.5,
+    "w": 42.0,
+    "h": 12.0
+   },
+   "source": "presidio"
+  },
+  {
+   "pii_type": "PERSON",
+   "field": null,
+   "text": "Abubakar",
+   "bbox": {
+    "x": 501.0,
+    "y": 238.0,
+    "w": 64.5,
+    "h": 11.5
+   },
+   "source": "presidio"
+  },
+  {
+   "pii_type": "DOB",
+   "field": null,
+   "text": "15/02/1971",
+   "bbox": {
+    "x": 502.5,
+    "y": 284.5,
+    "w": 71.0,
+    "h": 12.0
+   },
+   "source": "presidio"
+  },
+  {
+   "pii_type": "DOB",
+   "field": null,
+   "text": "61692845115",
+   "bbox": {
+    "x": 501.5,
+    "y": 379.0,
+    "w": 89.5,
+    "h": 11.5
+   },
+   "source": "presidio"
+  },
+  {
+   "pii_type": "ADDRESS",
+   "field": null,
+   "text": "48 Oron Road, Garki",
+   "bbox": {
+    "x": 501.0,
+    "y": 483.5,
+    "w": 137.5,
+    "h": 13.5
+   },
+   "source": "presidio"
+  },
+  {
+   "pii_type": "ADDRESS",
+   "field": null,
+   "text": "Kaduna North",
+   "bbox": {
+    "x": 502.0,
+    "y": 531.0,
+    "w": 91.0,
+    "h": 11.5
+   },
+   "source": "presidio"
+  },
+  {
+   "pii_type": "ADDRESS",
+   "field": null,
+   "text": "Kaduna",
+   "bbox": {
+    "x": 502.0,
+    "y": 578.0,
+    "w": 50.0,
+    "h": 11.5
+   },
+   "source": "presidio"
+  },
+  {
+   "pii_type": "DOB",
+   "field": null,
+   "text": "Annual Income (*)",
+   "bbox": {
+    "x": 230.0,
+    "y": 683.5,
+    "w": 116.5,
+    "h": 13.5
+   },
+   "source": "presidio"
+  },
+  {
+   "pii_type": "PHONE",
+   "field": null,
+   "text": "6163022531",
+   "bbox": {
+    "x": 501.5,
+    "y": 777.0,
+    "w": 80.5,
+    "h": 11.5
+   },
+   "source": "presidio"
+  },
+  {
+   "pii_type": "EMAIL",
+   "field": null,
+   "text": "abubakar.shehu44@example.com",
+   "bbox": {
+    "x": 501.5,
+    "y": 823.5,
+    "w": 227.0,
+    "h": 14.5
+   },
+   "source": "presidio"
+  }
+ ],
+ "timings_ms": {
+  "ocr": 1547.3432999569923,
+  "detect": 321.30499999038875,
+  "mask": 0.0
+ }
+}

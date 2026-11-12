@@ -1,0 +1,14 @@
+{
+ "detector": "presidio",
+ "task_id": "T05",
+ "needs": [
+  "nin",
+  "passport_no"
+ ],
+ "detections": [],
+ "timings_ms": {
+  "ocr": 1238.652899977751,
+  "detect": 149.49239999987185,
+  "mask": 0.0
+ }
+}

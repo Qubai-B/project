@@ -1,0 +1,39 @@
+{
+ "detector": "presidio",
+ "task_id": "T05",
+ "needs": [
+  "nin",
+  "passport_no"
+ ],
+ "detections": [
+  {
+   "pii_type": "DOB",
+   "field": null,
+   "text": "30/06/1998",
+   "bbox": {
+    "x": 501.5,
+    "y": 284.5,
+    "w": 74.0,
+    "h": 12.0
+   },
+   "source": "presidio"
+  },
+  {
+   "pii_type": "PHONE",
+   "field": null,
+   "text": "34936183242",
+   "bbox": {
+    "x": 501.5,
+    "y": 332.0,
+    "w": 90.5,
+    "h": 11.5
+   },
+   "source": "presidio"
+  }
+ ],
+ "timings_ms": {
+  "ocr": 1610.5248000239953,
+  "detect": 383.00370005890727,
+  "mask": 0.0
+ }
+}

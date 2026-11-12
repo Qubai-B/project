@@ -1,0 +1,63 @@
+{
+ "detector": "presidio",
+ "task_id": "T03",
+ "needs": [
+  "email",
+  "phone"
+ ],
+ "detections": [
+  {
+   "pii_type": "PERSON",
+   "field": null,
+   "text": "Shehu",
+   "bbox": {
+    "x": 501.5,
+    "y": 295.5,
+    "w": 42.0,
+    "h": 12.0
+   },
+   "source": "presidio"
+  },
+  {
+   "pii_type": "PERSON",
+   "field": null,
+   "text": "Abubakar",
+   "bbox": {
+    "x": 501.0,
+    "y": 343.0,
+    "w": 64.5,
+    "h": 11.5
+   },
+   "source": "presidio"
+  },
+  {
+   "pii_type": "DOB",
+   "field": null,
+   "text": "15/02/1971",
+   "bbox": {
+    "x": 502.5,
+    "y": 389.5,
+    "w": 71.0,
+    "h": 12.0
+   },
+   "source": "presidio"
+  },
+  {
+   "pii_type": "DOB",
+   "field": null,
+   "text": "61692845115",
+   "bbox": {
+    "x": 501.5,
+    "y": 437.0,
+    "w": 89.5,
+    "h": 11.5
+   },
+   "source": "presidio"
+  }
+ ],
+ "timings_ms": {
+  "ocr": 1169.460800010711,
+  "detect": 202.05930003430694,
+  "mask": 0.0
+ }
+}

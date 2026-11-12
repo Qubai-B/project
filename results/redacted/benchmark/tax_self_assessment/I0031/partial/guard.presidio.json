@@ -1,0 +1,76 @@
+{
+ "detector": "presidio",
+ "task_id": "T01",
+ "needs": [
+  "address_line",
+  "lga",
+  "state"
+ ],
+ "detections": [
+  {
+   "pii_type": "PERSON",
+   "field": null,
+   "text": "Fatima",
+   "bbox": {
+    "x": 502.0,
+    "y": 238.0,
+    "w": 44.5,
+    "h": 11.5
+   },
+   "source": "presidio"
+  },
+  {
+   "pii_type": "DOB",
+   "field": null,
+   "text": "26/07/1998",
+   "bbox": {
+    "x": 501.0,
+    "y": 284.5,
+    "w": 74.5,
+    "h": 12.0
+   },
+   "source": "presidio"
+  },
+  {
+   "pii_type": "DOB",
+   "field": null,
+   "text": "81177589178",
+   "bbox": {
+    "x": 501.5,
+    "y": 379.0,
+    "w": 89.5,
+    "h": 11.5
+   },
+   "source": "presidio"
+  },
+  {
+   "pii_type": "ADDRESS",
+   "field": null,
+   "text": "7 Aba Road, Maitama",
+   "bbox": {
+    "x": 501.5,
+    "y": 484.0,
+    "w": 143.5,
+    "h": 13.0
+   },
+   "source": "presidio"
+  },
+  {
+   "pii_type": "DOB",
+   "field": null,
+   "text": "Annual Income (*)",
+   "bbox": {
+    "x": 230.0,
+    "y": 683.5,
+    "w": 116.5,
+    "h": 13.5
+   },
+   "source": "presidio"
+  }
+ ],
+ "timings_ms": {
+  "ocr": 1416.0535000264645,
+  "detect": 248.90299991238862,
+  "mask": 0.0
+ }
+}

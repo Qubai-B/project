@@ -1,0 +1,39 @@
+{
+ "detector": "presidio",
+ "task_id": "T05",
+ "needs": [
+  "nin",
+  "passport_no"
+ ],
+ "detections": [
+  {
+   "pii_type": "PERSON",
+   "field": null,
+   "text": "Folake",
+   "bbox": {
+    "x": 502.0,
+    "y": 238.0,
+    "w": 43.5,
+    "h": 11.5
+   },
+   "source": "presidio"
+  },
+  {
+   "pii_type": "DOB",
+   "field": null,
+   "text": "08/09/1998",
+   "bbox": {
+    "x": 501.5,
+    "y": 284.5,
+    "w": 74.0,
+    "h": 12.0
+   },
+   "source": "presidio"
+  }
+ ],
+ "timings_ms": {
+  "ocr": 1238.2440000073984,
+  "detect": 184.0444999979809,
+  "mask": 0.0
+ }
+}

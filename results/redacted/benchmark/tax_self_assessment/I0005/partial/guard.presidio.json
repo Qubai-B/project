@@ -1,0 +1,52 @@
+{
+ "detector": "presidio",
+ "task_id": "T01",
+ "needs": [
+  "address_line",
+  "lga",
+  "state"
+ ],
+ "detections": [
+  {
+   "pii_type": "ADDRESS",
+   "field": null,
+   "text": "Preye",
+   "bbox": {
+    "x": 502.0,
+    "y": 238.0,
+    "w": 37.5,
+    "h": 14.0
+   },
+   "source": "presidio"
+  },
+  {
+   "pii_type": "PERSON",
+   "field": null,
+   "text": "98 Isaac John Street, Asokoro",
+   "bbox": {
+    "x": 501.5,
+    "y": 483.5,
+    "w": 199.5,
+    "h": 13.5
+   },
+   "source": "presidio"
+  },
+  {
+   "pii_type": "DOB",
+   "field": null,
+   "text": "Annual Income (*)",
+   "bbox": {
+    "x": 230.0,
+    "y": 683.5,
+    "w": 116.5,
+    "h": 13.5
+   },
+   "source": "presidio"
+  }
+ ],
+ "timings_ms": {
+  "ocr": 1547.4466000450775,
+  "detect": 249.43379999604076,
+  "mask": 0.0
+ }
+}

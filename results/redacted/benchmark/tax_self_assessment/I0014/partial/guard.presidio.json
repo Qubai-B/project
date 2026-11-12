@@ -1,0 +1,64 @@
+{
+ "detector": "presidio",
+ "task_id": "T01",
+ "needs": [
+  "address_line",
+  "lga",
+  "state"
+ ],
+ "detections": [
+  {
+   "pii_type": "PERSON",
+   "field": null,
+   "text": "Akpan",
+   "bbox": {
+    "x": 501.0,
+    "y": 191.0,
+    "w": 42.0,
+    "h": 14.0
+   },
+   "source": "presidio"
+  },
+  {
+   "pii_type": "DOB",
+   "field": null,
+   "text": "29/04/1966",
+   "bbox": {
+    "x": 501.0,
+    "y": 284.5,
+    "w": 74.5,
+    "h": 12.0
+   },
+   "source": "presidio"
+  },
+  {
+   "pii_type": "PERSON",
+   "field": null,
+   "text": "10 Olu Obasanjo Road, Wuse 2",
+   "bbox": {
+    "x": 502.5,
+    "y": 483.5,
+    "w": 209.5,
+    "h": 14.5
+   },
+   "source": "presidio"
+  },
+  {
+   "pii_type": "DOB",
+   "field": null,
+   "text": "Annual Income (*)",
+   "bbox": {
+    "x": 230.0,
+    "y": 683.5,
+    "w": 116.5,
+    "h": 13.5
+   },
+   "source": "presidio"
+  }
+ ],
+ "timings_ms": {
+  "ocr": 1534.95430003386,
+  "detect": 274.9690000200644,
+  "mask": 0.0
+ }
+}

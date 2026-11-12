@@ -1,0 +1,63 @@
+{
+ "detector": "presidio",
+ "task_id": "T05",
+ "needs": [
+  "nin",
+  "passport_no"
+ ],
+ "detections": [
+  {
+   "pii_type": "PERSON",
+   "field": null,
+   "text": "Akpan",
+   "bbox": {
+    "x": 501.0,
+    "y": 191.0,
+    "w": 42.0,
+    "h": 14.0
+   },
+   "source": "presidio"
+  },
+  {
+   "pii_type": "PERSON",
+   "field": null,
+   "text": "Sani",
+   "bbox": {
+    "x": 501.5,
+    "y": 237.5,
+    "w": 29.0,
+    "h": 12.0
+   },
+   "source": "presidio"
+  },
+  {
+   "pii_type": "DOB",
+   "field": null,
+   "text": "14/08/1967",
+   "bbox": {
+    "x": 502.5,
+    "y": 284.5,
+    "w": 73.0,
+    "h": 12.0
+   },
+   "source": "presidio"
+  },
+  {
+   "pii_type": "DOB",
+   "field": null,
+   "text": "51462704828",
+   "bbox": {
+    "x": 501.5,
+    "y": 332.0,
+    "w": 91.0,
+    "h": 11.5
+   },
+   "source": "presidio"
+  }
+ ],
+ "timings_ms": {
+  "ocr": 1160.4492999613285,
+  "detect": 215.89880005922168,
+  "mask": 0.0
+ }
+}

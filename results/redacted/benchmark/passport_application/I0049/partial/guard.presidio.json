@@ -1,0 +1,39 @@
+{
+ "detector": "presidio",
+ "task_id": "T05",
+ "needs": [
+  "nin",
+  "passport_no"
+ ],
+ "detections": [
+  {
+   "pii_type": "PERSON",
+   "field": null,
+   "text": "Nnamdi",
+   "bbox": {
+    "x": 502.0,
+    "y": 238.0,
+    "w": 50.0,
+    "h": 11.5
+   },
+   "source": "presidio"
+  },
+  {
+   "pii_type": "DOB",
+   "field": null,
+   "text": "24/06/1989",
+   "bbox": {
+    "x": 501.0,
+    "y": 284.5,
+    "w": 74.5,
+    "h": 12.0
+   },
+   "source": "presidio"
+  }
+ ],
+ "timings_ms": {
+  "ocr": 1220.3330000629649,
+  "detect": 209.86669999547303,
+  "mask": 0.0
+ }
+}

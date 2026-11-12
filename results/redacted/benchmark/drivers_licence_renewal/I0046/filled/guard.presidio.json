@@ -1,0 +1,87 @@
+{
+ "detector": "presidio",
+ "task_id": "T03",
+ "needs": [
+  "email",
+  "phone"
+ ],
+ "detections": [
+  {
+   "pii_type": "ADDRESS",
+   "field": null,
+   "text": "Chinedu",
+   "bbox": {
+    "x": 501.5,
+    "y": 342.5,
+    "w": 54.5,
+    "h": 12.0
+   },
+   "source": "presidio"
+  },
+  {
+   "pii_type": "DOB",
+   "field": null,
+   "text": "15/02/1968",
+   "bbox": {
+    "x": 502.5,
+    "y": 389.5,
+    "w": 73.0,
+    "h": 12.0
+   },
+   "source": "presidio"
+  },
+  {
+   "pii_type": "PHONE",
+   "field": null,
+   "text": "+234 906 189 6236",
+   "bbox": {
+    "x": 501.5,
+    "y": 542.0,
+    "w": 128.5,
+    "h": 11.5
+   },
+   "source": "presidio"
+  },
+  {
+   "pii_type": "EMAIL",
+   "field": null,
+   "text": "chinedu.obi23@example.com",
+   "bbox": {
+    "x": 501.5,
+    "y": 588.5,
+    "w": 196.5,
+    "h": 14.5
+   },
+   "source": "presidio"
+  },
+  {
+   "pii_type": "ADDRESS",
+   "field": null,
+   "text": "86 Ring Road, Maitama",
+   "bbox": {
+    "x": 501.5,
+    "y": 636.0,
+    "w": 156.5,
+    "h": 14.0
+   },
+   "source": "presidio"
+  },
+  {
+   "pii_type": "ADDRESS",
+   "field": null,
+   "text": "Awka South",
+   "bbox": {
+    "x": 501.0,
+    "y": 682.5,
+    "w": 79.0,
+    "h": 12.0
+   },
+   "source": "presidio"
+  }
+ ],
+ "timings_ms": {
+  "ocr": 1325.363300042227,
+  "detect": 254.97320003341883,
+  "mask": 0.0
+ }
+}

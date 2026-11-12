@@ -1,0 +1,28 @@
+{
+ "detector": "presidio",
+ "task_id": "T01",
+ "needs": [
+  "address_line",
+  "lga",
+  "state"
+ ],
+ "detections": [
+  {
+   "pii_type": "DOB",
+   "field": null,
+   "text": "Annual Income (*)",
+   "bbox": {
+    "x": 230.0,
+    "y": 683.5,
+    "w": 116.5,
+    "h": 13.5
+   },
+   "source": "presidio"
+  }
+ ],
+ "timings_ms": {
+  "ocr": 1570.211699930951,
+  "detect": 234.81460008770227,
+  "mask": 0.0
+ }
+}

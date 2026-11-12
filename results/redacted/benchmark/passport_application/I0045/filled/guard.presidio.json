@@ -1,0 +1,87 @@
+{
+ "detector": "presidio",
+ "task_id": "T05",
+ "needs": [
+  "nin",
+  "passport_no"
+ ],
+ "detections": [
+  {
+   "pii_type": "PERSON",
+   "field": null,
+   "text": "Shehu",
+   "bbox": {
+    "x": 501.5,
+    "y": 190.5,
+    "w": 42.0,
+    "h": 12.0
+   },
+   "source": "presidio"
+  },
+  {
+   "pii_type": "DOB",
+   "field": null,
+   "text": "06/01/1960",
+   "bbox": {
+    "x": 501.5,
+    "y": 284.5,
+    "w": 74.0,
+    "h": 12.0
+   },
+   "source": "presidio"
+  },
+  {
+   "pii_type": "PHONE",
+   "field": null,
+   "text": "+234 706 341 7001",
+   "bbox": {
+    "x": 501.5,
+    "y": 484.0,
+    "w": 126.5,
+    "h": 11.5
+   },
+   "source": "presidio"
+  },
+  {
+   "pii_type": "EMAIL",
+   "field": null,
+   "text": "ladi.shehu17@example.com",
+   "bbox": {
+    "x": 501.5,
+    "y": 530.5,
+    "w": 188.5,
+    "h": 14.5
+   },
+   "source": "presidio"
+  },
+  {
+   "pii_type": "ADDRESS",
+   "field": null,
+   "text": "47 Ogui Road, Nasarawa GRA",
+   "bbox": {
+    "x": 501.0,
+    "y": 577.5,
+    "w": 205.0,
+    "h": 14.5
+   },
+   "source": "presidio"
+  },
+  {
+   "pii_type": "ADDRESS",
+   "field": null,
+   "text": "Lagos",
+   "bbox": {
+    "x": 502.0,
+    "y": 672.0,
+    "w": 39.5,
+    "h": 14.0
+   },
+   "source": "presidio"
+  }
+ ],
+ "timings_ms": {
+  "ocr": 1633.4026999538764,
+  "detect": 258.00120003987104,
+  "mask": 0.0
+ }
+}

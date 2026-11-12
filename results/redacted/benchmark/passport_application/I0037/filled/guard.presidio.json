@@ -1,0 +1,99 @@
+{
+ "detector": "presidio",
+ "task_id": "T05",
+ "needs": [
+  "nin",
+  "passport_no"
+ ],
+ "detections": [
+  {
+   "pii_type": "PERSON",
+   "field": null,
+   "text": "Briggs",
+   "bbox": {
+    "x": 502.0,
+    "y": 191.0,
+    "w": 41.0,
+    "h": 14.0
+   },
+   "source": "presidio"
+  },
+  {
+   "pii_type": "PERSON",
+   "field": null,
+   "text": "Sani",
+   "bbox": {
+    "x": 501.5,
+    "y": 237.5,
+    "w": 29.0,
+    "h": 12.0
+   },
+   "source": "presidio"
+  },
+  {
+   "pii_type": "DOB",
+   "field": null,
+   "text": "30/09/1999",
+   "bbox": {
+    "x": 501.5,
+    "y": 284.5,
+    "w": 74.0,
+    "h": 12.0
+   },
+   "source": "presidio"
+  },
+  {
+   "pii_type": "PHONE",
+   "field": null,
+   "text": "17744905814",
+   "bbox": {
+    "x": 502.5,
+    "y": 332.0,
+    "w": 90.0,
+    "h": 11.5
+   },
+   "source": "presidio"
+  },
+  {
+   "pii_type": "PHONE",
+   "field": null,
+   "text": "+234 913 758 6295",
+   "bbox": {
+    "x": 501.5,
+    "y": 484.0,
+    "w": 128.5,
+    "h": 11.5
+   },
+   "source": "presidio"
+  },
+  {
+   "pii_type": "EMAIL",
+   "field": null,
+   "text": "sani.briggs58@example.com",
+   "bbox": {
+    "x": 501.5,
+    "y": 530.5,
+    "w": 192.5,
+    "h": 14.5
+   },
+   "source": "presidio"
+  },
+  {
+   "pii_type": "ADDRESS",
+   "field": null,
+   "text": "111 Sapele Road, Ikoyi",
+   "bbox": {
+    "x": 502.5,
+    "y": 577.5,
+    "w": 150.5,
+    "h": 14.5
+   },
+   "source": "presidio"
+  }
+ ],
+ "timings_ms": {
+  "ocr": 1291.661800001748,
+  "detect": 297.50809993129224,
+  "mask": 0.0
+ }
+}

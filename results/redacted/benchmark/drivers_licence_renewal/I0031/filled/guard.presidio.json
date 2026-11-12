@@ -1,0 +1,87 @@
+{
+ "detector": "presidio",
+ "task_id": "T03",
+ "needs": [
+  "email",
+  "phone"
+ ],
+ "detections": [
+  {
+   "pii_type": "PERSON",
+   "field": null,
+   "text": "Fatima",
+   "bbox": {
+    "x": 502.0,
+    "y": 343.0,
+    "w": 44.5,
+    "h": 11.5
+   },
+   "source": "presidio"
+  },
+  {
+   "pii_type": "DOB",
+   "field": null,
+   "text": "26/07/1998",
+   "bbox": {
+    "x": 501.0,
+    "y": 389.5,
+    "w": 74.5,
+    "h": 12.0
+   },
+   "source": "presidio"
+  },
+  {
+   "pii_type": "DOB",
+   "field": null,
+   "text": "81177589178",
+   "bbox": {
+    "x": 501.5,
+    "y": 437.0,
+    "w": 89.5,
+    "h": 11.5
+   },
+   "source": "presidio"
+  },
+  {
+   "pii_type": "PHONE",
+   "field": null,
+   "text": "+234 703 278 5347",
+   "bbox": {
+    "x": 501.5,
+    "y": 542.0,
+    "w": 128.5,
+    "h": 11.5
+   },
+   "source": "presidio"
+  },
+  {
+   "pii_type": "EMAIL",
+   "field": null,
+   "text": "fatima.akinwande42@example.com",
+   "bbox": {
+    "x": 501.0,
+    "y": 588.5,
+    "w": 237.0,
+    "h": 14.5
+   },
+   "source": "presidio"
+  },
+  {
+   "pii_type": "ADDRESS",
+   "field": null,
+   "text": "7 Aba Road, Maitama",
+   "bbox": {
+    "x": 501.5,
+    "y": 636.0,
+    "w": 143.5,
+    "h": 13.0
+   },
+   "source": "presidio"
+  }
+ ],
+ "timings_ms": {
+  "ocr": 1324.0930000320077,
+  "detect": 253.95619997289032,
+  "mask": 0.0
+ }
+}

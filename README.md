@@ -118,7 +118,8 @@ gaps, so a form row becomes a label run and a value run. `guard/detect.py` class
 `task_aware` mode. `guard/mask.py` paints the boxes.
 
 Integration point for an agent: call `redact()` on every screenshot before it is sent to the model.
-That single insertion is the Paperasse middleware.
+That single insertion is all a screenshot-driven agent such as Paperasse would need; the project
+offers it as a reference design and does not integrate it into any agent.
 
 **Design notes from development.** (1) Screenshots taken right after an agent types carry the
 browser's blue focus ring on that input, and Tesseract's layout analysis then skipped the text inside

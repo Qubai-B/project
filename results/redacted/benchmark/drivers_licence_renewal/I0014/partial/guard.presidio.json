@@ -1,0 +1,39 @@
+{
+ "detector": "presidio",
+ "task_id": "T03",
+ "needs": [
+  "email",
+  "phone"
+ ],
+ "detections": [
+  {
+   "pii_type": "PERSON",
+   "field": null,
+   "text": "Akpan",
+   "bbox": {
+    "x": 501.0,
+    "y": 296.0,
+    "w": 42.0,
+    "h": 14.0
+   },
+   "source": "presidio"
+  },
+  {
+   "pii_type": "DOB",
+   "field": null,
+   "text": "29/04/1966",
+   "bbox": {
+    "x": 501.0,
+    "y": 389.5,
+    "w": 74.5,
+    "h": 12.0
+   },
+   "source": "presidio"
+  }
+ ],
+ "timings_ms": {
+  "ocr": 1789.6905998932198,
+  "detect": 324.1436000680551,
+  "mask": 0.0
+ }
+}

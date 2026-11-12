@@ -1,0 +1,51 @@
+{
+ "detector": "presidio",
+ "task_id": "T05",
+ "needs": [
+  "nin",
+  "passport_no"
+ ],
+ "detections": [
+  {
+   "pii_type": "PERSON",
+   "field": null,
+   "text": "Abdullahi",
+   "bbox": {
+    "x": 501.0,
+    "y": 191.0,
+    "w": 61.0,
+    "h": 11.5
+   },
+   "source": "presidio"
+  },
+  {
+   "pii_type": "DOB",
+   "field": null,
+   "text": "09/07/2006",
+   "bbox": {
+    "x": 501.5,
+    "y": 284.5,
+    "w": 74.0,
+    "h": 12.0
+   },
+   "source": "presidio"
+  },
+  {
+   "pii_type": "PHONE",
+   "field": null,
+   "text": "17187026217",
+   "bbox": {
+    "x": 502.5,
+    "y": 332.0,
+    "w": 90.0,
+    "h": 11.5
+   },
+   "source": "presidio"
+  }
+ ],
+ "timings_ms": {
+  "ocr": 1319.6482000639662,
+  "detect": 241.78949999623,
+  "mask": 0.0
+ }
+}

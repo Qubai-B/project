@@ -1,0 +1,39 @@
+{
+ "detector": "presidio",
+ "task_id": "T03",
+ "needs": [
+  "email",
+  "phone"
+ ],
+ "detections": [
+  {
+   "pii_type": "ADDRESS",
+   "field": null,
+   "text": "Preye",
+   "bbox": {
+    "x": 502.0,
+    "y": 343.0,
+    "w": 37.5,
+    "h": 14.0
+   },
+   "source": "presidio"
+  },
+  {
+   "pii_type": "DOB",
+   "field": null,
+   "text": "27/10/1994",
+   "bbox": {
+    "x": 501.0,
+    "y": 389.5,
+    "w": 74.5,
+    "h": 12.0
+   },
+   "source": "presidio"
+  }
+ ],
+ "timings_ms": {
+  "ocr": 1824.3030000012368,
+  "detect": 268.5383000643924,
+  "mask": 0.0
+ }
+}

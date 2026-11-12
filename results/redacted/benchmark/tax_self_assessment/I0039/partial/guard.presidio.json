@@ -1,0 +1,64 @@
+{
+ "detector": "presidio",
+ "task_id": "T01",
+ "needs": [
+  "address_line",
+  "lga",
+  "state"
+ ],
+ "detections": [
+  {
+   "pii_type": "PERSON",
+   "field": null,
+   "text": "Mohammed",
+   "bbox": {
+    "x": 502.0,
+    "y": 191.0,
+    "w": 77.5,
+    "h": 11.5
+   },
+   "source": "presidio"
+  },
+  {
+   "pii_type": "DOB",
+   "field": null,
+   "text": "16/06/2001",
+   "bbox": {
+    "x": 502.5,
+    "y": 284.5,
+    "w": 71.0,
+    "h": 12.0
+   },
+   "source": "presidio"
+  },
+  {
+   "pii_type": "PERSON",
+   "field": null,
+   "text": "40 Isaac John Street, Bodija",
+   "bbox": {
+    "x": 501.0,
+    "y": 483.5,
+    "w": 187.0,
+    "h": 14.5
+   },
+   "source": "presidio"
+  },
+  {
+   "pii_type": "DOB",
+   "field": null,
+   "text": "Annual Income (*)",
+   "bbox": {
+    "x": 230.0,
+    "y": 683.5,
+    "w": 116.5,
+    "h": 13.5
+   },
+   "source": "presidio"
+  }
+ ],
+ "timings_ms": {
+  "ocr": 1460.15980001539,
+  "detect": 284.9088000366464,
+  "mask": 0.0
+ }
+}

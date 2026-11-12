@@ -1,0 +1,75 @@
+{
+ "detector": "presidio",
+ "task_id": "T04",
+ "needs": [
+  "licence_no",
+  "nin"
+ ],
+ "detections": [
+  {
+   "pii_type": "DOB",
+   "field": null,
+   "text": "10/02/1957",
+   "bbox": {
+    "x": 502.5,
+    "y": 389.5,
+    "w": 73.0,
+    "h": 12.0
+   },
+   "source": "presidio"
+  },
+  {
+   "pii_type": "PHONE",
+   "field": null,
+   "text": "+234 906 649 3045",
+   "bbox": {
+    "x": 501.5,
+    "y": 542.0,
+    "w": 128.5,
+    "h": 11.5
+   },
+   "source": "presidio"
+  },
+  {
+   "pii_type": "EMAIL",
+   "field": null,
+   "text": "ladi.olawale94@example.com",
+   "bbox": {
+    "x": 501.5,
+    "y": 588.5,
+    "w": 198.5,
+    "h": 14.5
+   },
+   "source": "presidio"
+  },
+  {
+   "pii_type": "ADDRESS",
+   "field": null,
+   "text": "119 Ogui Road, GRA",
+   "bbox": {
+    "x": 502.5,
+    "y": 635.5,
+    "w": 139.5,
+    "h": 14.5
+   },
+   "source": "presidio"
+  },
+  {
+   "pii_type": "ADDRESS",
+   "field": null,
+   "text": "Lagos",
+   "bbox": {
+    "x": 502.0,
+    "y": 730.0,
+    "w": 39.5,
+    "h": 14.0
+   },
+   "source": "presidio"
+  }
+ ],
+ "timings_ms": {
+  "ocr": 1580.610299948603,
+  "detect": 337.5643000472337,
+  "mask": 0.0
+ }
+}

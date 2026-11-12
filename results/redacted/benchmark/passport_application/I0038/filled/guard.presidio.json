@@ -1,0 +1,87 @@
+{
+ "detector": "presidio",
+ "task_id": "T05",
+ "needs": [
+  "nin",
+  "passport_no"
+ ],
+ "detections": [
+  {
+   "pii_type": "DOB",
+   "field": null,
+   "text": "26/07/1988",
+   "bbox": {
+    "x": 501.0,
+    "y": 284.5,
+    "w": 74.5,
+    "h": 12.0
+   },
+   "source": "presidio"
+  },
+  {
+   "pii_type": "PHONE",
+   "field": null,
+   "text": "+234 803 930 6626",
+   "bbox": {
+    "x": 501.5,
+    "y": 484.0,
+    "w": 128.5,
+    "h": 11.5
+   },
+   "source": "presidio"
+  },
+  {
+   "pii_type": "EMAIL",
+   "field": null,
+   "text": "ese.udeh58@example.com",
+   "bbox": {
+    "x": 501.5,
+    "y": 530.5,
+    "w": 181.5,
+    "h": 14.5
+   },
+   "source": "presidio"
+  },
+  {
+   "pii_type": "ADDRESS",
+   "field": null,
+   "text": "92 Allen Avenue, Ugbowo",
+   "bbox": {
+    "x": 501.5,
+    "y": 578.0,
+    "w": 169.5,
+    "h": 14.0
+   },
+   "source": "presidio"
+  },
+  {
+   "pii_type": "ADDRESS",
+   "field": null,
+   "text": "Lagos Island",
+   "bbox": {
+    "x": 502.0,
+    "y": 625.0,
+    "w": 83.5,
+    "h": 14.0
+   },
+   "source": "presidio"
+  },
+  {
+   "pii_type": "ADDRESS",
+   "field": null,
+   "text": "Lagos",
+   "bbox": {
+    "x": 502.0,
+    "y": 672.0,
+    "w": 39.5,
+    "h": 14.0
+   },
+   "source": "presidio"
+  }
+ ],
+ "timings_ms": {
+  "ocr": 1274.6454000007361,
+  "detect": 254.0159000782296,
+  "mask": 0.0
+ }
+}

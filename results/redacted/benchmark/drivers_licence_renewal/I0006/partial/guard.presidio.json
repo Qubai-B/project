@@ -1,0 +1,39 @@
+{
+ "detector": "presidio",
+ "task_id": "T03",
+ "needs": [
+  "email",
+  "phone"
+ ],
+ "detections": [
+  {
+   "pii_type": "PERSON",
+   "field": null,
+   "text": "Bello",
+   "bbox": {
+    "x": 502.0,
+    "y": 296.0,
+    "w": 32.0,
+    "h": 11.5
+   },
+   "source": "presidio"
+  },
+  {
+   "pii_type": "DOB",
+   "field": null,
+   "text": "27/08/1991",
+   "bbox": {
+    "x": 501.0,
+    "y": 389.5,
+    "w": 72.5,
+    "h": 12.0
+   },
+   "source": "presidio"
+  }
+ ],
+ "timings_ms": {
+  "ocr": 1773.3753999928012,
+  "detect": 358.97299996577203,
+  "mask": 0.0
+ }
+}

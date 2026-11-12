@@ -1,0 +1,75 @@
+{
+ "detector": "presidio",
+ "task_id": "T03",
+ "needs": [
+  "email",
+  "phone"
+ ],
+ "detections": [
+  {
+   "pii_type": "PERSON",
+   "field": null,
+   "text": "ENU50001DD13",
+   "bbox": {
+    "x": 502.0,
+    "y": 191.0,
+    "w": 110.5,
+    "h": 11.5
+   },
+   "source": "presidio"
+  },
+  {
+   "pii_type": "PERSON",
+   "field": null,
+   "text": "Nwachukwu",
+   "bbox": {
+    "x": 502.0,
+    "y": 296.0,
+    "w": 79.0,
+    "h": 11.5
+   },
+   "source": "presidio"
+  },
+  {
+   "pii_type": "PERSON",
+   "field": null,
+   "text": "Tega",
+   "bbox": {
+    "x": 501.0,
+    "y": 343.0,
+    "w": 32.0,
+    "h": 14.0
+   },
+   "source": "presidio"
+  },
+  {
+   "pii_type": "DOB",
+   "field": null,
+   "text": "13/05/1957",
+   "bbox": {
+    "x": 502.5,
+    "y": 389.5,
+    "w": 73.0,
+    "h": 12.0
+   },
+   "source": "presidio"
+  },
+  {
+   "pii_type": "PHONE",
+   "field": null,
+   "text": "05331586923",
+   "bbox": {
+    "x": 501.5,
+    "y": 437.0,
+    "w": 91.0,
+    "h": 11.5
+   },
+   "source": "presidio"
+  }
+ ],
+ "timings_ms": {
+  "ocr": 1923.9377999911085,
+  "detect": 374.04450005851686,
+  "mask": 0.0
+ }
+}

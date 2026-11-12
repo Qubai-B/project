@@ -1,0 +1,39 @@
+{
+ "detector": "presidio",
+ "task_id": "T03",
+ "needs": [
+  "email",
+  "phone"
+ ],
+ "detections": [
+  {
+   "pii_type": "PERSON",
+   "field": null,
+   "text": "Nwachukwu",
+   "bbox": {
+    "x": 502.0,
+    "y": 296.0,
+    "w": 79.0,
+    "h": 11.5
+   },
+   "source": "presidio"
+  },
+  {
+   "pii_type": "DOB",
+   "field": null,
+   "text": "11/03/1957",
+   "bbox": {
+    "x": 502.5,
+    "y": 390.0,
+    "w": 72.0,
+    "h": 11.5
+   },
+   "source": "presidio"
+  }
+ ],
+ "timings_ms": {
+  "ocr": 2927.209599991329,
+  "detect": 482.97719995025545,
+  "mask": 0.0
+ }
+}

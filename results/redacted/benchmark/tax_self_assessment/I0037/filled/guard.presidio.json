@@ -1,0 +1,112 @@
+{
+ "detector": "presidio",
+ "task_id": "T01",
+ "needs": [
+  "address_line",
+  "lga",
+  "state"
+ ],
+ "detections": [
+  {
+   "pii_type": "PERSON",
+   "field": null,
+   "text": "Briggs",
+   "bbox": {
+    "x": 502.0,
+    "y": 191.0,
+    "w": 41.0,
+    "h": 14.0
+   },
+   "source": "presidio"
+  },
+  {
+   "pii_type": "PERSON",
+   "field": null,
+   "text": "Sani",
+   "bbox": {
+    "x": 501.5,
+    "y": 237.5,
+    "w": 29.0,
+    "h": 12.0
+   },
+   "source": "presidio"
+  },
+  {
+   "pii_type": "DOB",
+   "field": null,
+   "text": "30/09/1999",
+   "bbox": {
+    "x": 501.5,
+    "y": 284.5,
+    "w": 74.0,
+    "h": 12.0
+   },
+   "source": "presidio"
+  },
+  {
+   "pii_type": "PHONE",
+   "field": null,
+   "text": "17744905814",
+   "bbox": {
+    "x": 502.5,
+    "y": 379.0,
+    "w": 90.0,
+    "h": 11.5
+   },
+   "source": "presidio"
+  },
+  {
+   "pii_type": "ADDRESS",
+   "field": null,
+   "text": "111 Sapele Road, Ikoyi",
+   "bbox": {
+    "x": 502.5,
+    "y": 483.5,
+    "w": 150.5,
+    "h": 14.5
+   },
+   "source": "presidio"
+  },
+  {
+   "pii_type": "DOB",
+   "field": null,
+   "text": "Annual Income (*)",
+   "bbox": {
+    "x": 230.0,
+    "y": 683.5,
+    "w": 116.5,
+    "h": 13.5
+   },
+   "source": "presidio"
+  },
+  {
+   "pii_type": "PHONE",
+   "field": null,
+   "text": "5946306973",
+   "bbox": {
+    "x": 501.5,
+    "y": 777.0,
+    "w": 82.5,
+    "h": 11.5
+   },
+   "source": "presidio"
+  },
+  {
+   "pii_type": "EMAIL",
+   "field": null,
+   "text": "sani.briggs58@example.com",
+   "bbox": {
+    "x": 501.5,
+    "y": 823.5,
+    "w": 192.5,
+    "h": 14.5
+   },
+   "source": "presidio"
+  }
+ ],
+ "timings_ms": {
+  "ocr": 1482.5373000930995,
+  "detect": 351.90040001180023,
+  "mask": 0.0
+ }
+}

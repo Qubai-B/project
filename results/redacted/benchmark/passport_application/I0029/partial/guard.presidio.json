@@ -1,0 +1,27 @@
+{
+ "detector": "presidio",
+ "task_id": "T05",
+ "needs": [
+  "nin",
+  "passport_no"
+ ],
+ "detections": [
+  {
+   "pii_type": "DOB",
+   "field": null,
+   "text": "14/09/2000",
+   "bbox": {
+    "x": 502.5,
+    "y": 284.5,
+    "w": 73.0,
+    "h": 12.0
+   },
+   "source": "presidio"
+  }
+ ],
+ "timings_ms": {
+  "ocr": 1226.6571999061853,
+  "detect": 190.0332000805065,
+  "mask": 0.0
+ }
+}

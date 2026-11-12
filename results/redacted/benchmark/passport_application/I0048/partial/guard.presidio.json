@@ -1,0 +1,51 @@
+{
+ "detector": "presidio",
+ "task_id": "T05",
+ "needs": [
+  "nin",
+  "passport_no"
+ ],
+ "detections": [
+  {
+   "pii_type": "PERSON",
+   "field": null,
+   "text": "Nwachukwu",
+   "bbox": {
+    "x": 502.0,
+    "y": 191.0,
+    "w": 79.0,
+    "h": 11.5
+   },
+   "source": "presidio"
+  },
+  {
+   "pii_type": "ADDRESS",
+   "field": null,
+   "text": "Preye",
+   "bbox": {
+    "x": 502.0,
+    "y": 238.0,
+    "w": 37.5,
+    "h": 14.0
+   },
+   "source": "presidio"
+  },
+  {
+   "pii_type": "DOB",
+   "field": null,
+   "text": "09/07/1970",
+   "bbox": {
+    "x": 501.5,
+    "y": 284.5,
+    "w": 74.0,
+    "h": 12.0
+   },
+   "source": "presidio"
+  }
+ ],
+ "timings_ms": {
+  "ocr": 1220.7671999931335,
+  "detect": 200.4092000424862,
+  "mask": 0.0
+ }
+}

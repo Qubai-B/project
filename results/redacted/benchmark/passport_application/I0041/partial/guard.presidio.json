@@ -1,0 +1,51 @@
+{
+ "detector": "presidio",
+ "task_id": "T05",
+ "needs": [
+  "nin",
+  "passport_no"
+ ],
+ "detections": [
+  {
+   "pii_type": "PERSON",
+   "field": null,
+   "text": "Shehu",
+   "bbox": {
+    "x": 501.5,
+    "y": 190.5,
+    "w": 42.0,
+    "h": 12.0
+   },
+   "source": "presidio"
+  },
+  {
+   "pii_type": "DOB",
+   "field": null,
+   "text": "16/02/1993",
+   "bbox": {
+    "x": 502.5,
+    "y": 284.5,
+    "w": 73.0,
+    "h": 12.0
+   },
+   "source": "presidio"
+  },
+  {
+   "pii_type": "PHONE",
+   "field": null,
+   "text": "06068536153",
+   "bbox": {
+    "x": 501.5,
+    "y": 332.0,
+    "w": 91.0,
+    "h": 11.5
+   },
+   "source": "presidio"
+  }
+ ],
+ "timings_ms": {
+  "ocr": 1240.9801000030711,
+  "detect": 201.61969994660467,
+  "mask": 0.0
+ }
+}

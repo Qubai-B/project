@@ -1,0 +1,76 @@
+{
+ "detector": "presidio",
+ "task_id": "T01",
+ "needs": [
+  "address_line",
+  "lga",
+  "state"
+ ],
+ "detections": [
+  {
+   "pii_type": "DOB",
+   "field": null,
+   "text": "10/02/1957",
+   "bbox": {
+    "x": 502.5,
+    "y": 284.5,
+    "w": 73.0,
+    "h": 12.0
+   },
+   "source": "presidio"
+  },
+  {
+   "pii_type": "ADDRESS",
+   "field": null,
+   "text": "119 Ogui Road, GRA",
+   "bbox": {
+    "x": 502.5,
+    "y": 483.5,
+    "w": 139.5,
+    "h": 14.5
+   },
+   "source": "presidio"
+  },
+  {
+   "pii_type": "ADDRESS",
+   "field": null,
+   "text": "Lagos",
+   "bbox": {
+    "x": 502.0,
+    "y": 578.0,
+    "w": 39.5,
+    "h": 14.0
+   },
+   "source": "presidio"
+  },
+  {
+   "pii_type": "DOB",
+   "field": null,
+   "text": "Annual Income (*)",
+   "bbox": {
+    "x": 230.0,
+    "y": 683.5,
+    "w": 116.5,
+    "h": 13.5
+   },
+   "source": "presidio"
+  },
+  {
+   "pii_type": "EMAIL",
+   "field": null,
+   "text": "ladi.clawale94@example.com",
+   "bbox": {
+    "x": 501.5,
+    "y": 823.5,
+    "w": 198.5,
+    "h": 14.5
+   },
+   "source": "presidio"
+  }
+ ],
+ "timings_ms": {
+  "ocr": 1430.9261000016704,
+  "detect": 390.7757999841124,
+  "mask": 0.0
+ }
+}

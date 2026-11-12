@@ -1,0 +1,39 @@
+{
+ "detector": "presidio",
+ "task_id": "T03",
+ "needs": [
+  "email",
+  "phone"
+ ],
+ "detections": [
+  {
+   "pii_type": "PERSON",
+   "field": null,
+   "text": "Mohammed",
+   "bbox": {
+    "x": 502.0,
+    "y": 296.0,
+    "w": 77.5,
+    "h": 11.5
+   },
+   "source": "presidio"
+  },
+  {
+   "pii_type": "DOB",
+   "field": null,
+   "text": "16/06/2001",
+   "bbox": {
+    "x": 502.5,
+    "y": 389.5,
+    "w": 71.0,
+    "h": 12.0
+   },
+   "source": "presidio"
+  }
+ ],
+ "timings_ms": {
+  "ocr": 1223.3975999988616,
+  "detect": 243.18789993412793,
+  "mask": 0.0
+ }
+}

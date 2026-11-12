@@ -1,0 +1,75 @@
+{
+ "detector": "presidio",
+ "task_id": "T05",
+ "needs": [
+  "nin",
+  "passport_no"
+ ],
+ "detections": [
+  {
+   "pii_type": "PERSON",
+   "field": null,
+   "text": "Ibrahim",
+   "bbox": {
+    "x": 502.0,
+    "y": 238.0,
+    "w": 48.5,
+    "h": 11.5
+   },
+   "source": "presidio"
+  },
+  {
+   "pii_type": "DOB",
+   "field": null,
+   "text": "21/06/1967",
+   "bbox": {
+    "x": 501.0,
+    "y": 284.5,
+    "w": 74.5,
+    "h": 12.0
+   },
+   "source": "presidio"
+  },
+  {
+   "pii_type": "PHONE",
+   "field": null,
+   "text": "+234 814 112 7882",
+   "bbox": {
+    "x": 501.5,
+    "y": 484.0,
+    "w": 127.5,
+    "h": 11.5
+   },
+   "source": "presidio"
+  },
+  {
+   "pii_type": "EMAIL",
+   "field": null,
+   "text": "ibrahim.obi83@example.com",
+   "bbox": {
+    "x": 501.5,
+    "y": 530.5,
+    "w": 193.5,
+    "h": 14.5
+   },
+   "source": "presidio"
+  },
+  {
+   "pii_type": "PERSON",
+   "field": null,
+   "text": "Oshimili South",
+   "bbox": {
+    "x": 501.5,
+    "y": 624.5,
+    "w": 95.5,
+    "h": 12.0
+   },
+   "source": "presidio"
+  }
+ ],
+ "timings_ms": {
+  "ocr": 1255.7968000182882,
+  "detect": 258.0651000607759,
+  "mask": 0.0
+ }
+}

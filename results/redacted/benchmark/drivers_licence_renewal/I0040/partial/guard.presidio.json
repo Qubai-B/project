@@ -1,0 +1,51 @@
+{
+ "detector": "presidio",
+ "task_id": "T03",
+ "needs": [
+  "email",
+  "phone"
+ ],
+ "detections": [
+  {
+   "pii_type": "PERSON",
+   "field": null,
+   "text": "Adeyemi",
+   "bbox": {
+    "x": 501.0,
+    "y": 296.0,
+    "w": 57.5,
+    "h": 14.0
+   },
+   "source": "presidio"
+  },
+  {
+   "pii_type": "DOB",
+   "field": null,
+   "text": "21/05/1986",
+   "bbox": {
+    "x": 501.0,
+    "y": 389.5,
+    "w": 74.5,
+    "h": 12.0
+   },
+   "source": "presidio"
+  },
+  {
+   "pii_type": "DOB",
+   "field": null,
+   "text": "73834735977",
+   "bbox": {
+    "x": 501.5,
+    "y": 437.0,
+    "w": 91.0,
+    "h": 11.5
+   },
+   "source": "presidio"
+  }
+ ],
+ "timings_ms": {
+  "ocr": 1211.2079999642447,
+  "detect": 315.36850007250905,
+  "mask": 0.0
+ }
+}

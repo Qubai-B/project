@@ -1,0 +1,27 @@
+{
+ "detector": "presidio",
+ "task_id": "T03",
+ "needs": [
+  "email",
+  "phone"
+ ],
+ "detections": [
+  {
+   "pii_type": "DOB",
+   "field": null,
+   "text": "26/07/1988",
+   "bbox": {
+    "x": 501.0,
+    "y": 389.5,
+    "w": 74.5,
+    "h": 12.0
+   },
+   "source": "presidio"
+  }
+ ],
+ "timings_ms": {
+  "ocr": 1345.4213000368327,
+  "detect": 227.91749995667487,
+  "mask": 0.0
+ }
+}

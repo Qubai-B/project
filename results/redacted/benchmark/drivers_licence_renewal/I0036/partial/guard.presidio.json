@@ -1,0 +1,39 @@
+{
+ "detector": "presidio",
+ "task_id": "T03",
+ "needs": [
+  "email",
+  "phone"
+ ],
+ "detections": [
+  {
+   "pii_type": "PERSON",
+   "field": null,
+   "text": "Abubakar",
+   "bbox": {
+    "x": 501.0,
+    "y": 343.0,
+    "w": 64.5,
+    "h": 11.5
+   },
+   "source": "presidio"
+  },
+  {
+   "pii_type": "DOB",
+   "field": null,
+   "text": "16/01/1985",
+   "bbox": {
+    "x": 502.5,
+    "y": 389.5,
+    "w": 73.5,
+    "h": 12.0
+   },
+   "source": "presidio"
+  }
+ ],
+ "timings_ms": {
+  "ocr": 1238.2813999429345,
+  "detect": 214.6920000668615,
+  "mask": 0.0
+ }
+}

@@ -1,0 +1,63 @@
+{
+ "detector": "presidio",
+ "task_id": "T03",
+ "needs": [
+  "email",
+  "phone"
+ ],
+ "detections": [
+  {
+   "pii_type": "PERSON",
+   "field": null,
+   "text": "Fashola",
+   "bbox": {
+    "x": 502.0,
+    "y": 296.0,
+    "w": 52.0,
+    "h": 11.5
+   },
+   "source": "presidio"
+  },
+  {
+   "pii_type": "ADDRESS",
+   "field": null,
+   "text": "Tamuno",
+   "bbox": {
+    "x": 501.0,
+    "y": 343.0,
+    "w": 53.0,
+    "h": 11.5
+   },
+   "source": "presidio"
+  },
+  {
+   "pii_type": "DOB",
+   "field": null,
+   "text": "13/09/1960",
+   "bbox": {
+    "x": 502.5,
+    "y": 389.5,
+    "w": 73.0,
+    "h": 12.0
+   },
+   "source": "presidio"
+  },
+  {
+   "pii_type": "PHONE",
+   "field": null,
+   "text": "13695944064",
+   "bbox": {
+    "x": 502.5,
+    "y": 437.0,
+    "w": 90.0,
+    "h": 11.5
+   },
+   "source": "presidio"
+  }
+ ],
+ "timings_ms": {
+  "ocr": 1221.8104000203311,
+  "detect": 206.68569998815656,
+  "mask": 0.0
+ }
+}

@@ -1,0 +1,14 @@
+{
+ "detector": "presidio",
+ "task_id": "T03",
+ "needs": [
+  "email",
+  "phone"
+ ],
+ "detections": [],
+ "timings_ms": {
+  "ocr": 1618.4686999768019,
+  "detect": 196.9497000100091,
+  "mask": 0.0
+ }
+}

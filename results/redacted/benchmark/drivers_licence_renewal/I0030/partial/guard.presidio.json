@@ -1,0 +1,63 @@
+{
+ "detector": "presidio",
+ "task_id": "T03",
+ "needs": [
+  "email",
+  "phone"
+ ],
+ "detections": [
+  {
+   "pii_type": "PERSON",
+   "field": null,
+   "text": "ENU32871BA26",
+   "bbox": {
+    "x": 502.0,
+    "y": 191.0,
+    "w": 108.5,
+    "h": 11.5
+   },
+   "source": "presidio"
+  },
+  {
+   "pii_type": "PERSON",
+   "field": null,
+   "text": "Halima",
+   "bbox": {
+    "x": 502.0,
+    "y": 343.0,
+    "w": 45.0,
+    "h": 11.5
+   },
+   "source": "presidio"
+  },
+  {
+   "pii_type": "DOB",
+   "field": null,
+   "text": "14/10/1987",
+   "bbox": {
+    "x": 502.5,
+    "y": 389.5,
+    "w": 73.0,
+    "h": 12.0
+   },
+   "source": "presidio"
+  },
+  {
+   "pii_type": "PHONE",
+   "field": null,
+   "text": "17139005329",
+   "bbox": {
+    "x": 502.5,
+    "y": 437.0,
+    "w": 90.0,
+    "h": 11.5
+   },
+   "source": "presidio"
+  }
+ ],
+ "timings_ms": {
+  "ocr": 1198.7723000347614,
+  "detect": 210.3863999946043,
+  "mask": 0.0
+ }
+}

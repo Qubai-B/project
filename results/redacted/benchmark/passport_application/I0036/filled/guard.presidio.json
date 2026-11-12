@@ -1,0 +1,87 @@
+{
+ "detector": "presidio",
+ "task_id": "T05",
+ "needs": [
+  "nin",
+  "passport_no"
+ ],
+ "detections": [
+  {
+   "pii_type": "PERSON",
+   "field": null,
+   "text": "Abubakar",
+   "bbox": {
+    "x": 501.0,
+    "y": 238.0,
+    "w": 64.5,
+    "h": 11.5
+   },
+   "source": "presidio"
+  },
+  {
+   "pii_type": "DOB",
+   "field": null,
+   "text": "16/01/1985",
+   "bbox": {
+    "x": 502.5,
+    "y": 284.5,
+    "w": 73.5,
+    "h": 12.0
+   },
+   "source": "presidio"
+  },
+  {
+   "pii_type": "PERSON",
+   "field": null,
+   "text": "+234 915 571 6928",
+   "bbox": {
+    "x": 501.5,
+    "y": 484.0,
+    "w": 128.5,
+    "h": 11.5
+   },
+   "source": "presidio"
+  },
+  {
+   "pii_type": "EMAIL",
+   "field": null,
+   "text": "abubakar.okafor22@example.com",
+   "bbox": {
+    "x": 501.5,
+    "y": 530.5,
+    "w": 227.5,
+    "h": 14.5
+   },
+   "source": "presidio"
+  },
+  {
+   "pii_type": "ADDRESS",
+   "field": null,
+   "text": "Enugu North",
+   "bbox": {
+    "x": 502.0,
+    "y": 625.0,
+    "w": 82.5,
+    "h": 14.0
+   },
+   "source": "presidio"
+  },
+  {
+   "pii_type": "ADDRESS",
+   "field": null,
+   "text": "Enugu",
+   "bbox": {
+    "x": 502.0,
+    "y": 672.0,
+    "w": 41.5,
+    "h": 14.0
+   },
+   "source": "presidio"
+  }
+ ],
+ "timings_ms": {
+  "ocr": 1348.2866999693215,
+  "detect": 247.58700001984835,
+  "mask": 0.0
+ }
+}

@@ -2,7 +2,7 @@
 
 **Project:** Data minimization at the perception layer for screenshot-driven AI agents\
 **Context:** Nigerian government e-services\
-**Stage:** proof of concept built and partly evaluated · 15 October 2026\
+**Stage:** proof of concept built and partly evaluated · 15 October 2026 · objectives and scope aligned with the revised Chapter One on 9 November 2026\
 **Repository:** https://github.com/Qubai-B/project · full technical record in `PROJECT_RECORD.md`
 
 ---
@@ -20,6 +20,14 @@ those screenshots, full of personal data, to cloud-hosted models, and that no cu
 framework covers this visual channel. The aim is a *visual redaction guard* that masks personal
 information in a screenshot before it leaves the user's machine, without stopping the agent from
 completing its task.
+
+The revised Chapter One sets five objectives, and the tables below are numbered against them:
+(1) a benchmark of annotated screenshots of mock Nigerian e-service forms; (2) a lightweight guard
+that identifies personal data from its form-field label, with a full and a task-aware policy;
+(3) detection accuracy against the benchmark, compared with a general-purpose detector;
+(4) reduction of privacy leakage, measured by what a vision model can still read; and (5) impact on
+agent performance, measured by next-action choice on recorded trajectories. Paperasse is an
+illustrative reference system only; integrating the guard into it is not part of the project.
 
 ## 3. Decisions taken to make this feasible as an undergraduate project
 
@@ -40,11 +48,11 @@ completing its task.
 | Recorded gold trajectories for the utility experiment | done | 15 trajectories, 51 decision steps, 495 values |
 | Redaction guard: OCR → form-aware detection → policy → mask (Objective 2) | done | ~0.5 s per screenshot on a laptop CPU |
 | Two policies: *full* (mask all) and *task-aware* (keep what the task needs) | done | |
-| Generic baseline detector (Microsoft Presidio) for comparison | done | |
+| Generic baseline detector (Microsoft Presidio) for comparison (Objective 3) | done | 501 screenshots |
 | Experiment 1 — detection quality (Objective 3) | **done** | 501 screenshots |
-| Experiment 2 — what a vision model can still read after redaction (Objective 3) | written, not run | needs model API key |
-| Experiment 3 — can the agent still choose the right action (Objective 4) | written, not run | needs model API key |
-| Middleware demonstration (Objective 5) | done | 2 step-by-step demo GIFs |
+| Experiment 2 — what a vision model can still read after redaction (Objective 4) | written, not run | needs model API key |
+| Experiment 3 — can the agent still choose the right action (Objective 5) | written, not run | needs model API key |
+| Step-by-step demonstration of the guard's place in an agent loop (reference design, not an objective) | done | 2 step-by-step demo GIFs |
 | Automated results report | done | `results/REPORT.md` |
 
 ## 5. Results so far
@@ -57,12 +65,15 @@ box overlaps the true text box by at least 50 %.
 | Detector | Screenshots | Values | Precision | Recall | F1 | Correct type |
 |---|---|---|---|---|---|---|
 | **My guard** (reads the form's labels + patterns + NER) | 501 | 2,895 | 1.000 | 1.000 | 1.000 | 100 % |
-| Presidio alone (generic, no form awareness) | 30 | 320 | 0.950 | 0.591 | 0.728 | 72.5 % |
+| Presidio alone (generic, no form awareness) | 501 | 2,895 | 0.903 | 0.561 | 0.692 | 75.9 % |
 
-What the baseline misses is the important part: it **never** finds a BVN, TIN or income figure,
-finds only half of NINs and names, and when it does find a NIN, bank account or licence number it
-labels it as something else every time. A generic privacy tool would leave four in ten personal
-values on a Nigerian government form unmasked. Reading the form's own labels fixes this entirely on
+Both detectors are now scored on the same 501 screenshots. (The baseline was first run on 30 of
+them, where it scored recall 0.591 and F1 0.728; the full run of 10 November 2026 reproduces those
+30 exactly.) What the baseline misses is the important part: it finds about half of the names,
+under a third of NINs, fewer than one in ten BVNs and TINs, and almost no passport numbers or income
+figures. When it does find a NIN, BVN, TIN, bank account or licence number it labels it as something
+else every time. A generic privacy tool would leave more than four in ten personal values on a
+Nigerian government form unmasked. Reading the form's own labels fixes this entirely on
 my benchmark, and is also what lets the guard tell a NIN from a BVN (both are 11 digits).
 
 ![F1 per PII type, my guard (green) against the Presidio baseline (grey)](results/figures/detection_f1.png)
@@ -70,14 +81,17 @@ my benchmark, and is also what lets the guard tell a NIN from a BVN (both are 11
 ### 5.2 Is it fast enough?
 
 Median 488 ms per screenshot on CPU (OCR 447 ms, detection 17 ms, masking 24 ms). A model call in
-an agent loop already takes several seconds, so the guard is not the bottleneck.
+an agent loop already takes several seconds, so the guard is not the bottleneck. The figure depends
+on hardware (OCR took 1.3 to 2.8 s on a second, slower laptop), so Chapter One calls the guard
+lightweight and does not claim real-time operation.
 
-### 5.3 Does it demonstrate the middleware idea?
+### 5.3 Does it show where the guard sits in an agent loop?
 
 `demo/T02_tax_self_assessment_I0001.gif` and `demo/T04_drivers_licence_renewal_I0002.gif` show each
 step of a task with the browser on the left and what the model receives on the right: the fields the
-task needs stay readable, everything else is blacked out. Integration into an agent is one function
-call on the screenshot before it is sent. One frame, task T02 (enter income and bank details), step 2:
+task needs stay readable, everything else is blacked out. Integration into an agent would be one
+function call on the screenshot before it is sent; doing that in a real agent is outside the
+project's scope. One frame, task T02 (enter income and bank details), step 2:
 
 ![Browser view (left) and model input after the task-aware guard (right)](demo/T02_tax_self_assessment_I0001/step_002.png)
 
@@ -102,8 +116,10 @@ that a missed value is a privacy failure while an extra black box is only a util
    is roughly 330 image calls (about 180 for leakage, 150 for step accuracy), cached so re-runs are
    free. *Decision needed:* can the department provide a key or small budget, or should I use a
    local open-weight vision model (slower, weaker, but free)?
-2. **Paperasse access.** If the source is available, the guard can be inserted into it directly for
-   the final demo; if not, an off-the-shelf Playwright + model loop stands in and the write-up says so.
+2. **Paperasse integration is out of scope.** The revised Chapter One uses Paperasse only as an
+   illustrative reference system, so no access to its source is needed. If a live demo is wanted, an
+   off-the-shelf Playwright + model loop is enough and the write-up says so. *No decision needed
+   unless you would like the live demo included.*
 3. **Honest framing of the perfect score.** The forms are clean and single-layout; I propose adding a
    second layout family per form (different fonts, placeholders instead of labels, two-column) to test
    how far the label-reading approach stretches. I would value your view on whether this belongs in
@@ -115,7 +131,7 @@ that a missed value is a privacy failure while an extra black box is only a util
 |---|---|
 | 1 | Run Experiments 2 and 3; produce the privacy-versus-utility figure; fill in §5 |
 | 2 | Second layout family per form; re-run Experiment 1 to measure degradation |
-| 3 | Live demo: guard inside an agent loop (Paperasse if available), one recorded run per task |
+| 3 | Optional live demo: guard inside a generic Playwright + model loop, one recorded run per task |
 | 4 | Write up Chapters 3–5 from `PROJECT_RECORD.md` |
 
 ## 9. How to look at it yourself

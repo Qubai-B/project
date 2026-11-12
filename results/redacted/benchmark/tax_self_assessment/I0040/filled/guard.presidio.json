@@ -1,0 +1,124 @@
+{
+ "detector": "presidio",
+ "task_id": "T01",
+ "needs": [
+  "address_line",
+  "lga",
+  "state"
+ ],
+ "detections": [
+  {
+   "pii_type": "PERSON",
+   "field": null,
+   "text": "Adeyemi",
+   "bbox": {
+    "x": 501.0,
+    "y": 191.0,
+    "w": 57.5,
+    "h": 14.0
+   },
+   "source": "presidio"
+  },
+  {
+   "pii_type": "DOB",
+   "field": null,
+   "text": "21/05/1986",
+   "bbox": {
+    "x": 501.0,
+    "y": 284.5,
+    "w": 74.5,
+    "h": 12.0
+   },
+   "source": "presidio"
+  },
+  {
+   "pii_type": "DOB",
+   "field": null,
+   "text": "73834735977",
+   "bbox": {
+    "x": 501.5,
+    "y": 379.0,
+    "w": 91.0,
+    "h": 11.5
+   },
+   "source": "presidio"
+  },
+  {
+   "pii_type": "ADDRESS",
+   "field": null,
+   "text": "87 Bodija Estate Road, Independence Layout",
+   "bbox": {
+    "x": 501.5,
+    "y": 484.0,
+    "w": 301.5,
+    "h": 14.0
+   },
+   "source": "presidio"
+  },
+  {
+   "pii_type": "ADDRESS",
+   "field": null,
+   "text": "Jos South",
+   "bbox": {
+    "x": 501.5,
+    "y": 530.5,
+    "w": 65.5,
+    "h": 12.0
+   },
+   "source": "presidio"
+  },
+  {
+   "pii_type": "ADDRESS",
+   "field": null,
+   "text": "Plateau",
+   "bbox": {
+    "x": 502.0,
+    "y": 578.0,
+    "w": 49.0,
+    "h": 11.5
+   },
+   "source": "presidio"
+  },
+  {
+   "pii_type": "DOB",
+   "field": null,
+   "text": "Annual Income (*)",
+   "bbox": {
+    "x": 230.0,
+    "y": 683.5,
+    "w": 116.5,
+    "h": 13.5
+   },
+   "source": "presidio"
+  },
+  {
+   "pii_type": "PHONE",
+   "field": null,
+   "text": "7048810275",
+   "bbox": {
+    "x": 501.5,
+    "y": 777.0,
+    "w": 82.5,
+    "h": 11.5
+   },
+   "source": "presidio"
+  },
+  {
+   "pii_type": "EMAIL",
+   "field": null,
+   "text": "blessing.adeyemi57@example.com",
+   "bbox": {
+    "x": 501.5,
+    "y": 823.5,
+    "w": 236.0,
+    "h": 14.5
+   },
+   "source": "presidio"
+  }
+ ],
+ "timings_ms": {
+  "ocr": 1691.2150999996811,
+  "detect": 279.2312999954447,
+  "mask": 0.0
+ }
+}

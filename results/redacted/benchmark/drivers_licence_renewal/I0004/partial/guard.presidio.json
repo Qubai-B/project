@@ -1,0 +1,63 @@
+{
+ "detector": "presidio",
+ "task_id": "T03",
+ "needs": [
+  "email",
+  "phone"
+ ],
+ "detections": [
+  {
+   "pii_type": "PERSON",
+   "field": null,
+   "text": "Akpan",
+   "bbox": {
+    "x": 501.0,
+    "y": 296.0,
+    "w": 42.0,
+    "h": 14.0
+   },
+   "source": "presidio"
+  },
+  {
+   "pii_type": "PERSON",
+   "field": null,
+   "text": "Sani",
+   "bbox": {
+    "x": 501.5,
+    "y": 342.5,
+    "w": 29.0,
+    "h": 12.0
+   },
+   "source": "presidio"
+  },
+  {
+   "pii_type": "DOB",
+   "field": null,
+   "text": "14/08/1967",
+   "bbox": {
+    "x": 502.5,
+    "y": 389.5,
+    "w": 73.0,
+    "h": 12.0
+   },
+   "source": "presidio"
+  },
+  {
+   "pii_type": "DOB",
+   "field": null,
+   "text": "51462704828",
+   "bbox": {
+    "x": 501.5,
+    "y": 437.0,
+    "w": 91.0,
+    "h": 11.5
+   },
+   "source": "presidio"
+  }
+ ],
+ "timings_ms": {
+  "ocr": 1379.8150999937207,
+  "detect": 274.62409995496273,
+  "mask": 0.0
+ }
+}

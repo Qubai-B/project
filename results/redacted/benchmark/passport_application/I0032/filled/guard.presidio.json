@@ -1,0 +1,63 @@
+{
+ "detector": "presidio",
+ "task_id": "T05",
+ "needs": [
+  "nin",
+  "passport_no"
+ ],
+ "detections": [
+  {
+   "pii_type": "DOB",
+   "field": null,
+   "text": "18/06/1994",
+   "bbox": {
+    "x": 502.5,
+    "y": 284.5,
+    "w": 73.0,
+    "h": 12.0
+   },
+   "source": "presidio"
+  },
+  {
+   "pii_type": "PHONE",
+   "field": null,
+   "text": "+234 916 699 9984",
+   "bbox": {
+    "x": 501.5,
+    "y": 484.0,
+    "w": 128.5,
+    "h": 11.5
+   },
+   "source": "presidio"
+  },
+  {
+   "pii_type": "EMAIL",
+   "field": null,
+   "text": "adaeze.onyeka80@example.com",
+   "bbox": {
+    "x": 501.5,
+    "y": 530.5,
+    "w": 221.5,
+    "h": 14.5
+   },
+   "source": "presidio"
+  },
+  {
+   "pii_type": "ADDRESS",
+   "field": null,
+   "text": "92 Sapele Road, Bodija",
+   "bbox": {
+    "x": 501.5,
+    "y": 577.5,
+    "w": 156.5,
+    "h": 14.5
+   },
+   "source": "presidio"
+  }
+ ],
+ "timings_ms": {
+  "ocr": 1369.8936000000685,
+  "detect": 287.2276999987662,
+  "mask": 0.0
+ }
+}

@@ -9,7 +9,7 @@ $PY scripts/01_gen_identities.py
 $PY scripts/02_render_benchmark.py
 $PY scripts/03_record_trajectories.py
 $PY scripts/04_run_guard.py
-$PY scripts/04_run_guard.py --detector presidio --only benchmark --states filled --limit 10   # baseline for Exp. 1
+$PY scripts/04_run_guard.py --detector presidio   # baseline for Exp. 1, on the same 501 screenshots as the guard
 $PY scripts/05_eval_detection.py
 if grep -qE '^ANTHROPIC_API_KEY=.+' .env 2>/dev/null; then
   $PY scripts/06_eval_leakage.py

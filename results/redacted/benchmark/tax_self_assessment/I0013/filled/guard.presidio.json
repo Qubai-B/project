@@ -1,0 +1,112 @@
+{
+ "detector": "presidio",
+ "task_id": "T01",
+ "needs": [
+  "address_line",
+  "lga",
+  "state"
+ ],
+ "detections": [
+  {
+   "pii_type": "PERSON",
+   "field": null,
+   "text": "Nwachukwu",
+   "bbox": {
+    "x": 502.0,
+    "y": 191.0,
+    "w": 79.0,
+    "h": 11.5
+   },
+   "source": "presidio"
+  },
+  {
+   "pii_type": "DOB",
+   "field": null,
+   "text": "11/03/1957",
+   "bbox": {
+    "x": 502.5,
+    "y": 285.0,
+    "w": 72.0,
+    "h": 11.5
+   },
+   "source": "presidio"
+  },
+  {
+   "pii_type": "ADDRESS",
+   "field": null,
+   "text": "59 Airport Road, New Haven",
+   "bbox": {
+    "x": 501.5,
+    "y": 484.0,
+    "w": 189.0,
+    "h": 14.0
+   },
+   "source": "presidio"
+  },
+  {
+   "pii_type": "PERSON",
+   "field": null,
+   "text": "Fagge",
+   "bbox": {
+    "x": 502.0,
+    "y": 531.0,
+    "w": 41.0,
+    "h": 14.0
+   },
+   "source": "presidio"
+  },
+  {
+   "pii_type": "ADDRESS",
+   "field": null,
+   "text": "Kano",
+   "bbox": {
+    "x": 502.0,
+    "y": 578.0,
+    "w": 34.0,
+    "h": 11.5
+   },
+   "source": "presidio"
+  },
+  {
+   "pii_type": "DOB",
+   "field": null,
+   "text": "Annual Income (*)",
+   "bbox": {
+    "x": 230.0,
+    "y": 683.5,
+    "w": 116.5,
+    "h": 13.5
+   },
+   "source": "presidio"
+  },
+  {
+   "pii_type": "PHONE",
+   "field": null,
+   "text": "8123612497",
+   "bbox": {
+    "x": 501.5,
+    "y": 777.0,
+    "w": 82.5,
+    "h": 11.5
+   },
+   "source": "presidio"
+  },
+  {
+   "pii_type": "EMAIL",
+   "field": null,
+   "text": "emeka.nwachukwu61@example.com",
+   "bbox": {
+    "x": 501.5,
+    "y": 823.5,
+    "w": 247.5,
+    "h": 14.5
+   },
+   "source": "presidio"
+  }
+ ],
+ "timings_ms": {
+  "ocr": 1500.4663999425247,
+  "detect": 303.4367000218481,
+  "mask": 0.0
+ }
+}

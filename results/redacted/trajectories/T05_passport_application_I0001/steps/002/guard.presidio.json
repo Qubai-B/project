@@ -1,0 +1,99 @@
+{
+ "detector": "presidio",
+ "task_id": "T05",
+ "needs": [
+  "nin",
+  "passport_no"
+ ],
+ "detections": [
+  {
+   "pii_type": "PERSON",
+   "field": null,
+   "text": "Nnamdi",
+   "bbox": {
+    "x": 502.0,
+    "y": 238.0,
+    "w": 50.0,
+    "h": 11.5
+   },
+   "source": "presidio"
+  },
+  {
+   "pii_type": "DOB",
+   "field": null,
+   "text": "04/09/1989",
+   "bbox": {
+    "x": 501.5,
+    "y": 284.5,
+    "w": 74.0,
+    "h": 12.0
+   },
+   "source": "presidio"
+  },
+  {
+   "pii_type": "PHONE",
+   "field": null,
+   "text": "+234 810 328 3286",
+   "bbox": {
+    "x": 501.5,
+    "y": 484.0,
+    "w": 128.5,
+    "h": 11.5
+   },
+   "source": "presidio"
+  },
+  {
+   "pii_type": "EMAIL",
+   "field": null,
+   "text": "nnamdi.okafor36@example.com",
+   "bbox": {
+    "x": 501.5,
+    "y": 530.5,
+    "w": 215.0,
+    "h": 14.5
+   },
+   "source": "presidio"
+  },
+  {
+   "pii_type": "PERSON",
+   "field": null,
+   "text": "95 Herbert Macaulay Way, Lekki Phase 1",
+   "bbox": {
+    "x": 501.5,
+    "y": 578.0,
+    "w": 271.5,
+    "h": 14.0
+   },
+   "source": "presidio"
+  },
+  {
+   "pii_type": "PERSON",
+   "field": null,
+   "text": "Jos North",
+   "bbox": {
+    "x": 501.5,
+    "y": 625.0,
+    "w": 63.0,
+    "h": 11.5
+   },
+   "source": "presidio"
+  },
+  {
+   "pii_type": "ADDRESS",
+   "field": null,
+   "text": "Plateau",
+   "bbox": {
+    "x": 502.0,
+    "y": 672.0,
+    "w": 49.0,
+    "h": 11.5
+   },
+   "source": "presidio"
+  }
+ ],
+ "timings_ms": {
+  "ocr": 1313.167699961923,
+  "detect": 244.4839000236243,
+  "mask": 0.0
+ }
+}
