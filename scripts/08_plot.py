@@ -19,10 +19,11 @@ COND_LABEL = {"raw": "No redaction", "full": "Full redaction", "task_aware": "Ta
 if (TABLES / "detection.csv").exists():
     d = pd.read_csv(TABLES / "detection.csv")
     d = d[d.pii_type != "ALL"].pivot(index="pii_type", columns="detector", values="f1").fillna(0)
-    ax = d.plot.bar(figsize=(9, 4), width=0.75, color={"hybrid": "#008751", "presidio": "#9aa5a0"})
+    d = d.rename(columns={"hybrid": "Guard", "presidio": "Presidio baseline"})   # reader-facing names
+    ax = d.plot.bar(figsize=(9, 4), width=0.75, color={"Guard": "#008751", "Presidio baseline": "#9aa5a0"})
     ax.set_ylabel("F1 (IoU ≥ 0.5)"); ax.set_xlabel(""); ax.set_ylim(0, 1.05); ax.set_title("Exp. 1 — PII detection by type")
     # Legend beside the plot: most bars reach 1.0, so anywhere inside the axes it covers data.
-    ax.legend(title="detector", frameon=False, loc="upper left", bbox_to_anchor=(1.01, 1.0))
+    ax.legend(title="Detector", frameon=False, loc="upper left", bbox_to_anchor=(1.01, 1.0))
     ax.spines[["top", "right"]].set_visible(False)
     plt.xticks(rotation=35, ha="right"); plt.tight_layout()
     plt.savefig(FIGURES / "detection_f1.png", dpi=160, bbox_inches="tight"); plt.close()
