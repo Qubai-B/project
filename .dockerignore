@@ -1,0 +1,14 @@
+# Keep the build context small: the image needs only guard/, common/, forms/, demo/live_* and three samples.
+.git
+.venv
+.env
+.claude
+results
+thesis
+data/identities
+data/trajectories
+demo/T0*
+demo/*.gif
+deploy/bundle
+**/__pycache__
+*.docx

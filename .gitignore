@@ -2,6 +2,7 @@
 __pycache__/
 .env
 *.pyc
+deploy/bundle/
 # generated data is kept in git for the PoC; uncomment to exclude
 # data/benchmark/
 # data/trajectories/

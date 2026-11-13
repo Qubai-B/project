@@ -1,0 +1,9 @@
+# What the web interface needs to run the guard: the same versions as requirements.lock,
+# without the packages used only to build the benchmark and run the experiments.
+pillow==11.3.0
+numpy==1.26.4
+pytesseract==0.3.13
+Jinja2==3.1.6
+presidio_analyzer==2.2.360
+spacy==3.7.5
+en_core_web_lg @ https://github.com/explosion/spacy-models/releases/download/en_core_web_lg-3.7.1/en_core_web_lg-3.7.1-py3-none-any.whl

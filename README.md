@@ -133,6 +133,33 @@ its field and whether it was masked. The policy can be switched between full and
 five benchmark tasks as presets. The page answers on this computer only, holds uploads in memory and
 never writes them to disk. It is a demonstration aid and is not part of the evaluated system.
 
+### Hosting the web interface
+
+The same page can run on a server so that it can be opened from a link. Hosted mode is switched on
+by environment variables and needs an access code; the page will not start without one.
+
+```
+GUARD_HOSTED=1 GUARD_ACCESS_CODE=<code> PORT=7860 python demo/live_app.py
+```
+
+| variable | effect |
+|---|---|
+| `GUARD_HOSTED=1` | listen on all interfaces, accept any host name, show the hosted wording on the page |
+| `GUARD_ACCESS_CODE` | code every visitor must enter; sent in a request header, never in the address; ten wrong tries lock a client out for ten minutes |
+| `GUARD_UPLOADS=off` | accept only the three benchmark samples |
+| `GUARD_MAX_MB` | largest upload accepted, in megabytes (default 15) |
+| `PORT` | port to listen on (the `Dockerfile` sets 7860) |
+
+`Dockerfile` builds an image with Tesseract, the pinned packages in `deploy/requirements-web.txt`
+and the three sample screenshots. `python deploy/make_bundle.py` copies the 27 files a host needs
+(about 280 KB) into `deploy/bundle/` for upload through a host's web page. `vercel.json` tells Vercel
+to build the `Dockerfile` with its container runtime (in beta in November 2026); there the project
+needs `GUARD_ACCESS_CODE`, `PORT=7860` and `GUARD_MAX_MB=4` in its environment variables, because
+Vercel routes to port 80 unless told otherwise and caps a request at 4.5 MB. Hosted mode was tested on
+the development laptop; the container image has not been built or run. A hosted copy receives the
+screenshots that visitors load, so it is for the synthetic sample forms: in real use the guard runs
+on the user's own device.
+
 **Design notes from development.** (1) Screenshots taken right after an agent types carry the
 browser's blue focus ring on that input, and Tesseract's layout analysis then skipped the text inside
 it — i.e. the one value the agent had just entered went unmasked (9 of 2,895 values in the first full

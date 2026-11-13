@@ -1,13 +1,20 @@
-"""Local demo page for the guard: upload a screenshot, see what the model would be shown.
+"""Web interface for the guard: load a screenshot, see what the model would be shown.
 
-usage: python demo/live_app.py [--port 8765] [--open]      then open http://127.0.0.1:8765
+Local use (default):   python demo/live_app.py [--port 8765] [--open]     then open http://127.0.0.1:8765
+    Bound to 127.0.0.1 and answers this computer only.
 
-Runs on this computer only (bound to 127.0.0.1). Uploaded images are held in memory, are never
-written to disk and are never sent anywhere. Standard library only, so it needs no extra packages.
-The page calls the same guard functions as scripts/04_run_guard.py (ocr -> detect -> policy -> mask).
+Hosted use:            GUARD_HOSTED=1 GUARD_ACCESS_CODE=<code> PORT=7860 python demo/live_app.py
+    Bound to 0.0.0.0 so that a hosting service can route a public link to it. An access code is
+    compulsory in this mode; every request for a sample or a redaction must carry it.
+    GUARD_UPLOADS=off limits the page to the three benchmark samples; GUARD_MAX_MB sets the largest
+    upload accepted (default 15).
+
+In both modes a screenshot is held in memory only and is never written to disk. Standard library
+only for the web part. The page calls the same guard functions as scripts/04_run_guard.py
+(ocr -> detect -> policy -> mask).
 """
 from __future__ import annotations
-import argparse, base64, hashlib, io, json, os, shutil, socket, sys, threading, time, webbrowser
+import argparse, base64, hashlib, hmac, io, json, os, shutil, socket, sys, threading, time, webbrowser
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
 from urllib.parse import parse_qs, urlparse
@@ -41,13 +48,27 @@ from guard.ocr import ocr_runs  # noqa: E402
 from guard.policy import select  # noqa: E402
 
 PAGE = Path(__file__).with_name("live_page.html")
-MAX_BYTES = 15 * 1024 * 1024
+MAX_MB = max(1, int(os.environ.get("GUARD_MAX_MB", "15")))   # some hosts cap a request body (Vercel: 4.5 MB)
+MAX_BYTES = MAX_MB * 1024 * 1024
 MAX_PIXELS = 40_000_000
 SAMPLE_IDENTITY = "I0001"
 
-LOCK = threading.Lock()          # one screenshot at a time: OCR already uses every core
-READY = threading.Event()        # set once the language model has been loaded
-_recent: dict[str, tuple] = {}   # sha256 of the upload -> (image, detections, timings); memory only
+HOSTED = os.environ.get("GUARD_HOSTED") == "1"
+ACCESS_CODE = os.environ.get("GUARD_ACCESS_CODE", "")
+UPLOADS = os.environ.get("GUARD_UPLOADS", "on").lower() != "off"
+MAX_FAILED_CODES = 10            # wrong codes allowed per client in FAILED_WINDOW seconds
+FAILED_WINDOW = 600
+
+LOCK = threading.Lock()                    # one screenshot at a time: OCR already uses every core
+WAITING = threading.BoundedSemaphore(4)    # at most four requests queued for the guard
+READY = threading.Event()                  # set once the language model has been loaded
+_recent: dict[str, tuple] = {}             # sha256 of the upload -> (image, detections, timings); memory only
+_failed: dict[str, list[float]] = {}       # client -> times of recent wrong access codes
+_failed_lock = threading.Lock()
+
+
+def _sample_path(form_id: str) -> Path:
+    return BENCHMARK / form_id / SAMPLE_IDENTITY / "filled" / "screenshot.png"
 
 
 def _config() -> dict:
@@ -60,11 +81,12 @@ def _config() -> dict:
             samples.append({"form_id": m["form_id"], "title": m["title"]})
     tasks.sort(key=lambda t: t["id"])
     fields = [{"name": name, "pii_type": pii} for name, pii in FIELD_PII_TYPE.items()]
-    return {"fields": fields, "tasks": tasks, "samples": samples}
+    return {"fields": fields, "tasks": tasks, "samples": samples,
+            "hosted": HOSTED, "needs_code": bool(ACCESS_CODE), "uploads": UPLOADS, "max_mb": MAX_MB}
 
 
-def _sample_path(form_id: str) -> Path:
-    return BENCHMARK / form_id / SAMPLE_IDENTITY / "filled" / "screenshot.png"
+def _sample_hashes() -> set[str]:
+    return {hashlib.sha256(_sample_path(s["form_id"]).read_bytes()).hexdigest() for s in _config()["samples"]}
 
 
 def run_guard(data: bytes, mode: str, keep: set[str]) -> dict:
@@ -118,7 +140,7 @@ def _warm_up() -> None:
 
 
 class Handler(BaseHTTPRequestHandler):
-    server_version = "GuardDemo/1.0"
+    server_version = "GuardDemo/1.1"
 
     def _send(self, code: int, body: bytes, ctype: str) -> None:
         self.send_response(code)
@@ -126,6 +148,10 @@ class Handler(BaseHTTPRequestHandler):
         self.send_header("Content-Length", str(len(body)))
         self.send_header("Cache-Control", "no-store")
         self.send_header("X-Content-Type-Options", "nosniff")
+        self.send_header("Referrer-Policy", "no-referrer")
+        self.send_header("Content-Security-Policy",
+                         "default-src 'none'; img-src 'self' data: blob:; style-src 'unsafe-inline'; "
+                         "script-src 'unsafe-inline'; connect-src 'self'; base-uri 'none'; form-action 'none'")
         self.end_headers()
         self.wfile.write(body)
 
@@ -133,11 +159,39 @@ class Handler(BaseHTTPRequestHandler):
         self._send(code, json.dumps(obj).encode("utf-8"), "application/json; charset=utf-8")
 
     def _local(self) -> bool:
-        """Refuse requests that reach this port under another host name (DNS rebinding)."""
+        """Local mode only: refuse requests that reach this port under another host name (DNS rebinding)."""
+        if HOSTED:
+            return True
         host = (self.headers.get("Host") or "").rsplit(":", 1)[0]
         if host in ("127.0.0.1", "localhost"):
             return True
         self._json(403, {"error": "This page only answers on 127.0.0.1."})
+        return False
+
+    def _client(self) -> str:
+        forwarded = (self.headers.get("X-Forwarded-For") or "").split(",")[0].strip()
+        return forwarded or self.client_address[0]
+
+    def _authorised(self) -> bool:
+        """True if no access code is set, or the request carries the right one. Replies 401/429 itself."""
+        if not ACCESS_CODE:
+            return True
+        who, now = self._client(), time.time()
+        with _failed_lock:
+            recent = [t for t in _failed.get(who, []) if now - t < FAILED_WINDOW]
+            _failed[who] = recent
+            locked_out = len(recent) >= MAX_FAILED_CODES
+        if locked_out:
+            self._json(429, {"error": "Too many wrong access codes. Try again in ten minutes."})
+            return False
+        given = self.headers.get("X-Access-Code") or ""
+        if hmac.compare_digest(given.encode("utf-8"), ACCESS_CODE.encode("utf-8")):
+            return True
+        if given:
+            with _failed_lock:
+                _failed.setdefault(who, []).append(now)
+            time.sleep(1)                      # slow down guessing
+        self._json(401, {"error": "An access code is needed." if not given else "That access code is not right."})
         return False
 
     def do_GET(self) -> None:
@@ -150,7 +204,12 @@ class Handler(BaseHTTPRequestHandler):
             self._send(200, html.encode("utf-8"), "text/html; charset=utf-8")
         elif path == "/api/status":
             self._json(200, {"ready": READY.is_set()})
+        elif path == "/api/check":
+            if self._authorised():
+                self._json(200, {"ok": True})
         elif path.startswith("/sample/"):
+            if not self._authorised():
+                return
             form_id = path.rsplit("/", 1)[1]
             known = {s["form_id"] for s in _config()["samples"]}
             if form_id in known:
@@ -167,19 +226,25 @@ class Handler(BaseHTTPRequestHandler):
         if url.path != "/api/redact":
             return self._json(404, {"error": "Not found."})
         if self.headers.get("X-Guard") != "1":          # only this page's own script sends it
-            return self._json(403, {"error": "Request not sent by the demo page."})
+            return self._json(403, {"error": "Request not sent by the page."})
+        if not self._authorised():
+            return
         try:
             length = int(self.headers.get("Content-Length") or 0)
         except ValueError:
             length = 0
         if not 0 < length <= MAX_BYTES:
-            return self._json(413, {"error": "Send one image of at most 15 MB."})
+            return self._json(413, {"error": f"Send one image of at most {MAX_MB} MB."})
         data = self.rfile.read(length)
+        if not UPLOADS and hashlib.sha256(data).hexdigest() not in _sample_hashes():
+            return self._json(403, {"error": "Uploads are switched off here. Use one of the sample forms."})
         q = parse_qs(url.query)
         mode = q.get("mode", ["full"])[0]
         if mode not in ("full", "task_aware"):
             return self._json(400, {"error": "Unknown policy."})
         keep = {f for f in q.get("keep", [""])[0].split(",") if f in FIELD_PII_TYPE}
+        if not WAITING.acquire(blocking=False):
+            return self._json(503, {"error": "The server is busy. Try again in a moment."})
         try:
             self._json(200, run_guard(data, mode, keep))
         except (UnidentifiedImageError, ValueError, OSError) as e:
@@ -187,27 +252,34 @@ class Handler(BaseHTTPRequestHandler):
             self._json(400, {"error": msg})
         except Exception as e:  # show the reason on the page instead of a dropped connection
             self._json(500, {"error": f"The guard failed: {type(e).__name__}: {e}"})
+        finally:
+            WAITING.release()
 
-    def log_message(self, fmt: str, *args) -> None:  # request lines only, never image content
+    def log_message(self, fmt: str, *args) -> None:  # request lines only, never image content or the access code
         print(f"{self.log_date_time_string()}  {fmt % args}")
 
 
 if __name__ == "__main__":
     ap = argparse.ArgumentParser()
-    ap.add_argument("--port", type=int, default=8765)
-    ap.add_argument("--open", action="store_true", help="open the page in the default browser")
+    ap.add_argument("--port", type=int, default=int(os.environ.get("PORT", "8765")))
+    ap.add_argument("--host", default=os.environ.get("GUARD_HOST", "0.0.0.0" if HOSTED else "127.0.0.1"))
+    ap.add_argument("--open", action="store_true", help="open the page in the default browser (local use)")
     args = ap.parse_args()
+    if HOSTED and not ACCESS_CODE:
+        sys.exit("Hosted mode needs an access code: set the GUARD_ACCESS_CODE environment variable.")
     url = f"http://127.0.0.1:{args.port}"
     try:  # started twice (double-clicked again): show the page that is already up instead of a second server
         socket.create_connection(("127.0.0.1", args.port), timeout=1).close()
-        print(f"The guard demo is already running on {url}")
+        print(f"The guard interface is already running on {url}")
         if args.open:
             webbrowser.open(url)
         sys.exit(0)
     except OSError:
         pass
-    server = ThreadingHTTPServer(("127.0.0.1", args.port), Handler)
-    print(f"Guard demo on {url}  (this computer only; Ctrl+C to stop)")
+    server = ThreadingHTTPServer((args.host, args.port), Handler)
+    where = "hosted mode, all interfaces" if HOSTED else "this computer only"
+    print(f"Guard interface on {args.host}:{args.port}  ({where}; access code {'on' if ACCESS_CODE else 'off'}; "
+          f"uploads {'on' if UPLOADS else 'off'}; Ctrl+C to stop)")
     print("loading the language model ...")
     threading.Thread(target=_warm_up, daemon=True).start()
     if args.open:

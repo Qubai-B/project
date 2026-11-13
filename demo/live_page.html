@@ -27,6 +27,8 @@
   label { cursor: pointer; }
   .policy label { display: block; padding: 4px 0; }
   .hint { color: var(--muted); font-size: 13px; }
+  #code { font: inherit; padding: 6px 10px; border-radius: 6px; border: 1px solid var(--line); min-width: 220px; }
+  #gateMsg { color: var(--bad); }
   select { font: inherit; padding: 5px 8px; border-radius: 6px; border: 1px solid var(--line); background: #fff; max-width: 100%; }
   #keepBox { margin-top: 10px; padding-top: 10px; border-top: 1px solid var(--line); }
   #fields { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 2px 12px; margin-top: 8px; }
@@ -50,9 +52,20 @@
 <body>
 <header>
   <h1>Redaction guard: what the model would see</h1>
-  <p>Runs on this computer only. The screenshot is not saved and is not sent anywhere.</p>
+  <p id="where">Runs on this computer only. The screenshot is not saved and is not sent anywhere.</p>
 </header>
 <main>
+  <section class="card" id="gate" hidden>
+    <h2>Access code</h2>
+    <p class="hint">Enter the access code you were given with the link.</p>
+    <div class="row">
+      <input type="password" id="code" autocomplete="off" aria-label="Access code">
+      <button id="enter">Continue</button>
+      <span id="gateMsg" class="hint" role="alert"></span>
+    </div>
+  </section>
+
+  <div id="app">
   <div id="notice"></div>
 
   <div class="steps">
@@ -60,7 +73,7 @@
       <h2>1. Choose a screenshot</h2>
       <div id="drop" tabindex="0">
         <strong>Click to choose a file</strong>, drop an image here, or paste one with Ctrl+V
-        <div class="hint">PNG or JPEG, up to 15 MB</div>
+        <div class="hint">PNG or JPEG, up to <span id="maxMb">15</span> MB</div>
       </div>
       <input type="file" id="file" accept="image/*" hidden>
       <div class="row" id="samples"><span class="hint">Or use a sample from the benchmark (synthetic data):</span></div>
@@ -94,6 +107,7 @@
   </section>
 
   <footer>The guard was built and tested on three mock Nigerian e-service forms. Its results on other pages have not been evaluated.</footer>
+  </div>
 </main>
 
 <script>
@@ -109,6 +123,47 @@ function notice(text, isError) {
   n.style.display = text ? "block" : "none";
 }
 
+// ---- access code (only when the server asks for one) ----
+// The code travels in a request header, never in the address, and is kept for this browser tab only.
+let accessCode = "";
+try { accessCode = sessionStorage.getItem("guardCode") || ""; } catch (e) { /* storage unavailable */ }
+
+function api(url, opts = {}) {
+  opts.headers = Object.assign({}, opts.headers, accessCode ? { "X-Access-Code": accessCode } : {});
+  return fetch(url, opts).then(r => { if (r.status === 401 && CONFIG.needs_code) lock(); return r; });
+}
+
+function lock(message) {
+  $("app").hidden = true; $("gate").hidden = false;
+  $("gateMsg").textContent = message || "";
+  $("code").focus();
+}
+
+async function tryCode(candidate, quiet) {
+  accessCode = candidate;
+  let r;
+  try { r = await fetch("/api/check", { headers: { "X-Access-Code": candidate } }); }
+  catch (e) { return lock("The server did not answer."); }
+  if (r.ok) {
+    try { sessionStorage.setItem("guardCode", candidate); } catch (e) { /* keep it in memory */ }
+    $("gate").hidden = true; $("app").hidden = false; $("code").value = "";
+    return;
+  }
+  accessCode = "";
+  try { sessionStorage.removeItem("guardCode"); } catch (e) { /* nothing stored */ }
+  const body = await r.json().catch(() => ({}));
+  lock(quiet ? "" : (body.error || "That access code is not right."));
+}
+
+$("enter").onclick = () => { const c = $("code").value.trim(); if (c) tryCode(c); };
+$("code").onkeydown = e => { if (e.key === "Enter") $("enter").click(); };
+if (CONFIG.needs_code) { $("app").hidden = true; if (accessCode) tryCode(accessCode, true); else lock(); }
+
+if (CONFIG.hosted) {
+  $("where").textContent = "Demonstration server. Use the sample forms or synthetic data only: do not upload real "
+    + "personal data. Screenshots are processed in memory and are not saved.";
+}
+
 function mode() { return document.querySelector("input[name=mode]:checked").value; }
 function kept() { return [...document.querySelectorAll("#fields input:checked")].map(c => c.value); }
 
@@ -117,7 +172,7 @@ for (const s of CONFIG.samples) {
   const b = document.createElement("button");
   b.textContent = s.title;
   b.onclick = async () => {
-    const r = await fetch("/sample/" + encodeURIComponent(s.form_id));
+    const r = await api("/sample/" + encodeURIComponent(s.form_id));
     if (r.ok) use(await r.blob()); else notice("The sample could not be loaded.", true);
   };
   $("samples").appendChild(b);
@@ -146,6 +201,11 @@ for (const r of document.querySelectorAll("input[name=mode]")) r.onchange = () =
 };
 
 // ---- choosing an image ----
+$("maxMb").textContent = CONFIG.max_mb;
+if (!CONFIG.uploads) {            // the server accepts the sample forms only
+  $("drop").hidden = true;
+  $("samples").firstElementChild.textContent = "Choose a sample form from the benchmark (synthetic data):";
+}
 const drop = $("drop");
 drop.onclick = () => $("file").click();
 drop.onkeydown = e => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); $("file").click(); } };
@@ -167,7 +227,7 @@ function show(slotId, src, alt) {
 
 function use(blob) {
   if (!blob.type.startsWith("image/")) return notice("Please choose an image file.", true);
-  if (blob.size > 15 * 1024 * 1024) return notice("The image is larger than 15 MB.", true);
+  if (blob.size > CONFIG.max_mb * 1024 * 1024) return notice(`The image is larger than ${CONFIG.max_mb} MB.`, true);
   current = blob;
   show("rawSlot", URL.createObjectURL(blob), "Original screenshot");
   redact();
@@ -183,7 +243,7 @@ async function redact() {
   const qs = new URLSearchParams({ mode: mode(), keep: kept().join(",") });
   let reply, data;
   try {
-    reply = await fetch("/api/redact?" + qs, { method: "POST", body: current,
+    reply = await api("/api/redact?" + qs, { method: "POST", body: current,
       headers: { "X-Guard": "1", "Content-Type": "application/octet-stream" } });
     data = await reply.json();
   } catch (err) {
