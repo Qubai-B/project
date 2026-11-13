@@ -121,7 +121,7 @@ Integration point for an agent: call `redact()` on every screenshot before it is
 That single insertion is all a screenshot-driven agent such as Paperasse would need; the project
 offers it as a reference design and does not integrate it into any agent.
 
-### Local demo page
+### The web interface
 
 ```
 python demo/live_app.py --open          # Windows: .\.venv\Scripts\python.exe demo\live_app.py --open
@@ -131,7 +131,9 @@ Opens `http://127.0.0.1:8765`: choose, drop or paste a screenshot (or pick a ben
 page shows the original beside the copy the model would receive, with every value found, its type,
 its field and whether it was masked. The policy can be switched between full and task-aware, with the
 five benchmark tasks as presets. The page answers on this computer only, holds uploads in memory and
-never writes them to disk. It is a demonstration aid and is not part of the evaluated system.
+never writes them to disk. This is the system's user interface: it calls the same guard functions as
+the pipeline, and it is how an evaluator can try the guard directly. The figures of the three
+experiments were produced by the pipeline scripts, not through the page.
 
 ### Hosting the web interface
 
