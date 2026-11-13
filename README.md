@@ -121,6 +121,18 @@ Integration point for an agent: call `redact()` on every screenshot before it is
 That single insertion is all a screenshot-driven agent such as Paperasse would need; the project
 offers it as a reference design and does not integrate it into any agent.
 
+### Local demo page
+
+```
+python demo/live_app.py --open          # Windows: .\.venv\Scripts\python.exe demo\live_app.py --open
+```
+
+Opens `http://127.0.0.1:8765`: choose, drop or paste a screenshot (or pick a benchmark sample) and the
+page shows the original beside the copy the model would receive, with every value found, its type,
+its field and whether it was masked. The policy can be switched between full and task-aware, with the
+five benchmark tasks as presets. The page answers on this computer only, holds uploads in memory and
+never writes them to disk. It is a demonstration aid and is not part of the evaluated system.
+
 **Design notes from development.** (1) Screenshots taken right after an agent types carry the
 browser's blue focus ring on that input, and Tesseract's layout analysis then skipped the text inside
 it — i.e. the one value the agent had just entered went unmasked (9 of 2,895 values in the first full

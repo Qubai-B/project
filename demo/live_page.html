@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Redaction guard demo</title>
+<style>
+  :root { --green: #008751; --green-dark: #006b40; --ink: #1c2420; --muted: #5d6963; --line: #d9dfdb;
+          --bg: #f5f7f6; --card: #ffffff; --warn: #8a5a00; --warn-bg: #fff6e0; --bad: #a32020; }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--ink); font: 15px/1.5 "Segoe UI", system-ui, sans-serif; }
+  header { background: var(--green); color: #fff; padding: 18px 24px; }
+  header h1 { margin: 0; font-size: 20px; font-weight: 600; }
+  header p { margin: 4px 0 0; opacity: .92; font-size: 14px; }
+  main { max-width: 1280px; margin: 0 auto; padding: 20px 24px 40px; }
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: 8px; padding: 16px 18px; margin-bottom: 16px; }
+  h2 { font-size: 15px; margin: 0 0 10px; font-weight: 600; }
+  .steps { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  @media (max-width: 860px) { .steps, .panes { grid-template-columns: 1fr !important; } }
+  #drop { border: 2px dashed var(--line); border-radius: 8px; padding: 22px 16px; text-align: center; color: var(--muted); cursor: pointer; }
+  #drop.over { border-color: var(--green); background: #eef7f2; }
+  #drop strong { color: var(--ink); }
+  .row { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin-top: 12px; }
+  button { font: inherit; padding: 6px 12px; border-radius: 6px; border: 1px solid var(--line); background: #fff; color: var(--ink); cursor: pointer; }
+  button:hover { border-color: var(--green); }
+  button:disabled { opacity: .5; cursor: default; }
+  label { cursor: pointer; }
+  .policy label { display: block; padding: 4px 0; }
+  .hint { color: var(--muted); font-size: 13px; }
+  select { font: inherit; padding: 5px 8px; border-radius: 6px; border: 1px solid var(--line); background: #fff; max-width: 100%; }
+  #keepBox { margin-top: 10px; padding-top: 10px; border-top: 1px solid var(--line); }
+  #fields { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 2px 12px; margin-top: 8px; }
+  #fields label { font-size: 14px; }
+  #notice { display: none; padding: 10px 14px; border-radius: 6px; margin-bottom: 16px; background: var(--warn-bg); color: var(--warn); border: 1px solid #ecd9a6; }
+  #notice.error { background: #fdeaea; color: var(--bad); border-color: #efc2c2; }
+  .panes { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .pane img { display: block; width: 100%; height: auto; border: 1px solid var(--line); border-radius: 4px; background: #fff; }
+  .pane .empty { border: 1px dashed var(--line); border-radius: 4px; padding: 60px 10px; text-align: center; color: var(--muted); }
+  #summary { font-weight: 600; }
+  table { width: 100%; border-collapse: collapse; margin-top: 10px; font-size: 14px; }
+  th, td { text-align: left; padding: 6px 10px; border-bottom: 1px solid var(--line); vertical-align: top; }
+  th { color: var(--muted); font-weight: 600; font-size: 13px; }
+  td.value { font-family: Consolas, monospace; word-break: break-word; }
+  .tag { display: inline-block; padding: 1px 8px; border-radius: 10px; font-size: 12px; font-weight: 600; }
+  .tag.masked { background: #1c2420; color: #fff; }
+  .tag.visible { background: #e3f3ea; color: var(--green-dark); border: 1px solid #b9dcc8; }
+  footer { color: var(--muted); font-size: 13px; margin-top: 8px; }
+</style>
+</head>
+<body>
+<header>
+  <h1>Redaction guard: what the model would see</h1>
+  <p>Runs on this computer only. The screenshot is not saved and is not sent anywhere.</p>
+</header>
+<main>
+  <div id="notice"></div>
+
+  <div class="steps">
+    <section class="card">
+      <h2>1. Choose a screenshot</h2>
+      <div id="drop" tabindex="0">
+        <strong>Click to choose a file</strong>, drop an image here, or paste one with Ctrl+V
+        <div class="hint">PNG or JPEG, up to 15 MB</div>
+      </div>
+      <input type="file" id="file" accept="image/*" hidden>
+      <div class="row" id="samples"><span class="hint">Or use a sample from the benchmark (synthetic data):</span></div>
+    </section>
+
+    <section class="card">
+      <h2>2. Choose the redaction policy</h2>
+      <div class="policy">
+        <label><input type="radio" name="mode" value="full" checked> <strong>Full</strong> <span class="hint">mask every value found</span></label>
+        <label><input type="radio" name="mode" value="task_aware"> <strong>Task-aware</strong> <span class="hint">leave only the fields the task needs</span></label>
+      </div>
+      <div id="keepBox" hidden>
+        <label for="task" class="hint">Task</label><br>
+        <select id="task"></select>
+        <div id="fields"></div>
+      </div>
+    </section>
+  </div>
+
+  <section class="card">
+    <div class="panes">
+      <div class="pane"><h2>Original screenshot</h2><div id="rawSlot" class="empty">No screenshot yet</div></div>
+      <div class="pane"><h2>Sent to the model</h2><div id="outSlot" class="empty">The redacted screenshot appears here</div></div>
+    </div>
+  </section>
+
+  <section class="card" id="resultCard" hidden>
+    <div id="summary"></div>
+    <div class="hint" id="timing"></div>
+    <table id="dets"><thead><tr><th>Value read from the screenshot</th><th>Type</th><th>Form field</th><th>In the model's copy</th></tr></thead><tbody></tbody></table>
+  </section>
+
+  <footer>The guard was built and tested on three mock Nigerian e-service forms. Its results on other pages have not been evaluated.</footer>
+</main>
+
+<script>
+const CONFIG = __CONFIG__;
+const $ = id => document.getElementById(id);
+let current = null;      // the image being shown, as a Blob
+let running = 0;         // id of the latest request, so an older reply cannot overwrite a newer one
+
+function notice(text, isError) {
+  const n = $("notice");
+  n.textContent = text || "";
+  n.className = isError ? "error" : "";
+  n.style.display = text ? "block" : "none";
+}
+
+function mode() { return document.querySelector("input[name=mode]:checked").value; }
+function kept() { return [...document.querySelectorAll("#fields input:checked")].map(c => c.value); }
+
+// ---- controls ----
+for (const s of CONFIG.samples) {
+  const b = document.createElement("button");
+  b.textContent = s.title;
+  b.onclick = async () => {
+    const r = await fetch("/sample/" + encodeURIComponent(s.form_id));
+    if (r.ok) use(await r.blob()); else notice("The sample could not be loaded.", true);
+  };
+  $("samples").appendChild(b);
+}
+
+for (const f of CONFIG.fields) {
+  const l = document.createElement("label"), c = document.createElement("input");
+  c.type = "checkbox"; c.value = f.name;
+  c.onchange = () => { $("task").value = ""; redact(); };
+  l.append(c, " " + f.name.replace(/_/g, " "));
+  $("fields").appendChild(l);
+}
+
+const custom = new Option("Choose the fields yourself", "");
+$("task").add(custom);
+for (const t of CONFIG.tasks) $("task").add(new Option(`${t.id}: ${t.goal} (${t.form})`, t.id));
+$("task").onchange = () => {
+  const t = CONFIG.tasks.find(x => x.id === $("task").value);
+  if (t) for (const c of document.querySelectorAll("#fields input")) c.checked = t.needs.includes(c.value);
+  redact();
+};
+
+for (const r of document.querySelectorAll("input[name=mode]")) r.onchange = () => {
+  $("keepBox").hidden = mode() !== "task_aware";
+  redact();
+};
+
+// ---- choosing an image ----
+const drop = $("drop");
+drop.onclick = () => $("file").click();
+drop.onkeydown = e => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); $("file").click(); } };
+$("file").onchange = e => { if (e.target.files[0]) use(e.target.files[0]); e.target.value = ""; };
+drop.ondragover = e => { e.preventDefault(); drop.classList.add("over"); };
+drop.ondragleave = () => drop.classList.remove("over");
+drop.ondrop = e => { e.preventDefault(); drop.classList.remove("over"); if (e.dataTransfer.files[0]) use(e.dataTransfer.files[0]); };
+document.addEventListener("paste", e => {
+  const item = [...(e.clipboardData?.items || [])].find(i => i.type.startsWith("image/"));
+  if (item) use(item.getAsFile());
+});
+
+function show(slotId, src, alt) {
+  const img = document.createElement("img");
+  img.src = src; img.alt = alt;
+  const slot = $(slotId);
+  slot.className = ""; slot.replaceChildren(img);
+}
+
+function use(blob) {
+  if (!blob.type.startsWith("image/")) return notice("Please choose an image file.", true);
+  if (blob.size > 15 * 1024 * 1024) return notice("The image is larger than 15 MB.", true);
+  current = blob;
+  show("rawSlot", URL.createObjectURL(blob), "Original screenshot");
+  redact();
+}
+
+// ---- running the guard ----
+async function redact() {
+  if (!current) return;
+  const id = ++running;
+  notice("Reading the screenshot ...");
+  const out = $("outSlot");
+  out.className = "empty"; out.textContent = "Working ...";
+  const qs = new URLSearchParams({ mode: mode(), keep: kept().join(",") });
+  let reply, data;
+  try {
+    reply = await fetch("/api/redact?" + qs, { method: "POST", body: current,
+      headers: { "X-Guard": "1", "Content-Type": "application/octet-stream" } });
+    data = await reply.json();
+  } catch (err) {
+    if (id === running) notice("The demo server did not answer. Is it still running?", true);
+    return;
+  }
+  if (id !== running) return;
+  if (!reply.ok) { out.textContent = "No result"; $("resultCard").hidden = true; return notice(data.error || "The request failed.", true); }
+  notice("");
+  show("outSlot", data.image, "Redacted screenshot");
+  report(data);
+}
+
+function report(data) {
+  const dets = data.detections, masked = dets.filter(d => d.masked).length;
+  $("resultCard").hidden = false;
+  $("dets").hidden = dets.length === 0;
+  $("summary").textContent = dets.length === 0
+    ? "No personal data was found in this screenshot."
+    : `${masked} of ${dets.length} values masked, ${dets.length - masked} left visible.`;
+  const t = data.timings, s = ms => ms >= 1000 ? (ms / 1000).toFixed(1) + " s" : Math.round(ms) + " ms";
+  $("timing").textContent = `Reading the text ${s(t.ocr_ms)}, finding personal data ${s(t.detect_ms)}, masking ${s(t.mask_ms)}`
+    + (data.reused ? " (text reading reused from the previous run on this image)." : ".");
+  const body = $("dets").tBodies[0];
+  body.replaceChildren();
+  for (const d of dets) {
+    const tr = body.insertRow();
+    const v = tr.insertCell(); v.className = "value"; v.textContent = d.text;
+    tr.insertCell().textContent = d.pii_type;
+    tr.insertCell().textContent = d.field ? d.field.replace(/_/g, " ") : "not attributed";
+    const tag = document.createElement("span");
+    tag.className = "tag " + (d.masked ? "masked" : "visible");
+    tag.textContent = d.masked ? "Masked" : "Visible";
+    tr.insertCell().appendChild(tag);
+  }
+}
+
+// ---- first load: the language model takes a few seconds ----
+(async function waitReady() {
+  for (;;) {
+    try {
+      const r = await (await fetch("/api/status")).json();
+      if (r.ready) { if (!current) notice(""); return; }
+      if (!current) notice("Loading the language model. The first result takes a little longer ...");
+    } catch (e) { /* server not up yet */ }
+    await new Promise(res => setTimeout(res, 1500));
+  }
+})();
+</script>
+</body>
+</html>
