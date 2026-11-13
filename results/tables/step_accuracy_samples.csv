@@ -1,0 +1,154 @@
+condition,path,gold_action,gold_field,pred_action,pred_field,pred_value,field_ok,correct,model
+raw,T01_tax_self_assessment_I0001\steps\000,type,address_line,type,address_line,"95 Herbert Macaulay Way, Lekki Phase 1",1,1,claude-haiku-5-5
+full,T01_tax_self_assessment_I0001\steps\000,type,address_line,type,address_line,"95 Herbert Macaulay Way, Lekki Phase 1",1,1,claude-haiku-5-5
+task_aware,T01_tax_self_assessment_I0001\steps\000,type,address_line,type,address_line,"95 Herbert Macaulay Way, Lekki Phase 1",1,1,claude-haiku-5-5
+raw,T01_tax_self_assessment_I0001\steps\001,type,lga,type,lga,Jos North,1,1,claude-haiku-5-5
+full,T01_tax_self_assessment_I0001\steps\001,type,lga,type,lga,Jos North,1,1,claude-haiku-5-5
+task_aware,T01_tax_self_assessment_I0001\steps\001,type,lga,type,lga,Jos North,1,1,claude-haiku-5-5
+raw,T01_tax_self_assessment_I0001\steps\002,type,state,type,state,Plateau,1,1,claude-haiku-5-5
+full,T01_tax_self_assessment_I0001\steps\002,type,state,type,state,Plateau,1,1,claude-haiku-5-5
+task_aware,T01_tax_self_assessment_I0001\steps\002,type,state,type,state,Plateau,1,1,claude-haiku-5-5
+raw,T01_tax_self_assessment_I0001\steps\003,click,btn_next,click,,,1,1,claude-haiku-5-5
+full,T01_tax_self_assessment_I0001\steps\003,click,btn_next,type,state,Plateau,0,0,claude-haiku-5-5
+task_aware,T01_tax_self_assessment_I0001\steps\003,click,btn_next,click,,,1,1,claude-haiku-5-5
+raw,T01_tax_self_assessment_I0002\steps\000,type,address_line,type,address_line,"119 Ogui Road, GRA",1,1,claude-haiku-5-5
+full,T01_tax_self_assessment_I0002\steps\000,type,address_line,type,address_line,"119 Ogui Road, GRA",1,1,claude-haiku-5-5
+task_aware,T01_tax_self_assessment_I0002\steps\000,type,address_line,type,address_line,"119 Ogui Road, GRA",1,1,claude-haiku-5-5
+raw,T01_tax_self_assessment_I0002\steps\001,type,lga,type,lga,Kosofe,1,1,claude-haiku-5-5
+full,T01_tax_self_assessment_I0002\steps\001,type,lga,type,lga,Kosofe,1,1,claude-haiku-5-5
+task_aware,T01_tax_self_assessment_I0002\steps\001,type,lga,type,lga,Kosofe,1,1,claude-haiku-5-5
+raw,T01_tax_self_assessment_I0002\steps\002,type,state,type,state,Lagos,1,1,claude-haiku-5-5
+full,T01_tax_self_assessment_I0002\steps\002,type,state,type,state,Lagos,1,1,claude-haiku-5-5
+task_aware,T01_tax_self_assessment_I0002\steps\002,type,state,type,state,Lagos,1,1,claude-haiku-5-5
+raw,T01_tax_self_assessment_I0002\steps\003,click,btn_next,click,,,1,1,claude-haiku-5-5
+full,T01_tax_self_assessment_I0002\steps\003,click,btn_next,type,address_line,"119 Ogui Road, GRA",0,0,claude-haiku-5-5
+task_aware,T01_tax_self_assessment_I0002\steps\003,click,btn_next,click,,,1,1,claude-haiku-5-5
+raw,T01_tax_self_assessment_I0003\steps\000,type,address_line,type,address_line,"52 Murtala Mohammed Way, GRA",1,1,claude-haiku-5-5
+full,T01_tax_self_assessment_I0003\steps\000,type,address_line,type,address_line,"52 Murtala Mohammed Way, GRA",1,1,claude-haiku-5-5
+task_aware,T01_tax_self_assessment_I0003\steps\000,type,address_line,type,address_line,"52 Murtala Mohammed Way, GRA",1,1,claude-haiku-5-5
+raw,T01_tax_self_assessment_I0003\steps\001,type,lga,type,lga,Ikeja,1,1,claude-haiku-5-5
+full,T01_tax_self_assessment_I0003\steps\001,type,lga,type,lga,Ikeja,1,1,claude-haiku-5-5
+task_aware,T01_tax_self_assessment_I0003\steps\001,type,lga,type,lga,Ikeja,1,1,claude-haiku-5-5
+raw,T01_tax_self_assessment_I0003\steps\002,type,state,type,state,Lagos,1,1,claude-haiku-5-5
+full,T01_tax_self_assessment_I0003\steps\002,type,state,type,state,Lagos,1,1,claude-haiku-5-5
+task_aware,T01_tax_self_assessment_I0003\steps\002,type,state,type,state,Lagos,1,1,claude-haiku-5-5
+raw,T01_tax_self_assessment_I0003\steps\003,click,btn_next,click,,,1,1,claude-haiku-5-5
+full,T01_tax_self_assessment_I0003\steps\003,click,btn_next,type,address_line,"52 Murtala Mohammed Way, GRA",0,0,claude-haiku-5-5
+task_aware,T01_tax_self_assessment_I0003\steps\003,click,btn_next,click,,,1,1,claude-haiku-5-5
+raw,T02_tax_self_assessment_I0001\steps\000,type,annual_income,type,annual_income,14680000,1,1,claude-haiku-5-5
+full,T02_tax_self_assessment_I0001\steps\000,type,annual_income,type,annual_income,14680000,1,1,claude-haiku-5-5
+task_aware,T02_tax_self_assessment_I0001\steps\000,type,annual_income,type,annual_income,14680000,1,1,claude-haiku-5-5
+raw,T02_tax_self_assessment_I0001\steps\001,type,bvn,type,bvn,22386379402,1,1,claude-haiku-5-5
+full,T02_tax_self_assessment_I0001\steps\001,type,bvn,type,bvn,22386379402,1,1,claude-haiku-5-5
+task_aware,T02_tax_self_assessment_I0001\steps\001,type,bvn,type,bvn,22386379402,1,1,claude-haiku-5-5
+raw,T02_tax_self_assessment_I0001\steps\002,type,bank_account,type,bank_account,1193448329,1,1,claude-haiku-5-5
+full,T02_tax_self_assessment_I0001\steps\002,type,bank_account,type,bank_account,1193448329,1,1,claude-haiku-5-5
+task_aware,T02_tax_self_assessment_I0001\steps\002,type,bank_account,type,bank_account,1193448329,1,1,claude-haiku-5-5
+raw,T02_tax_self_assessment_I0001\steps\003,click,btn_next,click,,,1,1,claude-haiku-5-5
+full,T02_tax_self_assessment_I0001\steps\003,click,btn_next,click,,,1,1,claude-haiku-5-5
+task_aware,T02_tax_self_assessment_I0001\steps\003,click,btn_next,click,,,1,1,claude-haiku-5-5
+raw,T02_tax_self_assessment_I0002\steps\000,type,annual_income,type,annual_income,23410000,1,1,claude-haiku-5-5
+full,T02_tax_self_assessment_I0002\steps\000,type,annual_income,type,annual_income,23410000,1,1,claude-haiku-5-5
+task_aware,T02_tax_self_assessment_I0002\steps\000,type,annual_income,type,annual_income,23410000,1,1,claude-haiku-5-5
+raw,T02_tax_self_assessment_I0002\steps\001,type,bvn,type,bvn,22164752553,1,1,claude-haiku-5-5
+full,T02_tax_self_assessment_I0002\steps\001,type,bvn,type,bvn,22164752553,1,1,claude-haiku-5-5
+task_aware,T02_tax_self_assessment_I0002\steps\001,type,bvn,type,bvn,22164752553,1,1,claude-haiku-5-5
+raw,T02_tax_self_assessment_I0002\steps\002,type,bank_account,type,bank_account,8896606039,1,1,claude-haiku-5-5
+full,T02_tax_self_assessment_I0002\steps\002,type,bank_account,type,bank_account,8896606039,1,1,claude-haiku-5-5
+task_aware,T02_tax_self_assessment_I0002\steps\002,type,bank_account,type,bank_account,8896606039,1,1,claude-haiku-5-5
+raw,T02_tax_self_assessment_I0002\steps\003,click,btn_next,click,,,1,1,claude-haiku-5-5
+full,T02_tax_self_assessment_I0002\steps\003,click,btn_next,click,,,1,1,claude-haiku-5-5
+task_aware,T02_tax_self_assessment_I0002\steps\003,click,btn_next,click,,,1,1,claude-haiku-5-5
+raw,T02_tax_self_assessment_I0003\steps\000,type,annual_income,type,annual_income,25000000,1,1,claude-haiku-5-5
+full,T02_tax_self_assessment_I0003\steps\000,type,annual_income,type,annual_income,25000000,1,1,claude-haiku-5-5
+task_aware,T02_tax_self_assessment_I0003\steps\000,type,annual_income,type,annual_income,25000000,1,1,claude-haiku-5-5
+raw,T02_tax_self_assessment_I0003\steps\001,type,bvn,type,bvn,22849696532,1,1,claude-haiku-5-5
+full,T02_tax_self_assessment_I0003\steps\001,type,bvn,type,bvn,22849696532,1,1,claude-haiku-5-5
+task_aware,T02_tax_self_assessment_I0003\steps\001,type,bvn,type,bvn,22849696532,1,1,claude-haiku-5-5
+raw,T02_tax_self_assessment_I0003\steps\002,type,bank_account,type,bank_account,0470939445,1,1,claude-haiku-5-5
+full,T02_tax_self_assessment_I0003\steps\002,type,bank_account,type,bank_account,0470939445,1,1,claude-haiku-5-5
+task_aware,T02_tax_self_assessment_I0003\steps\002,type,bank_account,type,bank_account,0470939445,1,1,claude-haiku-5-5
+raw,T02_tax_self_assessment_I0003\steps\003,click,btn_next,click,,,1,1,claude-haiku-5-5
+full,T02_tax_self_assessment_I0003\steps\003,click,btn_next,type,annual_income,25000000,0,0,claude-haiku-5-5
+task_aware,T02_tax_self_assessment_I0003\steps\003,click,btn_next,click,,,1,1,claude-haiku-5-5
+raw,T03_drivers_licence_renewal_I0001\steps\000,type,phone,type,phone,+234 810 328 3286,1,1,claude-haiku-5-5
+full,T03_drivers_licence_renewal_I0001\steps\000,type,phone,type,phone,+234 810 328 3286,1,1,claude-haiku-5-5
+task_aware,T03_drivers_licence_renewal_I0001\steps\000,type,phone,type,phone,+234 810 328 3286,1,1,claude-haiku-5-5
+raw,T03_drivers_licence_renewal_I0001\steps\001,type,email,type,email,nnamdi.okafor36@example.com,1,1,claude-haiku-5-5
+full,T03_drivers_licence_renewal_I0001\steps\001,type,email,type,email,nnamdi.okafor36@example.com,1,1,claude-haiku-5-5
+task_aware,T03_drivers_licence_renewal_I0001\steps\001,type,email,type,email,nnamdi.okafor36@example.com,1,1,claude-haiku-5-5
+raw,T03_drivers_licence_renewal_I0001\steps\002,click,btn_next,click,,,1,1,claude-haiku-5-5
+full,T03_drivers_licence_renewal_I0001\steps\002,click,btn_next,type,email,nnamdi.okafor36@example.com,0,0,claude-haiku-5-5
+task_aware,T03_drivers_licence_renewal_I0001\steps\002,click,btn_next,click,,,1,1,claude-haiku-5-5
+raw,T03_drivers_licence_renewal_I0002\steps\000,type,phone,type,phone,+234 906 649 3045,1,1,claude-haiku-5-5
+full,T03_drivers_licence_renewal_I0002\steps\000,type,phone,type,phone,+234 906 649 3045,1,1,claude-haiku-5-5
+task_aware,T03_drivers_licence_renewal_I0002\steps\000,type,phone,type,phone,+234 906 649 3045,1,1,claude-haiku-5-5
+raw,T03_drivers_licence_renewal_I0002\steps\001,type,email,type,email,ladi.olawale94@example.com,1,1,claude-haiku-5-5
+full,T03_drivers_licence_renewal_I0002\steps\001,type,email,type,email,ladi.olawale94@example.com,1,1,claude-haiku-5-5
+task_aware,T03_drivers_licence_renewal_I0002\steps\001,type,email,type,email,ladi.olawale94@example.com,1,1,claude-haiku-5-5
+raw,T03_drivers_licence_renewal_I0002\steps\002,click,btn_next,click,,,1,1,claude-haiku-5-5
+full,T03_drivers_licence_renewal_I0002\steps\002,click,btn_next,type,email,ladi.olawale94@example.com,0,0,claude-haiku-5-5
+task_aware,T03_drivers_licence_renewal_I0002\steps\002,click,btn_next,click,,,1,1,claude-haiku-5-5
+raw,T03_drivers_licence_renewal_I0003\steps\000,type,phone,type,phone,+234 705 924 6168,1,1,claude-haiku-5-5
+full,T03_drivers_licence_renewal_I0003\steps\000,type,phone,type,phone,+234 705 924 6168,1,1,claude-haiku-5-5
+task_aware,T03_drivers_licence_renewal_I0003\steps\000,type,phone,type,phone,+234 705 924 6168,1,1,claude-haiku-5-5
+raw,T03_drivers_licence_renewal_I0003\steps\001,type,email,type,email,yetunde.abdullahi30@example.com,1,1,claude-haiku-5-5
+full,T03_drivers_licence_renewal_I0003\steps\001,type,email,type,email,yetunde.abdullahi30@example.com,1,1,claude-haiku-5-5
+task_aware,T03_drivers_licence_renewal_I0003\steps\001,type,email,type,email,yetunde.abdullahi30@example.com,1,1,claude-haiku-5-5
+raw,T03_drivers_licence_renewal_I0003\steps\002,click,btn_next,click,,,1,1,claude-haiku-5-5
+full,T03_drivers_licence_renewal_I0003\steps\002,click,btn_next,click,,,1,1,claude-haiku-5-5
+task_aware,T03_drivers_licence_renewal_I0003\steps\002,click,btn_next,click,,,1,1,claude-haiku-5-5
+raw,T04_drivers_licence_renewal_I0001\steps\000,type,licence_no,type,licence_no,PLA22156GB55,1,1,claude-haiku-5-5
+full,T04_drivers_licence_renewal_I0001\steps\000,type,licence_no,type,licence_no,PLA22156GB55,1,1,claude-haiku-5-5
+task_aware,T04_drivers_licence_renewal_I0001\steps\000,type,licence_no,type,licence_no,PLA22156GB55,1,1,claude-haiku-5-5
+raw,T04_drivers_licence_renewal_I0001\steps\001,type,nin,type,nin,96001338908,1,1,claude-haiku-5-5
+full,T04_drivers_licence_renewal_I0001\steps\001,type,nin,type,nin,96001338908,1,1,claude-haiku-5-5
+task_aware,T04_drivers_licence_renewal_I0001\steps\001,type,nin,type,nin,96001338908,1,1,claude-haiku-5-5
+raw,T04_drivers_licence_renewal_I0001\steps\002,click,btn_next,click,,,1,1,claude-haiku-5-5
+full,T04_drivers_licence_renewal_I0001\steps\002,click,btn_next,click,,,1,1,claude-haiku-5-5
+task_aware,T04_drivers_licence_renewal_I0001\steps\002,click,btn_next,click,,,1,1,claude-haiku-5-5
+raw,T04_drivers_licence_renewal_I0002\steps\000,type,licence_no,type,licence_no,LAG31417HG44,1,1,claude-haiku-5-5
+full,T04_drivers_licence_renewal_I0002\steps\000,type,licence_no,type,licence_no,LAG31417HG44,1,1,claude-haiku-5-5
+task_aware,T04_drivers_licence_renewal_I0002\steps\000,type,licence_no,type,licence_no,LAG31417HG44,1,1,claude-haiku-5-5
+raw,T04_drivers_licence_renewal_I0002\steps\001,type,nin,type,nin,49593103413,1,1,claude-haiku-5-5
+full,T04_drivers_licence_renewal_I0002\steps\001,type,nin,type,nin,49593103413,1,1,claude-haiku-5-5
+task_aware,T04_drivers_licence_renewal_I0002\steps\001,type,nin,type,nin,49593103413,1,1,claude-haiku-5-5
+raw,T04_drivers_licence_renewal_I0002\steps\002,click,btn_next,click,,,1,1,claude-haiku-5-5
+full,T04_drivers_licence_renewal_I0002\steps\002,click,btn_next,type,nin,49593103413,0,0,claude-haiku-5-5
+task_aware,T04_drivers_licence_renewal_I0002\steps\002,click,btn_next,click,,,1,1,claude-haiku-5-5
+raw,T04_drivers_licence_renewal_I0003\steps\000,type,licence_no,type,licence_no,LAG88172BG58,1,1,claude-haiku-5-5
+full,T04_drivers_licence_renewal_I0003\steps\000,type,licence_no,type,licence_no,LAG88172BG58,1,1,claude-haiku-5-5
+task_aware,T04_drivers_licence_renewal_I0003\steps\000,type,licence_no,type,licence_no,LAG88172BG58,1,1,claude-haiku-5-5
+raw,T04_drivers_licence_renewal_I0003\steps\001,type,nin,type,nin,95376724238,1,1,claude-haiku-5-5
+full,T04_drivers_licence_renewal_I0003\steps\001,type,nin,type,nin,95376724238,1,1,claude-haiku-5-5
+task_aware,T04_drivers_licence_renewal_I0003\steps\001,type,nin,type,nin,95376724238,1,1,claude-haiku-5-5
+raw,T04_drivers_licence_renewal_I0003\steps\002,click,btn_next,click,,,1,1,claude-haiku-5-5
+full,T04_drivers_licence_renewal_I0003\steps\002,click,btn_next,click,,,1,1,claude-haiku-5-5
+task_aware,T04_drivers_licence_renewal_I0003\steps\002,click,btn_next,click,,,1,1,claude-haiku-5-5
+raw,T05_passport_application_I0001\steps\000,type,nin,type,nin,96001338908,1,1,claude-haiku-5-5
+full,T05_passport_application_I0001\steps\000,type,nin,type,nin,96001338908,1,1,claude-haiku-5-5
+task_aware,T05_passport_application_I0001\steps\000,type,nin,type,nin,96001338908,1,1,claude-haiku-5-5
+raw,T05_passport_application_I0001\steps\001,type,passport_no,type,passport_no,B23718431,1,1,claude-haiku-5-5
+full,T05_passport_application_I0001\steps\001,type,passport_no,type,passport_no,B23718431,1,1,claude-haiku-5-5
+task_aware,T05_passport_application_I0001\steps\001,type,passport_no,type,passport_no,B23718431,1,1,claude-haiku-5-5
+raw,T05_passport_application_I0001\steps\002,click,btn_next,click,,,1,1,claude-haiku-5-5
+full,T05_passport_application_I0001\steps\002,click,btn_next,type,passport_no,B23718431,0,0,claude-haiku-5-5
+task_aware,T05_passport_application_I0001\steps\002,click,btn_next,click,,,1,1,claude-haiku-5-5
+raw,T05_passport_application_I0002\steps\000,type,nin,type,nin,49593103413,1,1,claude-haiku-5-5
+full,T05_passport_application_I0002\steps\000,type,nin,type,nin,49593103413,1,1,claude-haiku-5-5
+task_aware,T05_passport_application_I0002\steps\000,type,nin,type,nin,49593103413,1,1,claude-haiku-5-5
+raw,T05_passport_application_I0002\steps\001,type,passport_no,type,passport_no,C42857966,1,1,claude-haiku-5-5
+full,T05_passport_application_I0002\steps\001,type,passport_no,type,passport_no,C42857966,1,1,claude-haiku-5-5
+task_aware,T05_passport_application_I0002\steps\001,type,passport_no,type,passport_no,C42857966,1,1,claude-haiku-5-5
+raw,T05_passport_application_I0002\steps\002,click,btn_next,click,,,1,1,claude-haiku-5-5
+full,T05_passport_application_I0002\steps\002,click,btn_next,click,,,1,1,claude-haiku-5-5
+task_aware,T05_passport_application_I0002\steps\002,click,btn_next,click,,,1,1,claude-haiku-5-5
+raw,T05_passport_application_I0003\steps\000,type,nin,type,nin,95376724238,1,1,claude-haiku-5-5
+full,T05_passport_application_I0003\steps\000,type,nin,type,nin,95376724238,1,1,claude-haiku-5-5
+task_aware,T05_passport_application_I0003\steps\000,type,nin,type,nin,95376724238,1,1,claude-haiku-5-5
+raw,T05_passport_application_I0003\steps\001,type,passport_no,type,passport_no,C66661351,1,1,claude-haiku-5-5
+full,T05_passport_application_I0003\steps\001,type,passport_no,type,passport_no,C66661351,1,1,claude-haiku-5-5
+task_aware,T05_passport_application_I0003\steps\001,type,passport_no,type,passport_no,C66661351,1,1,claude-haiku-5-5
+raw,T05_passport_application_I0003\steps\002,click,btn_next,click,,,1,1,claude-haiku-5-5
+full,T05_passport_application_I0003\steps\002,click,btn_next,click,,,1,1,claude-haiku-5-5
+task_aware,T05_passport_application_I0003\steps\002,click,btn_next,click,,,1,1,claude-haiku-5-5

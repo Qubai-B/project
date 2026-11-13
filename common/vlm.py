@@ -25,7 +25,10 @@ def _get_client():
     return _client
 
 
-def ask(image_path: Path, prompt: str, max_tokens: int = 800) -> str:
+def ask(image_path: Path, prompt: str, max_tokens: int = 4000) -> str:
+    """One image + prompt -> reply text. On current models the reasoning counts towards max_tokens as well
+    as the answer, so the ceiling is generous (billing is per token produced, not per ceiling). A reply that
+    did not finish normally (cut off, refused) is never cached or scored: the run stops instead."""
     data = Path(image_path).read_bytes()
     key = hashlib.sha256(MODEL.encode() + data + prompt.encode()).hexdigest()
     CACHE.mkdir(parents=True, exist_ok=True)
@@ -39,8 +42,14 @@ def ask(image_path: Path, prompt: str, max_tokens: int = 800) -> str:
             {"type": "text", "text": prompt},
         ]}],
     )
+    if msg.stop_reason != "end_turn":
+        raise RuntimeError(f"{MODEL} did not finish its reply for {image_path} "
+                           f"(stop_reason={msg.stop_reason}); nothing was cached for this call")
     text = "".join(b.text for b in msg.content if b.type == "text")
-    cpath.write_text(json.dumps({"model": MODEL, "image": str(image_path), "prompt": prompt, "text": text}))
+    cpath.write_text(json.dumps({"model": MODEL, "image": str(image_path), "prompt": prompt, "text": text,
+                                 "stop_reason": msg.stop_reason,
+                                 "usage": {"input_tokens": msg.usage.input_tokens,
+                                           "output_tokens": msg.usage.output_tokens}}))
     return text
 
 
