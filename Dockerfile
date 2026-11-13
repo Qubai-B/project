@@ -13,25 +13,31 @@ RUN apt-get update \
  && apt-get install -y --no-install-recommends tesseract-ocr \
  && rm -rf /var/lib/apt/lists/*
 
-# Run as an ordinary user (uid 1000 is what Hugging Face Spaces expects; harmless elsewhere).
+# Packages go into the system site-packages, not a user's home folder: some hosts start the
+# container with a different user or HOME, and a per-user install is then invisible to Python.
+ENV PYTHONUNBUFFERED=1 \
+    PYTHONUTF8=1 \
+    PYTHONDONTWRITEBYTECODE=1 \
+    TLDEXTRACT_CACHE=/tmp/tldextract-cache
+WORKDIR /app
+
+COPY deploy/requirements-web.txt deploy/requirements-web.txt
+RUN pip install --no-cache-dir -r deploy/requirements-web.txt \
+ && python -c "import PIL, numpy, pytesseract, jinja2, presidio_analyzer, spacy; spacy.load('en_core_web_lg'); print('packages ok')" \
+ && tesseract --version | head -n 1
+
+COPY guard guard
+COPY common common
+COPY forms forms
+COPY demo/live_app.py demo/live_page.html demo/
+COPY data/benchmark/tax_self_assessment/I0001/filled/screenshot.png data/benchmark/tax_self_assessment/I0001/filled/screenshot.png
+COPY data/benchmark/drivers_licence_renewal/I0001/filled/screenshot.png data/benchmark/drivers_licence_renewal/I0001/filled/screenshot.png
+COPY data/benchmark/passport_application/I0001/filled/screenshot.png data/benchmark/passport_application/I0001/filled/screenshot.png
+
+# Run as an ordinary user where the host allows it (uid 1000 is what Hugging Face Spaces expects).
+# Nothing below depends on that user's home folder: the app only reads /app and writes to /tmp.
 RUN useradd -m -u 1000 user
 USER user
-ENV HOME=/home/user \
-    PATH=/home/user/.local/bin:$PATH \
-    PYTHONUNBUFFERED=1 \
-    PYTHONUTF8=1
-WORKDIR $HOME/app
-
-COPY --chown=user deploy/requirements-web.txt deploy/requirements-web.txt
-RUN pip install --no-cache-dir --user -r deploy/requirements-web.txt
-
-COPY --chown=user guard guard
-COPY --chown=user common common
-COPY --chown=user forms forms
-COPY --chown=user demo/live_app.py demo/live_page.html demo/
-COPY --chown=user data/benchmark/tax_self_assessment/I0001/filled/screenshot.png data/benchmark/tax_self_assessment/I0001/filled/screenshot.png
-COPY --chown=user data/benchmark/drivers_licence_renewal/I0001/filled/screenshot.png data/benchmark/drivers_licence_renewal/I0001/filled/screenshot.png
-COPY --chown=user data/benchmark/passport_application/I0001/filled/screenshot.png data/benchmark/passport_application/I0001/filled/screenshot.png
 
 ENV GUARD_HOSTED=1 \
     PORT=7860

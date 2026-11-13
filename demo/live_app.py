@@ -268,14 +268,17 @@ if __name__ == "__main__":
     if HOSTED and not ACCESS_CODE:
         sys.exit("Hosted mode needs an access code: set the GUARD_ACCESS_CODE environment variable.")
     url = f"http://127.0.0.1:{args.port}"
-    try:  # started twice (double-clicked again): show the page that is already up instead of a second server
-        socket.create_connection(("127.0.0.1", args.port), timeout=1).close()
-        print(f"The guard interface is already running on {url}")
-        if args.open:
-            webbrowser.open(url)
-        sys.exit(0)
-    except OSError:
-        pass
+    if not HOSTED:  # local use only: on a host, something else may already answer on the port we are given
+        try:  # started twice (double-clicked again): show the page that is already up instead of a second server
+            socket.create_connection(("127.0.0.1", args.port), timeout=1).close()
+            print(f"The guard interface is already running on {url}")
+            if args.open:
+                webbrowser.open(url)
+            sys.exit(0)
+        except OSError:
+            pass
+    print(f"starting: python {sys.version.split()[0]}, uid {os.getuid() if hasattr(os, 'getuid') else 'n/a'}, "
+          f"home {os.environ.get('HOME', 'unset')}, port {args.port}", flush=True)
     server = ThreadingHTTPServer((args.host, args.port), Handler)
     where = "hosted mode, all interfaces" if HOSTED else "this computer only"
     print(f"Guard interface on {args.host}:{args.port}  ({where}; access code {'on' if ACCESS_CODE else 'off'}; "
