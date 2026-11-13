@@ -48,7 +48,8 @@ for name in ("guard", "common", "forms"):
 for name in ("live_app.py", "live_page.html"):
     shutil.copy2(ROOT / "demo" / name, OUT / "demo" / name)
 (OUT / "deploy").mkdir()
-shutil.copy2(ROOT / "deploy" / "requirements-web.txt", OUT / "deploy" / "requirements-web.txt")
+for name in ("requirements-web.txt", "constraints-web.txt"):
+    shutil.copy2(ROOT / "deploy" / name, OUT / "deploy" / name)
 shutil.copy2(ROOT / "Dockerfile", OUT / "Dockerfile")
 for form in sorted(p.name for p in (ROOT / "forms").iterdir() if (p / "form.json").exists()):
     rel = Path("data/benchmark") / form / "I0001" / "filled" / "screenshot.png"

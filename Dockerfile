@@ -21,8 +21,8 @@ ENV PYTHONUNBUFFERED=1 \
     TLDEXTRACT_CACHE=/tmp/tldextract-cache
 WORKDIR /app
 
-COPY deploy/requirements-web.txt deploy/requirements-web.txt
-RUN pip install --no-cache-dir -r deploy/requirements-web.txt \
+COPY deploy/requirements-web.txt deploy/constraints-web.txt deploy/
+RUN pip install --no-cache-dir -c deploy/constraints-web.txt -r deploy/requirements-web.txt \
  && python -c "import PIL, numpy, pytesseract, jinja2, presidio_analyzer, spacy; spacy.load('en_core_web_lg'); print('packages ok')" \
  && tesseract --version | head -n 1
 

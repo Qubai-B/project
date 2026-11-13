@@ -6,4 +6,6 @@ pytesseract==0.3.13
 Jinja2==3.1.6
 presidio_analyzer==2.2.360
 spacy==3.7.5
+# spaCy 3.7.5 imports click directly, and current versions of its dependency typer no longer install it
+click==8.5.0
 en_core_web_lg @ https://github.com/explosion/spacy-models/releases/download/en_core_web_lg-3.7.1/en_core_web_lg-3.7.1-py3-none-any.whl
