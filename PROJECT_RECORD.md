@@ -5,6 +5,7 @@ the order they happened so the methodology and results chapters can be written f
 Numbers are from the run of **15 October 2026**; `results/REPORT.md` regenerates them from the tables.
 The objectives, scope and limitations were aligned with the revised Chapter One
 (`thesis/CHAPTER_ONE_Project_Revised_v4.docx`) on **9 November 2026**; no result changed.
+Experiments 2 and 3 were run on **13 November 2026** (§5.3).
 
 ---
 
@@ -24,8 +25,8 @@ Objectives from the revised Chapter One (§1.3) and how this PoC maps to them:
 | 1 | Benchmark of screenshots of mock Nigerian e-service forms, filled with synthetic identities and automatically annotated with the location, type and form field of every PII item | `data/benchmark/` — 450 screenshots, DOM-exact boxes; `data/trajectories/` — 51 recorded steps |
 | 2 | Lightweight visual redaction guard that identifies PII from its form-field label and masks it before transmission, under a full and a task-aware policy | `guard/` package, ~0.5 s per screenshot on the development laptop's CPU |
 | 3 | Evaluate the guard's detection accuracy against the benchmark and compare it with a general-purpose PII detector | Experiment 1 (hybrid guard vs Presidio baseline) — **done** |
-| 4 | Evaluate the reduction of privacy leakage, measured by what a VLM can still read from redacted screenshots | Experiment 2 (VLM leakage) — written, not run |
-| 5 | Assess the impact of redaction on agent performance, measured by next-action choice on recorded trajectories | Experiment 3 (offline step accuracy) — written, not run |
+| 4 | Evaluate the reduction of privacy leakage, measured by what a VLM can still read from redacted screenshots | Experiment 2 (VLM leakage) — **done** (13 November 2026, one model) |
+| 5 | Assess the impact of redaction on agent performance, measured by next-action choice on recorded trajectories | Experiment 3 (offline step accuracy) — **done** (13 November 2026, one model) |
 
 Integration into an existing agent is **not** an objective. Chapter One (§1.4) uses Paperasse only as
 an illustrative reference system and excludes integration into or deployment on its codebase. The
@@ -156,6 +157,14 @@ must output the next action as JSON. Scored against the gold action: for `type` 
 model must choose to submit. 153 calls, cached. The headline comparison is leakage (Exp. 2) against
 step accuracy (Exp. 3) across the three conditions.
 
+**Model settings for Experiments 2 and 3.** One request is one screenshot followed by one prompt,
+with no earlier messages. The model is named by `VLM_MODEL` in `.env`; the reported run used
+Claude Haiku 5.5 (`claude-haiku-5-5`, Anthropic, released 7 October 2026) with its default settings.
+Each reply is limited to 4,000 tokens. The limit was 800 until 13 November 2026 and was raised
+because on current models the reasoning counts towards it as well as the answer. A reply that does
+not finish normally (cut off or refused) is not cached or scored; the run stops instead. Replies are
+cached in `results/cache/` under a key of model name, image and prompt, with the token counts.
+
 **Latency.** OCR, detect and mask times are recorded per screenshot.
 
 ## 5. Results
@@ -231,10 +240,73 @@ a VLM call already takes. The figure depends on hardware: on a second, slower Wi
 guard as *lightweight* and does not claim real-time operation.
 
 ### 5.3 Experiments 2 and 3
-Not yet run: they require a VLM API key, which is not on the development machine. The scripts are
-complete and their scoring logic is unit-checked. Once a key is placed in `.env`, `./run_all.sh`
-runs both, regenerates `results/figures/privacy_vs_utility.png` and updates `results/REPORT.md`.
-This section is to be filled in from `results/tables/leakage.csv` and `step_accuracy.csv`.
+Run of 13 November 2026 with Claude Haiku 5.5 (`claude-haiku-5-5`). Tables:
+`results/tables/leakage.csv`, `leakage_samples.csv`, `step_accuracy.csv`,
+`step_accuracy_samples.csv`. Figure: `results/figures/privacy_vs_utility.png`.
+
+**Experiment 2 — leakage.** 60 screenshots (partial and filled, first 10 identities, three forms),
+480 annotated values, three conditions.
+
+| Condition | Values counted | Read by the model | Leakage rate |
+|---|---|---|---|
+| Raw (no redaction) | 480 | 479 | 0.998 |
+| Full policy | 480 | 0 | 0.000 |
+| Task-aware policy, values the task does not need | 380 | 20 | 0.053 |
+| Task-aware policy, values the task needs (left visible on purpose) | 100 | 99 | 0.990 |
+
+By type, the only non-zero rate under either policy is PERSON under task-aware: 20 of 120 (0.167).
+Every other type is 0 under both policies.
+
+Reading:
+
+- On unredacted screenshots the model transcribes essentially everything. The one miss is a reading
+  error by the model ("119 Ogui Road, GRA" returned as "119 Ogu Road, GRA").
+- Under the full policy nothing is read: the reply is an empty list on every one of the 60
+  screenshots.
+- The 20 values read under the task-aware policy are the first name and surname on the 10 filled
+  driver's licence screenshots. The guard masked both name fields. The benchmark redacts that form
+  for task T03, which needs the phone number and the email address, so the email stays visible, and
+  the synthetic email addresses are built from the name (`nnamdi.okafor36@example.com`). The scoring
+  rule finds the name inside the transcribed email. This is not a detection miss. It is a field the
+  task needs disclosing a field that was masked, which masking field by field cannot prevent.
+- The one needed value not counted is a passport number the model misread by one digit
+  (`A78159587` returned as `A78159287`, `passport_application/I0007/filled`).
+- The task-aware condition here covers tasks T01, T03 and T05 only (the first task of each form).
+
+**Experiment 3 — offline step accuracy.** 51 recorded steps, three conditions.
+
+| Task | Steps | Raw | Full policy | Task-aware policy |
+|---|---|---|---|---|
+| T01 address | 12 | 1.000 | 0.750 | 1.000 |
+| T02 income and bank details | 12 | 1.000 | 0.917 | 1.000 |
+| T03 phone and email | 9 | 1.000 | 0.778 | 1.000 |
+| T04 licence number and NIN | 9 | 1.000 | 0.889 | 1.000 |
+| T05 NIN and passport number | 9 | 1.000 | 0.889 | 1.000 |
+| **All** | **51** | **1.000** | **0.843** | **1.000** |
+
+Field accuracy equals step accuracy in every cell. Reading:
+
+- With the raw screenshot and with the task-aware screenshot the model chose the recorded action at
+  all 51 steps.
+- Under the full policy it was wrong at 8 steps. All 8 are the final step of a trajectory, where the
+  recorded action is to click "Save and Continue": the model typed one of the task's values again
+  instead. With every value masked it cannot confirm that the needed fields already show the right
+  values. It still clicked correctly on 7 of the 15 final steps, and it chose the right field and
+  value on all 36 typing steps, because an empty field is visibly empty even when the rest is masked.
+- With 51 steps, one step is about two percentage points and no statistical test is applied.
+
+**Privacy against utility.** No redaction: leakage 0.998, step accuracy 1.000. Full policy: 0.000
+and 0.843. Task-aware policy: 0.053 and 1.000. On this benchmark and this model the task-aware
+policy keeps the agent's step accuracy at the unredacted level while hiding all but the names that
+the visible email address gives away.
+
+**Run details.** 308 distinct calls: 25 of the 333 planned requests had the same image and prompt
+as another and were answered from the cache: where no field the task needs is filled yet, the full
+and task-aware images are identical (10 partly filled licence screenshots in Experiment 2, 15 steps
+in Experiment 3). 587,486 input and 60,687 output tokens, about 0.09 US dollars at the listed price of
+0.10 and 0.50 dollars per million. Every reply ended normally; the longest used 712 tokens, so the
+change of the reply limit from 800 to 4,000 affected no reply in this run. Experiment 2 was
+interrupted once by a connection timeout at call 100 and resumed from the cache.
 
 ### 5.4 Demonstration
 `demo/T02_tax_self_assessment_I0001.gif` and `demo/T04_drivers_licence_renewal_I0002.gif` show, for
@@ -253,6 +325,8 @@ policy: the fields the task needs stay readable, everything else is black.
 | 2026-10-15 | Third full run: 0 errors on 501 screenshots | Final configuration |
 | 2026-11-09 | Chapter One revised to match what was built (`thesis/CHAPTER_ONE_Project_Revised_v4.docx`): five objectives, with detection accuracy against a generic baseline added as its own objective; Paperasse kept as an illustrative reference only | §1 objectives table renumbered; agent integration moved from an objective to future work (§9); two limitations added (§7) |
 | 2026-11-10 | Presidio baseline re-run on all 501 screenshots (it had covered 30) so that Experiment 1 compares both detectors on the same material | Baseline recall 0.561, F1 0.692 on 2,895 values (was 0.591 and 0.728 on 320); the 30 original screenshots are reproduced exactly; §4.4 and §5.1 updated; `run_all.sh` and `run_all.ps1` now run the baseline on everything |
+| 2026-11-13 | First test calls to the model: one reply used 648 of the 800 tokens allowed, because the model's reasoning counts towards the limit | Reply limit raised to 4,000 in `common/vlm.py`; replies that do not end normally are no longer cached or scored |
+| 2026-11-13 | Experiments 2 and 3 run on Claude Haiku 5.5 | Leakage 0.998 raw, 0.000 full, 0.053 task-aware; step accuracy 1.000 raw, 0.843 full, 1.000 task-aware; §5.3 filled; names found to be recoverable from the visible email address (§7) |
 
 The focus-ring failure is the most important thing the PoC produced so far. It is a perception-layer
 failure that hits precisely the value the agent has just entered, i.e. the freshest PII on screen, and
@@ -269,7 +343,12 @@ screenshots captured from live browser state.
 - **Nigerian names and generic NER.** Presidio's spaCy model recognised only half the names; the
   guard sidesteps this with labels, but a free-text page with a Nigerian name would be at risk.
 - **One OCR engine, one VLM, no adversarial inputs.** Not tested against deliberately obfuscated
-  text, screenshots at other scales, or dark mode.
+  text, screenshots at other scales, or dark mode. Experiments 2 and 3 used one model, Claude Haiku
+  5.5, the lowest-priced model of its family; a larger model was not tested.
+- **A visible field can disclose a masked one.** Under the task-aware policy the email address left
+  visible for task T03 contains the user's name, so the masked name fields were recovered from it
+  (20 of 380 non-task values in Experiment 2). The guard decides field by field and has no notion of
+  one value being derivable from another.
 - **Small utility set.** 51 decision steps across 5 tasks is enough to show a trend, not to
   quantify it tightly.
 - **Offline utility, no live agent.** Agent performance is measured one step at a time on recorded
@@ -290,14 +369,18 @@ screenshots captured from live browser state.
    own labels recovers 100 % on this benchmark. Data minimization at the perception layer needs
    *form-aware* detection, not just NER.
 3. Task-aware policy is implementable with the same mechanism: once a value is attributed to a field,
-   the policy can keep exactly the fields the task needs visible. Whether that preserves agent utility
-   is what Experiment 3 will quantify.
+   the policy can keep exactly the fields the task needs visible. On the 51 recorded steps and one
+   model it preserved step accuracy completely (1.000, the same as with no redaction), where masking
+   everything lowered it to 0.843 because the model could no longer tell that a task was finished.
+   The price was that 5.3 % of the values the task did not need could still be read, all of them
+   names disclosed by a visible email address.
 4. Live browser state matters. The one failure mode found (focus ring hiding the just-typed value)
    was invisible in static screenshots and would have leaked the most recent user input every step.
 
 ## 9. Next steps
 
-1. Add a VLM key and run Experiments 2 and 3; fill §5.3 and produce the privacy-versus-utility figure.
+1. Optional: repeat Experiments 2 and 3 on a second, larger model to see whether the results of §5.3
+   hold beyond one model.
 2. Add a second layout family per form (different fonts, two-column layout, placeholder labels) to test
    the label-context assumption.
 3. Optional, beyond the Chapter One objectives: plug `redact()` into an off-the-shelf agent loop

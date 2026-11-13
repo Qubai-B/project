@@ -2,7 +2,7 @@
 
 **Project:** Data minimization at the perception layer for screenshot-driven AI agents\
 **Context:** Nigerian government e-services\
-**Stage:** proof of concept built and partly evaluated · 15 October 2026 · objectives and scope aligned with the revised Chapter One on 9 November 2026\
+**Stage:** proof of concept built and evaluated · 15 October 2026 · objectives and scope aligned with the revised Chapter One on 9 November 2026 · Experiments 2 and 3 run on 13 November 2026\
 **Repository:** https://github.com/Qubai-B/project · full technical record in `PROJECT_RECORD.md`
 
 ---
@@ -50,8 +50,8 @@ illustrative reference system only; integrating the guard into it is not part of
 | Two policies: *full* (mask all) and *task-aware* (keep what the task needs) | done | |
 | Generic baseline detector (Microsoft Presidio) for comparison (Objective 3) | done | 501 screenshots |
 | Experiment 1 — detection quality (Objective 3) | **done** | 501 screenshots |
-| Experiment 2 — what a vision model can still read after redaction (Objective 4) | written, not run | needs model API key |
-| Experiment 3 — can the agent still choose the right action (Objective 5) | written, not run | needs model API key |
+| Experiment 2 — what a vision model can still read after redaction (Objective 4) | **done** | 60 screenshots, 480 values, one model |
+| Experiment 3 — can the agent still choose the right action (Objective 5) | **done** | 51 steps, one model |
 | Step-by-step demonstration of the guard's place in an agent loop (reference design, not an objective) | done | 2 step-by-step demo GIFs |
 | Automated results report | done | `results/REPORT.md` |
 
@@ -95,6 +95,37 @@ project's scope. One frame, task T02 (enter income and bank details), step 2:
 
 ![Browser view (left) and model input after the task-aware guard (right)](demo/T02_tax_self_assessment_I0001/step_002.png)
 
+### 5.4 Can the model still read the data, and can the agent still act? (Experiments 2 and 3)
+
+Both were run on 13 November 2026 with one vision model, Claude Haiku 5.5, for about 0.09 US dollars
+(308 calls). In Experiment 2 the model was asked to list every personal value it could read in 60
+screenshots holding 480 values. In Experiment 3 it was asked for the next action at each of the 51
+recorded steps.
+
+| What the model was shown | Personal values it could read | Correct next action |
+|---|---|---|
+| Raw screenshot (no guard) | 99.8 % (479 of 480) | 100 % (51 of 51) |
+| Guard, full policy (mask everything) | 0 % (0 of 480) | 84.3 % (43 of 51) |
+| Guard, task-aware policy (keep what the task needs) | 5.3 % of values the task does not need (20 of 380) | 100 % (51 of 51) |
+
+Three things stand out:
+
+- **Masking works as a barrier.** With everything masked the model read nothing, on all 60
+  screenshots.
+- **Masking everything costs the agent.** All 8 errors under the full policy are the last step of a
+  task: the model cannot see that the fields are already filled, so it types a value again when it
+  should click "Save and Continue". Keeping the task's own fields visible removed every error.
+- **A visible field can give away a hidden one.** The 20 values read under the task-aware policy are
+  first names and surnames on the driver's licence form. Both name boxes were masked, but the task
+  needs the email address, and the email address contains the name. The guard did what it was
+  designed to do and the name still got through. This is a limit of deciding field by field, and I
+  intend to report it as a finding.
+
+These are results from one model and 51 steps (one step is about two percentage points), so I read
+them as a clear trend and not as a tight measurement.
+
+![Privacy against utility for the three conditions](results/figures/privacy_vs_utility.png)
+
 ## 6. The most useful thing I found
 
 The first full run was *not* perfect: 9 values out of 2,895 were missed, and every one of them was
@@ -112,10 +143,10 @@ that a missed value is a privacy failure while an extra black box is only a util
 
 ## 7. What remains, and where I need a decision
 
-1. **Experiments 2 and 3 need a vision-model API key.** The scripts are written and tested; the cost
-   is roughly 330 image calls (about 180 for leakage, 150 for step accuracy), cached so re-runs are
-   free. *Decision needed:* can the department provide a key or small budget, or should I use a
-   local open-weight vision model (slower, weaker, but free)?
+1. **Experiments 2 and 3 are done on one model.** I paid for a small amount of API credit myself and
+   ran both on Claude Haiku 5.5, the lowest-priced model of its family (about 0.09 US dollars; every
+   reply is cached, so re-runs are free). *Decision needed:* should I repeat them on a second,
+   larger model, so that the results do not rest on one model? The cost would be a few dollars.
 2. **Paperasse integration is out of scope.** The revised Chapter One uses Paperasse only as an
    illustrative reference system, so no access to its source is needed. If a live demo is wanted, an
    off-the-shelf Playwright + model loop is enough and the write-up says so. *No decision needed
@@ -129,7 +160,7 @@ that a missed value is a privacy failure while an extra black box is only a util
 
 | Week | Work |
 |---|---|
-| 1 | Run Experiments 2 and 3; produce the privacy-versus-utility figure; fill in §5 |
+| 1 | Experiments 2 and 3 (done, 13 November 2026); optionally repeat them on a second model |
 | 2 | Second layout family per form; re-run Experiment 1 to measure degradation |
 | 3 | Optional live demo: guard inside a generic Playwright + model loop, one recorded run per task |
 | 4 | Write up Chapters 3–5 from `PROJECT_RECORD.md` |
