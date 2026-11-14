@@ -108,6 +108,49 @@ These are proposals, not errors. The author asked how the study knows that the m
 | 33 | Say in Ch. 4 that in Experiment 3 the values the task needs are given to the model in the prompt (for task T02 this includes the BVN). The model knows those by design. | Ch. 4, §4.1.9 (with item 21) |
 | 34 | Optional extra experiment: ask the model to infer or guess the masked values. It would measure the residual channel in item 32 directly, at a cost of a few cents. | New; needs the author's decision |
 
+## H. Reference list checked against APA 7th edition (14 November 2026) — applied in version 2
+
+The author asked for these to be applied, and they are in `thesis/THESIS_Chapters_One_to_Five_v2.docx`,
+which supersedes version 1:
+
+- **37 applied.** Chapter One now cites its sources: Anthropic (2024) and OpenAI (2025a) for
+  screenshot-driven agents, EverydayMoney SAS (2026) for Paperasse, Cen et al. (2026) and N. Zhao (2026)
+  for "recent studies", Bagdasarian et al. (2024) for AirGapAgent, Microsoft (2025) for Presidio,
+  the GDPR and the Nigeria Data Protection Act, and Hoepman (2014) for data minimization.
+- **38 left as it is.** The heading stays "REFERENCES" in bold capitals at the left, to match the
+  chapter headings of the document and the department's sample. To follow APA strictly it would be
+  "References", centred.
+- **39 applied.** All arXiv entries use the DOI form of the link.
+- **40 applied.** The Central Bank of Nigeria (2019) entry links to the document itself. The link was
+  opened and the document checked: it is the bank's circular of 9 March 2020 carrying the standards,
+  whose cover is dated 2019.
+- **41 not resolved.** The registry of DOIs (Crossref) gives pages 75–106 for Hevner et al. (2004); the
+  publisher's own page gives no page numbers, and the article could not be opened. The entry still
+  says 75–105, the range usually cited. To settle it, look at the last page number of the article.
+- **42 and 43 left as they are**, as acceptable.
+
+The 59 entries and the in-text citations follow APA 7th edition in the main. These points were found:
+
+| # | Point | Where | Fix |
+|---|---|---|---|
+| 37 | Chapter One has no in-text citations at all, although it names AirGapAgent, Microsoft Presidio, Paperasse, the GDPR and the Nigeria Data Protection Act, and says "Recent studies highlight". All of these have entries in the reference list. | Ch. 1, §1.1, §1.2, §1.5 | Add the citations: Bagdasarian et al. (2024), Microsoft (2025), EverydayMoney SAS (2026), the two statutes, and the studies meant by "recent studies" |
+| 38 | The heading is "REFERENCES", bold, capitals, at the left. APA has "References", bold and centred. | Reference list | Keep if the department's format asks for capitals (the sample project has its own style); otherwise change |
+| 39 | arXiv links are given in two forms: `https://doi.org/10.48550/arXiv...` for most, `https://arxiv.org/abs/...` for Lin et al. (2025), Mishra et al. (2020) and Y. Zhao et al. (2026). | Reference list | Use the DOI form for all three |
+| 40 | Central Bank of Nigeria (2019) links to the bank's home page, not to the document. | Reference list | Give the document's own address |
+| 41 | Hevner et al. (2004) is given as pages 75–105; the publisher's record says 75–106. | Reference list | Confirm against the article and correct |
+| 42 | The two Nigerian Acts and the GDPR are set out in an adapted form. APA sends legal sources to a legal citation style, so there is no single correct APA form for them. | Reference list | Leave unless the department has a rule for statutes |
+| 43 | Several conference papers (NeurIPS, ICLR) and one journal article (Ji et al., 2025) link to their arXiv copies and carry no page numbers. | Reference list | Acceptable; link to the published version where one exists |
+
+## I. Raised on 14 November 2026
+
+The current document is `thesis/THESIS_Chapters_One_to_Five_v3.docx` (99 pages). It is version 2 with
+item 45 applied and nothing else changed.
+
+| # | Point | Where | Status |
+|---|---|---|---|
+| 44 | The closing sentence of a chapter that points to the next one ("Chapter Five summarises the study ...") stays at the end of Chapters Two, Three and Four. The author agreed. Chapter One has no such sentence; one could be added so that all four match. | Ch. 1, §1.7 | Keeping the three is decided; adding one to Chapter One awaits the author's word |
+| 45 | The thesis has no source code in its appendices. Appendix A holds the two prompts and Appendix B two screenshots. The address of the repository is not given anywhere in the text either. Proposal: an Appendix C with the source code of the guard itself (the four modules and the label vocabulary, about 250 lines, six or seven pages), and the repository address for the rest (1,666 lines in all, which would run to some forty pages if printed in full). | New Appendix C; Ch. 3, §3.6.3 | **Applied in version 3** (14 November 2026), on the author's word. Appendix C prints `guard/ocr.py`, `guard/detect.py`, the first 43 lines of `common/forms.py` (the label vocabulary), `guard/policy.py` and `guard/mask.py`: 267 lines on four pages (96 to 99), in 7-point Courier New. A check compared every printed line with the files and found them identical. Section 3.0 names the appendix, and Section 3.6.3 gives the repository address, https://github.com/Qubai-B/project. Eight lines of code are longer than the page is wide and continue on the line below; the appendix says so. The repository must stay public for the address to be of use to an examiner. |
+
 ## Still open, not contradictions
 
 - Ch. 1, §1.4 does not list the limitation found in Ch. 4 (a visible field can disclose a masked one). To consider in the Chapter One fine-tune.
