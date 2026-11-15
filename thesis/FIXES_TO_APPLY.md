@@ -169,6 +169,50 @@ the code. The points below are places where the wording is looser than the code.
 | 51 | Table 3.5, PHONE: "+234 followed by 10 digits, with or without spaces". In the code the plus sign is optional and hyphens are accepted as well as spaces. | Ch. 3, Table 3.5 | Minor: "234, with or without a plus sign, followed by 10 digits, with or without spaces or hyphens". |
 | 52 | Table 4.2, cycle 2: "fragments made only of bars dropped". The code also drops fragments made only of square brackets. | Ch. 4, Table 4.2 | Minor: "bars or square brackets". |
 
+### Item 46 measured (15 November 2026)
+
+The baseline was run again over all 501 screenshots (12,102 runs of text), keeping everything
+Presidio reports, and scored under three counting rules with the same matching as Experiment 1.
+Nothing in the thesis or in the committed results was changed.
+
+| Rule | A run counts as a detection if | Found | Missed | False positives | Precision | Recall | F1 |
+|---|---|---|---|---|---|---|---|
+| A | its highest-scoring entity scores 0.4 or more and is one of the eight mapped types (the rule the thesis reports) | 1,624 | 1,271 | 174 | 0.903 | 0.561 | 0.692 |
+| B | any entity scores 0.4 or more, whatever its type | 1,656 | 1,239 | 174 | 0.905 | 0.572 | 0.701 |
+| C | Presidio reports any entity at all (its own default cut-off of 0) | 2,256 | 639 | 174 | 0.928 | 0.779 | 0.847 |
+
+Rule A reproduces the thesis figures exactly, overall and for every type, so the re-run is sound.
+
+Recall by type under rule C, with rule A in brackets: NIN 1.000 (0.281), BVN 1.000 (0.088), bank
+account 1.000 (0.692), annual income 1.000 (0.014), passport 1.000 (0.019), TIN 0.992 (0.081),
+phone 1.000 (0.919), email 1.000 (1.000), date of birth 0.991 (0.991), address 0.709 (0.709),
+name 0.493 (0.484), driver's licence 0.183 (0.148). The false positives are the same 174 under
+every rule (the label "Annual Income" read as a date).
+
+What Presidio calls the Nigerian numbers when it flags them: mostly "US bank number" with a score
+of 0.05 (NIN, BVN, TIN, income), and "US driver's licence" with a score of 0.30 for passport
+numbers. It reports "US passport" for the passport numbers too, at 0.10, below the driver's licence.
+
+What this changes:
+
+- "In its default configuration" is not accurate for rule A. Used exactly as supplied, with every
+  flagged value masked, Presidio hides 77.9 per cent of the values, not 56.1.
+- The statements built on 0.561 need both figures or the rule stated beside them: Ch. 1 §1.2
+  ("found 56 per cent"), Ch. 4 §4.1.6 (text, Tables 4.3 and 4.4, Figure 4.6), §4.1.11 (Table 4.9),
+  §4.2, Ch. 5 §5.1 and §5.2 ("missed more than four in ten").
+- "It found 28.1 per cent of the NINs, 8.8 per cent of the BVNs ..." holds only under rule A. Under
+  rule C every NIN and BVN is flagged, as a low-confidence US bank number.
+- What still holds under every rule: the baseline misses about half the names, three in ten
+  addresses and eight in ten licence numbers; it never names a NIN, BVN, TIN, bank account, licence
+  number or income for what it is, so it cannot support a task-aware policy; and the guard's recall
+  of 1.000 with no false positive.
+- The fair reading for the thesis: the guard's lead in recall over the baseline as supplied is
+  1.000 against 0.779. The 0.4 cut-off was this study's choice and must be stated as such.
+
+Kept in the project, not committed: `results/tables/baseline_counting_rules.csv` and the two scripts
+in `scripts/extra_baseline_rules/`. The per-screenshot raw output (1.4 MB) is in the session's
+scratch folder only and would have to be produced again (about 15 minutes) if it is cleared.
+
 ## Still open, not contradictions
 
 - Ch. 1, §1.4 does not list the limitation found in Ch. 4 (a visible field can disclose a masked one). To consider in the Chapter One fine-tune.
