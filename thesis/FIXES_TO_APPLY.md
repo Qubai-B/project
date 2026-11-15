@@ -281,6 +281,49 @@ Eighty pages was not reached. The summaries and Chapter Five are a small part of
 remaining eleven pages would have to come from the reference list (10 pages at the present spacing)
 or from the text of Chapters Two to Four.
 
+## M. Chapters Two to Four tightened, at the author's request (15 November 2026) — version 7
+
+`thesis/THESIS_Chapters_One_to_Five_v7.docx` is the current document.
+
+| | Version 6 | Version 7 |
+|---|---|---|
+| Whole document | 99 pages | 98 pages |
+| Chapter One to the end of the references | 91 pages | 90 pages |
+| Words (Word's count) | 26,046 | 25,310 |
+
+The prose of the three chapters was reworded more briefly, sentence by sentence, with no paragraph,
+heading, table, figure, number, citation or cross-reference removed:
+
+| Chapter | Prose words before | After | Change |
+|---|---|---|---|
+| Two | 4,798 | 4,568 | 4.8 per cent fewer |
+| Three | 6,472 | 6,221 | 3.9 per cent fewer |
+| Four | 4,215 | 3,960 | 6.0 per cent fewer |
+
+The estimate given beforehand was 15 per cent and six or seven pages. It was wrong. These chapters
+are mostly facts, rules, results and limitations, and little could go without removing content.
+About 730 words went, which is two pages of text, but only one page was gained, because the freed
+space was taken up by figures settling differently on the pages.
+
+Checked by comparing each chapter before and after: every heading, caption and table cell is the
+same; every number, citation and cross-reference is still present; all 59 references are still
+cited.
+
+Sentences folded away, for the author to judge (the point is still made elsewhere in each case):
+
+- Section 3.2: that the synthetic values "were not taken from or checked against any registry"
+  (still stated in Section 3.2.1).
+- Section 3.2: "Three forms, fifty identities, and three states give 450 screenshots" (the figures
+  are in Table 3.3).
+- Section 3.1: "This was necessary in practice."
+- Section 4.1.1: "filled with synthetic identities" in the restated objective (stated in the next
+  sentence).
+- Section 4.0 now lists the sections in one sentence with their numbers in brackets.
+
+What remains on the pages as blank space is about six pages, most of it before figures that do not
+fit where they are first mentioned. Further pages can come only from placing some figures after the
+paragraph that discusses them, from the spacing of the reference list, or from removing content.
+
 ## Still open, not contradictions
 
 - Ch. 1, §1.4 does not list the limitation found in Ch. 4 (a visible field can disclose a masked one). To consider in the Chapter One fine-tune.
