@@ -143,15 +143,35 @@ The 59 entries and the in-text citations follow APA 7th edition in the main. The
 
 ## I. Raised on 14 November 2026
 
-The current document is `thesis/THESIS_Chapters_One_to_Five_v3.docx` (99 pages). It is version 2 with
-item 45 applied and nothing else changed.
+`thesis/THESIS_Chapters_One_to_Five_v3.docx` (99 pages) is version 2 with item 45 applied and nothing
+else changed. It is superseded by version 4 (section J).
 
 | # | Point | Where | Status |
 |---|---|---|---|
 | 44 | The closing sentence of a chapter that points to the next one ("Chapter Five summarises the study ...") stays at the end of Chapters Two, Three and Four. The author agreed. Chapter One has no such sentence; one could be added so that all four match. | Ch. 1, §1.7 | Keeping the three is decided; adding one to Chapter One awaits the author's word |
 | 45 | The thesis has no source code in its appendices. Appendix A holds the two prompts and Appendix B two screenshots. The address of the repository is not given anywhere in the text either. Proposal: an Appendix C with the source code of the guard itself (the four modules and the label vocabulary, about 250 lines, six or seven pages), and the repository address for the rest (1,666 lines in all, which would run to some forty pages if printed in full). | New Appendix C; Ch. 3, §3.6.3 | **Applied in version 3** (14 November 2026), on the author's word. Appendix C prints `guard/ocr.py`, `guard/detect.py`, the first 43 lines of `common/forms.py` (the label vocabulary), `guard/policy.py` and `guard/mask.py`: 267 lines on four pages (96 to 99), in 7-point Courier New. A check compared every printed line with the files and found them identical. Section 3.0 names the appendix, and Section 3.6.3 gives the repository address, https://github.com/Qubai-B/project. Eight lines of code are longer than the page is wide and continue on the line below; the appendix says so. The repository must stay public for the address to be of use to an examiner. |
 
-## J. Thesis checked against the guard's code (15 November 2026) — not applied
+## J. Thesis checked against the guard's code (15 November 2026) — applied in version 4
+
+The author gave the word on 15 November 2026 and items 46 to 52 were applied in
+`thesis/THESIS_Chapters_One_to_Five_v4.docx` (101 pages), which is now the current document.
+
+How item 46 was applied. The baseline is reported under two counts, defined in Section 3.7.2: the
+"confident count" (rule A below, the figures the thesis already had) and the "as-supplied count"
+(rule C below). "Default configuration" became "default recognisers". Table 4.3 has a row for each
+count, Table 4.4 has two more columns, and Figure 4.6 shows both counts beside the guard. The
+sentences that rested on 0.561 alone now give both figures: Section 1.2 ("between 56 and 78 per
+cent"), Section 4.1.6, Table 4.9, Section 4.2, Section 5.1 and Section 5.2 ("between two and four
+in ten"). One statement had to be narrowed: passport numbers are given the correct type under the
+as-supplied count (0.981), so the thesis now says the baseline never typed a NIN, BVN, TIN, bank
+account number, licence number or income figure correctly, and treats passports separately.
+
+Items 47 and 48 were reworded in Section 3.4.1 and the algorithm steps, and a new limitation was
+added to Section 3.7.6 (one field to a row; text that is not blue). Section 1.4 now says "one field
+to a row". Items 49 to 52 were reworded where they stood.
+
+Not touched: `README.md`, `PROJECT_RECORD.md`, `POC.md` and `results/REPORT.md` still give the
+baseline as 0.561 only.
 
 Version 3 was read against `guard/ocr.py`, `guard/detect.py`, `guard/policy.py`, `guard/mask.py`,
 the top of `common/forms.py` and `demo/live_app.py`. The four modules, Table 3.4 (15 labels, order
@@ -212,6 +232,23 @@ What this changes:
 Kept in the project, not committed: `results/tables/baseline_counting_rules.csv` and the two scripts
 in `scripts/extra_baseline_rules/`. The per-screenshot raw output (1.4 MB) is in the session's
 scratch folder only and would have to be produced again (about 15 minutes) if it is cleared.
+
+## K. The six items that were still open (15 November 2026) — settled in version 5
+
+The author asked for all remaining fixes to be applied. The current document is
+`thesis/THESIS_Chapters_One_to_Five_v5.docx` (103 pages).
+
+| # | Outcome |
+|---|---|
+| 34 | **Done.** A supplementary probe was added to Experiment 2 (`scripts/10_eval_inference.py`): the same 60 screenshots under the full and the task-aware policy, with the model asked which hidden values can be worked out from what is visible. Full policy: 0 of 480 masked values recovered. Task-aware policy: 16 of 380 (4.2 per cent), all surnames and first names on the filled driver's licence forms, from the visible email address. Nothing was recovered from the size of a mask. The model declined for 6 of the 120 screenshots. A first wording that asked for a "best guess" of every hidden value was declined on all 12 screenshots tried and was replaced; both wordings are in Appendix A.3. 132 requests, 121 distinct, about 7 US cents. Written into Sections 3.7.3, 3.7.5, 3.7.6, Table 3.12, Section 4.1.8, Table 4.9, Section 4.2, Sections 5.1 and 5.2. Results in `results/tables/inference*.csv`. |
+| 38 | **No change, by the item's own rule.** The fix was "keep if the department's format asks for capitals". The department's sample project sets its headings in capitals, so "REFERENCES" stays as it is and matches "CHAPTER ONE" and "APPENDIX A". |
+| 41 | **Settled: 75–105 is correct, no change.** The article's own first page prints "pp. 75-105", and the University of Arizona's record of the article gives 75–105 (31 pages). Page 106 is a blank page carrying only a footer, which is why the DOI registry says 75–106. Seen in a copy of the article hosted by a university, not on the publisher's own site, which would not open. |
+| 42 | **No change, by the item's own rule.** The fix was "leave unless the department has a rule for statutes", and none is known. |
+| 43 | **Applied.** Ten entries that linked to arXiv copies now link to the published version, each opened and its title checked: NeurIPS proceedings for Deng et al. (2023), Shao et al. (2024), Tömekçe et al. (2024), Xie et al. (2024) and Zharmagambetov et al. (2025); ICLR proceedings for Liao et al. (2025), Mireshghallah et al. (2024) and Zhou et al. (2024); the journal's DOI for Ji et al. (2025); the journal's own page for Zhang et al. (2025). Page numbers were added for the four NeurIPS papers that have them. The check also found an error: the authors of Ji et al. (2025) are Ji, Shen, Koedinger and Lin, in that order; the entry had the last two reversed and is corrected. No in-text citation changes. |
+| 44 | **Applied.** Section 1.7 now ends "Chapter Two reviews the related works and identifies the gap that the study addresses." |
+
+Not touched: `README.md`, `PROJECT_RECORD.md`, `POC.md` and `results/REPORT.md` do not yet mention
+the two baseline counts or the supplementary probe.
 
 ## Still open, not contradictions
 

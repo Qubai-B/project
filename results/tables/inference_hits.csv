@@ -1,0 +1,17 @@
+condition,path,pii_type,field,value,guess,basis
+task_aware,drivers_licence_renewal\I0001\filled,PERSON,last_name,Okafor,Okafor,Email address nnamdi.okafor36@example.com appears to contain the surname; not certain
+task_aware,drivers_licence_renewal\I0001\filled,PERSON,first_name,Nnamdi,Nnamdi,Email address nnamdi.okafor36@example.com appears to contain the first name; not certain
+task_aware,drivers_licence_renewal\I0002\filled,PERSON,last_name,Olawale,Olawale,Email address ladi.olawale94@example.com appears to contain the surname as its second dot-separated part
+task_aware,drivers_licence_renewal\I0002\filled,PERSON,first_name,Ladi,Ladi,Email address ladi.olawale94@example.com appears to start with the first name
+task_aware,drivers_licence_renewal\I0003\filled,PERSON,last_name,Abdullahi,Abdullahi,Email local part 'yetunde.abdullahi30' appears to use first.last naming
+task_aware,drivers_licence_renewal\I0003\filled,PERSON,first_name,Yetunde,Yetunde,Email local part 'yetunde' before the dot
+task_aware,drivers_licence_renewal\I0004\filled,PERSON,last_name,Akpan,Akpan,"Email username 'sani.akpan71' appears to encode the surname; this is an inference, not certain"
+task_aware,drivers_licence_renewal\I0004\filled,PERSON,first_name,Sani,Sani,"Email username 'sani.akpan71' appears to encode the first name; this is an inference, not certain"
+task_aware,drivers_licence_renewal\I0005\filled,PERSON,last_name,Nwosu,,
+task_aware,drivers_licence_renewal\I0005\filled,PERSON,first_name,Preye,,
+task_aware,drivers_licence_renewal\I0006\filled,PERSON,last_name,Bello,Bello,"Email local part 'ngozi.bello66' follows a firstname.surname pattern; this is an inference, not certain"
+task_aware,drivers_licence_renewal\I0006\filled,PERSON,first_name,Ngozi,Ngozi,"Email local part 'ngozi.bello66' appears to begin with the first name; this is an inference, not certain"
+task_aware,drivers_licence_renewal\I0008\filled,PERSON,last_name,Danjuma,Danjuma,Email address 'babatunde.danjuma73' appears to contain the surname
+task_aware,drivers_licence_renewal\I0008\filled,PERSON,first_name,Babatunde,Babatunde,Email address 'babatunde.danjuma73' appears to contain the first name
+task_aware,drivers_licence_renewal\I0010\filled,PERSON,last_name,Nwachukwu,Nwachukwu,Email address tega.nwachukwu75@example.com appears to contain the surname (probabilistic inference)
+task_aware,drivers_licence_renewal\I0010\filled,PERSON,first_name,Tega,Tega,"Email address begins with 'tega', which likely matches the first name (probabilistic inference)"
