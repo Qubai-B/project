@@ -250,6 +250,37 @@ The author asked for all remaining fixes to be applied. The current document is
 Not touched: `README.md`, `PROJECT_RECORD.md`, `POC.md` and `results/REPORT.md` do not yet mention
 the two baseline counts or the supplementary probe.
 
+## L. Shortening, at the author's request (15 November 2026) — version 6
+
+The author asked for the thesis to be brought towards 80 pages without changing the meaning or
+removing any heading, by shortening the chapter summaries (1.7, 2.8, 3.8, 4.2) and the three sections
+of Chapter Five. `thesis/THESIS_Chapters_One_to_Five_v6.docx` is the result and is the current document.
+
+| | Version 5 | Version 6 |
+|---|---|---|
+| Whole document | 103 pages | 99 pages |
+| Chapter One to the end of the references | 95 pages | 91 pages |
+| Words (Word's count) | 26,597 | 26,046 |
+
+What was done:
+
+- Summaries 1.7, 2.8, 3.8 and 4.2 rewritten more briefly. Each keeps its closing sentence that points
+  to the next chapter.
+- Chapter Five: 5.1 from four paragraphs to two, 5.2 from five to three, 5.3 with the same ten
+  recommendations in fewer words. Chapter Five is 4 pages, from 5.
+- One short paragraph in Section 3.1.1 now comes before Figure 3.2 instead of after it, and the
+  sentence under Table 4.9 was shortened.
+- Figures made smaller so that they fit on the page before instead of leaving it half empty:
+  Fig. 3.2 (5.9 to 5.3 in wide), 3.6 (5.9 to 5.3), 3.7 (5.5 to 4.3), 3.8 (5.9 to 5.2), 3.9 (6.2 to 5.5),
+  3.10 (6.2 to 5.0), 4.1 and 4.3 (6.0 to 5.6); Fig. 4.6 redrawn less tall. Fig. 3.7 is the one whose
+  lettering is now small (about 6 points); putting it back costs one page.
+- All 134 headings, table captions and figure captions are the same as in version 5 (checked by
+  comparing the two documents). No table was moved. Line spacing is unchanged.
+
+Eighty pages was not reached. The summaries and Chapter Five are a small part of the thesis, and the
+remaining eleven pages would have to come from the reference list (10 pages at the present spacing)
+or from the text of Chapters Two to Four.
+
 ## Still open, not contradictions
 
 - Ch. 1, §1.4 does not list the limitation found in Ch. 4 (a visible field can disclose a masked one). To consider in the Chapter One fine-tune.
