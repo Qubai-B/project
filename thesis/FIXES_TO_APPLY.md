@@ -432,6 +432,19 @@ certification page (the guideline names the supervisor, the Head of Department a
 Examiner; the sample used has a Program Coordinator, a Director and an External Supervisor), and
 confirmation of the title and of the month on the title page.
 
+## P. References and appendices taken out of the table of contents (version 10, 2026-11-17)
+
+At the author's request the table of contents no longer lists the references or the appendices
+(pages 81 to 100 of version 9). `THESIS_Chapters_One_to_Five_v10.docx`, 109 pages.
+
+- The table now ends at "5.3 Recommendations ... 79": 92 entries on pages vii to ix (it was 114
+  entries on pages vii to x).
+- Done by removing the outline level from the 22 headings from REFERENCES to "D.5 Messages and
+  Limits", so the entries stay out when the table is updated in Word. Those headings also no longer
+  show in Word's Navigation pane.
+- The references and the appendices themselves are unchanged and on the same pages (81 to 100).
+  Compared with version 9, the only text gone is the 22 contents entries.
+
 ## Still open, not contradictions
 
 - Ch. 1, §1.4 does not list the limitation found in Ch. 4 (a visible field can disclose a masked one). To consider in the Chapter One fine-tune.
