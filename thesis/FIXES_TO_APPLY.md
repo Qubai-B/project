@@ -445,6 +445,18 @@ At the author's request the table of contents no longer lists the references or 
 - The references and the appendices themselves are unchanged and on the same pages (81 to 100).
   Compared with version 9, the only text gone is the 22 contents entries.
 
+## Q. REFERENCES and APPENDIX entries put back in the table of contents (version 11, 2026-11-17)
+
+At the author's request the table of contents ends with two more entries after
+"5.3 Recommendations": "REFERENCES ... 81" and "APPENDIX ... 91", each with the page it starts on.
+`THESIS_Chapters_One_to_Five_v11.docx`, 109 pages.
+
+- 94 entries on pages vii to ix. The titles and subheadings of the four appendices stay out.
+- REFERENCES comes from its heading. APPENDIX comes from an entry field placed in the "APPENDIX A"
+  heading (the heading itself still reads "APPENDIX A"), so the page number follows that heading
+  when the table is updated in Word.
+- Compared with version 10, the only text added is the two contents entries.
+
 ## Still open, not contradictions
 
 - Ch. 1, §1.4 does not list the limitation found in Ch. 4 (a visible field can disclose a masked one). To consider in the Chapter One fine-tune.
