@@ -411,6 +411,27 @@ or "our" anywhere in the chapters.
 Not checked: spelling and punctuation word by word; whether the binding and submission rules
 (spiral binding for the defence, dark green hard cover for the final copies) are met.
 
+## O. Preliminary pages and table of contents joined to the thesis (17 November 2026) — version 9
+
+At the author's request the preliminary pages were placed at the front of the thesis and a table of
+contents was added after the abstract (`THESIS_Chapters_One_to_Five_v9.docx`, 110 pages).
+
+- The table of contents is a Word field built from the headings, as the guideline requires
+  ("generated automatically"). To refresh it after any edit: right-click the table, Update Field,
+  Update entire table.
+- It lists the title page, declaration, certification, dedication, acknowledgement, abstract and
+  itself (pages i to vii), then every chapter heading, title and subheading, the references and the
+  four appendices with their subheadings: 114 entries on pages vii to x.
+- Preliminary pages carry Roman numerals i to x; Arabic numbering starts at 1 on Chapter One.
+- Compared with version 8, no text was removed or changed; the page numbers of the chapters are the
+  same as in version 8.
+
+Still to be supplied by the author for the preliminary pages: the registration number (three
+places, highlighted), the names in the acknowledgement (three places, highlighted), who signs the
+certification page (the guideline names the supervisor, the Head of Department and an External
+Examiner; the sample used has a Program Coordinator, a Director and an External Supervisor), and
+confirmation of the title and of the month on the title page.
+
 ## Still open, not contradictions
 
 - Ch. 1, §1.4 does not list the limitation found in Ch. 4 (a visible field can disclose a masked one). To consider in the Chapter One fine-tune.
