@@ -324,6 +324,93 @@ What remains on the pages as blank space is about six pages, most of it before f
 fit where they are first mentioned. Further pages can come only from placing some figures after the
 paragraph that discusses them, from the spacing of the reference list, or from removing content.
 
+## N. Chapters checked against the department's Project Guidelines (17 November 2026) — applied in version 8, except items 53 and 63
+
+**Status (17 November 2026).** On the author's word, items 54 to 62 and 64 to 67 were applied as
+`THESIS_Chapters_One_to_Five_v8.docx`. Items 53 (page limit) and 63 (titles of Chapters Three and
+Four) are left as they are until the supervisor advises. How each was done:
+
+- 54: left margin 3.0 cm; the 22 tables were narrowed in proportion and five figures reduced by a
+  few points to fit the narrower text.
+- 55: Arabic page numbers at the bottom centre, starting at 1 on Chapter One.
+- 56, 57: "INTRODUCTION" added under "CHAPTER ONE"; Chapter Five is "SUMMARY, CONCLUSIONS AND
+  RECOMMENDATIONS", with "5.2 Conclusions" and "5.3 Recommendations".
+- 58, 67: all 107 headings at 1.5 line spacing, with no space between a heading and the text below.
+- 59: the 56 third-tier headings (including A.1 to A.3, C.1 to C.5 and D.1 to D.5) are italic and
+  no longer bold.
+- 60: "1.3.1 Objectives", "1.4.1 Scope", "1.4.2 Limitations".
+- 61: the eight formulas are set with the equation editor as fractions and numbered (3.1) to
+  (3.8) at the right. The guideline's own example shows the number as "3.1."; brackets were used.
+- 62: seven source lines now read "(Source: …)" in italics; a note that follows a source stays
+  upright after the bracket.
+- 64: Appendix D, "User's Manual of the Web Interface" (two pages), written from the interface's
+  own code and wording; one sentence in Section 4.1.3 points to it.
+- 65: "Figure" changed to "Fig." in 30 places in the text.
+- 66: "Table 2.1: Summary of Related Works".
+
+Checked: the text of versions 7 and 8 compared paragraph by paragraph shows only these changes;
+Appendix C still matches the source files; the eight equations open as equations in Word; no
+heading is left at the foot of a page. Version 8 is 100 pages; Chapter One to the end of the
+references is still 90 (the narrower text is offset by the tighter headings).
+
+The changes are made by a script run on the built file (`apply_guidelines.py`, kept with the other
+build tools, outside the repository), so they can be re-applied after any later rebuild.
+
+What follows is the check as it was recorded before the fixes.
+
+Source: "400 Level B. Sc. Computer Science General Project Guidelines", Department of Computer
+Science, Ahmadu Bello University, Zaria (8 pages), supplied by the author on 17 November 2026. It
+ends: "ANY PROJECT REPORT THAT VIOLATES THE ABOVE GUIDELINES WILL NOT BE ACCEPTED." Checked against
+version 7 (98 pages; Chapter One to the end of the references is 90 pages). The preliminary pages
+were checked and corrected separately (`PRELIMINARY_PAGES_v1.docx`).
+
+### Does not conform
+
+| # | Guideline | Version 7 | Fix |
+|---|---|---|---|
+| 53 | "between 30 to 50 A4 size pages (Excluding the preliminary pages and the appendices)" | 90 pages from Chapter One to the end of the references (80 of chapters, 10 of references) | **Serious.** About 40 pages must go. Cannot be done by rewording; needs the author's and the supervisor's decision on what to remove or move to the appendices. |
+| 54 | Left margin 3.0 cm (1.18 in); top, bottom, right 2.54 cm | 2.54 cm on all four sides | Set the left margin to 3.0 cm. The narrower text adds about 3 per cent to the length, which works against item 53. |
+| 55 | Page numbers at the bottom centre: Roman from the title page to the end of the table of contents, Arabic from Chapter One to the last page | No page numbers at all (the file has no footer) | Add a footer with Arabic numbers starting at 1 on Chapter One. |
+| 56 | Chapter One must be titled "Introduction"; every chapter must have a title | "CHAPTER ONE" is followed directly by "1.0 Introduction"; there is no title line | Add the title line "INTRODUCTION" under "CHAPTER ONE", as the other chapters have. |
+| 57 | Chapter Five must be titled "Summary, Conclusions and Recommendations" and this title "should not be changed" | "SUMMARY, CONCLUSION AND RECOMMENDATION"; sections "5.2 Conclusion", "5.3 Recommendation" | Use the plural forms in the title, and in 5.2 and 5.3 for consistency (the chapter gives several conclusions and ten recommendations). |
+| 58 | Headings at 1.5 line spacing ("should not be more than 1.5") | Section headings are double-spaced (88 headings); chapter headings and titles are single-spaced | Set every heading to 1.5. |
+| 59 | Third-tier subheadings "typed in italics with the first letter of each main word in capital" | All 51 third-tier headings (e.g. 2.1.1, 3.6.5, 4.1.10) are bold, not italic | Make the third tier italic. Whether it should also stay bold is not stated; plain italic is the literal reading. |
+| 60 | All headings "numbered consecutively within the chapters" | Three unnumbered subheadings in Chapter One: "Objectives" (under 1.3), "Scope" and "Limitations" (under 1.4) | Number them (1.3.1; 1.4.1 and 1.4.2) or turn them into run-in words at the start of the paragraph. |
+| 61 | Equations typed with an equation editor, centred on a new line, numbered consecutively with Arabic numerals (the example shows "3.1." at the right), the word "equation" omitted | Eight formulas in Chapter Three (IoU, Precision, Recall, F1, Leakage rate, Recovery rate, Field accuracy, Step accuracy) are typed as ordinary text, centred, with no numbers | Retype the eight with Word's equation editor and number them 3.1 to 3.8 at the right margin. |
+| 62 | The source of a table or figure "may be stated (in brackets and in italics) immediately below" | Seven "Source: …" lines are upright and not in brackets | Put each in brackets and italics: "(Source: …)". |
+
+### Open to the supervisor's agreement
+
+| # | Guideline | Version 7 | Note |
+|---|---|---|---|
+| 63 | Chapter Three: "Design of the Proposed System/Application"; Chapter Four: "Implementation of the Proposed System and Discussion of Result". These two titles "may be modified/changed in agreement with the project supervisor" | "METHODOLOGY" and "RESULTS AND DISCUSSION" | Either get the supervisor's agreement to the present titles or change them to the guideline's. |
+| 64 | For a project where software is developed, the appendix "should contain a User's Manual, Design Documents…, source code and test suite (where applicable)" | Appendices hold the prompts, two screenshots and the source code. There is no user's manual. The design diagrams are in Chapter Three | Consider a short user's manual for the web interface as a further appendix. Appendices do not count towards the page limit. |
+
+### Minor
+
+| # | Guideline | Version 7 | Fix |
+|---|---|---|---|
+| 65 | "When numbering figures, the word 'Fig' should be used e.g. Fig. 3.1" | Captions say "Fig. 3.1"; the running text says "Figure 3.1" (29 times) | Use "Fig." in the text as well, for one form throughout. |
+| 66 | Proper capitalisation | The caption of Table 2.1 is in sentence case ("Summary of related works"); every other caption capitalises the main words | "Summary of Related Works". |
+| 67 | "ONLY ONE BLANK line" before a heading and "no blank line between … a subheading and the text below it" | Headings carry automatic spacing of about half a line both before and after | Give headings one line of space before and none after. To be done with item 58. |
+
+### Conforms
+
+A4 paper. Times New Roman 12 point in the text; 10 point inside tables and smaller type in the
+appendices, both of which are allowed. Double line spacing in the text and single inside tables.
+Block paragraphs used throughout. No more than three tiers of heading; headings flush left; no
+heading left alone at the foot of a page (checked in Word, 88 headings). Second-tier headings bold
+with main words capitalised. Tables numbered within chapters with the number and title on one line
+above the table; figures numbered "Fig." within chapters with the caption below; every table and
+figure kept on the same page as its title. Chapters, references and each appendix start on a new
+page with the heading in capitals. Chapter Two is titled "Literature Review". References are a
+separate part after Chapter Five, in APA form, in alphabetical order (59 entries, each cited in
+the text). Appendices come after the references. Written in the third person: no "I", "we", "my"
+or "our" anywhere in the chapters.
+
+Not checked: spelling and punctuation word by word; whether the binding and submission rules
+(spiral binding for the defence, dark green hard cover for the final copies) are met.
+
 ## Still open, not contradictions
 
 - Ch. 1, §1.4 does not list the limitation found in Ch. 4 (a visible field can disclose a masked one). To consider in the Chapter One fine-tune.
