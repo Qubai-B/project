@@ -457,6 +457,24 @@ At the author's request the table of contents ends with two more entries after
   when the table is updated in Word.
 - Compared with version 10, the only text added is the two contents entries.
 
+## R. The author's submission copy (2026-11-19)
+
+`JOSEPH BESSIE KUBAI(U24DLCS30086)MAIN PROJECT.docx` is version 11 as edited by the author in Word
+and is the copy for the supervisor. It was added to the repository as supplied; nothing in it was
+changed. 109 pages; the chapters start on the same pages as in version 11; the abstract is 193
+words (limit 150 to 200). Points noticed, for the author to decide:
+
+68. Chapter Three, paragraph "Recorded task trajectories": stray characters, "that part of the
+    formni8h." should read "that part of the form."
+69. Title page reads "SCREENSHOT DRIVEN AGENTS" without the hyphen; the declaration, the
+    certification and the rest of the document have "Screenshot-Driven".
+70. Abstract, last sentence: "demonstrate that, data minimization" has a comma that does not belong.
+    The sentence also no longer says "On this controlled benchmark".
+71. Acknowledgement: "Mr. Daser Retnan , for" (space before the comma) and "Dee,Happi,Nebo and Rose"
+    (no spaces after the commas).
+72. Table of contents: the dots of the APPENDIX line were typed by hand. Updating the table in Word
+    puts the line back to the automatic form.
+
 ## Still open, not contradictions
 
 - Ch. 1, §1.4 does not list the limitation found in Ch. 4 (a visible field can disclose a masked one). To consider in the Chapter One fine-tune.
